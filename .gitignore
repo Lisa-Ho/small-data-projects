@@ -1,0 +1,17 @@
+# exclude jupyter checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+
+# exclude data files
+*.csv
+*.xlsx
+
+# exclude images
+*.png
+*.jpg
+*.jpeg
+
