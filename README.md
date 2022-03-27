@@ -1,3 +1,3 @@
-# Charity data analysis
+# Small data analysis and viz projects
 
-Repository to hold analysis around and about charities. 
+Repository to hold small analysis and data viz projects. 
