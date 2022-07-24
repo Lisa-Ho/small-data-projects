@@ -1,0 +1,2926 @@
+{
+  "01110": {
+    "industry": "Growing of cereals (except rice), leguminous crops and oil seeds",
+    "section": "A"
+  },
+  "01120": {
+    "industry": "Growing of rice",
+    "section": "A"
+  },
+  "01130": {
+    "industry": "Growing of vegetables and melons, roots and tubers",
+    "section": "A"
+  },
+  "01140": {
+    "industry": "Growing of sugar cane",
+    "section": "A"
+  },
+  "01150": {
+    "industry": "Growing of tobacco",
+    "section": "A"
+  },
+  "01160": {
+    "industry": "Growing of fibre crops",
+    "section": "A"
+  },
+  "01190": {
+    "industry": "Growing of other non-perennial crops",
+    "section": "A"
+  },
+  "01210": {
+    "industry": "Growing of grapes",
+    "section": "A"
+  },
+  "01220": {
+    "industry": "Growing of tropical and subtropical fruits",
+    "section": "A"
+  },
+  "01230": {
+    "industry": "Growing of citrus fruits",
+    "section": "A"
+  },
+  "01240": {
+    "industry": "Growing of pome fruits and stone fruits",
+    "section": "A"
+  },
+  "01250": {
+    "industry": "Growing of other tree and bush fruits and nuts",
+    "section": "A"
+  },
+  "01260": {
+    "industry": "Growing of oleaginous fruits",
+    "section": "A"
+  },
+  "01270": {
+    "industry": "Growing of beverage crops",
+    "section": "A"
+  },
+  "01280": {
+    "industry": "Growing of spices, aromatic, drug and pharmaceutical crops",
+    "section": "A"
+  },
+  "01290": {
+    "industry": "Growing of other perennial crops",
+    "section": "A"
+  },
+  "01300": {
+    "industry": "Plant propagation",
+    "section": "A"
+  },
+  "01410": {
+    "industry": "Raising of dairy cattle",
+    "section": "A"
+  },
+  "01420": {
+    "industry": "Raising of other cattle and buffaloes",
+    "section": "A"
+  },
+  "01430": {
+    "industry": "Raising of horses and other equines",
+    "section": "A"
+  },
+  "01440": {
+    "industry": "Raising of camels and camelids",
+    "section": "A"
+  },
+  "01450": {
+    "industry": "Raising of sheep and  goats",
+    "section": "A"
+  },
+  "01460": {
+    "industry": "Raising of swine/pigs",
+    "section": "A"
+  },
+  "01470": {
+    "industry": "Raising of poultry",
+    "section": "A"
+  },
+  "01490": {
+    "industry": "Raising of other animals",
+    "section": "A"
+  },
+  "01500": {
+    "industry": "Mixed farming",
+    "section": "A"
+  },
+  "01610": {
+    "industry": "Support activities for crop production",
+    "section": "A"
+  },
+  "01621": {
+    "industry": "Farm animal boarding and care",
+    "section": "A"
+  },
+  "01629": {
+    "industry": "Support activities for animal production (other than farm animal boarding and care) n.e.c.",
+    "section": "A"
+  },
+  "01630": {
+    "industry": "Post-harvest crop activities",
+    "section": "A"
+  },
+  "01640": {
+    "industry": "Seed processing for propagation",
+    "section": "A"
+  },
+  "01700": {
+    "industry": "Hunting, trapping and related service activities",
+    "section": "A"
+  },
+  "02100": {
+    "industry": "Silviculture and other forestry activities",
+    "section": "A"
+  },
+  "02200": {
+    "industry": "Logging",
+    "section": "A"
+  },
+  "02300": {
+    "industry": "Gathering of wild growing non-wood products",
+    "section": "A"
+  },
+  "02400": {
+    "industry": "Support services to forestry",
+    "section": "A"
+  },
+  "03110": {
+    "industry": "Marine fishing",
+    "section": "A"
+  },
+  "03120": {
+    "industry": "Freshwater fishing",
+    "section": "A"
+  },
+  "03210": {
+    "industry": "Marine aquaculture",
+    "section": "A"
+  },
+  "03220": {
+    "industry": "Freshwater aquaculture",
+    "section": "A"
+  },
+  "05101": {
+    "industry": "Deep coal mines",
+    "section": "B"
+  },
+  "05102": {
+    "industry": "Open cast coal working",
+    "section": "B"
+  },
+  "05200": {
+    "industry": "Mining of lignite",
+    "section": "B"
+  },
+  "06100": {
+    "industry": "Extraction of crude petroleum",
+    "section": "B"
+  },
+  "06200": {
+    "industry": "Extraction of natural gas",
+    "section": "B"
+  },
+  "07100": {
+    "industry": "Mining of iron ores",
+    "section": "B"
+  },
+  "07210": {
+    "industry": "Mining of uranium and thorium ores",
+    "section": "B"
+  },
+  "07290": {
+    "industry": "Mining of other non-ferrous metal ores",
+    "section": "B"
+  },
+  "08110": {
+    "industry": "Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate",
+    "section": "B"
+  },
+  "08120": {
+    "industry": "Operation of gravel and sand pits; mining of clays and kaolin",
+    "section": "B"
+  },
+  "08910": {
+    "industry": "Mining of chemical and fertilizer minerals",
+    "section": "B"
+  },
+  "08920": {
+    "industry": "Extraction of peat",
+    "section": "B"
+  },
+  "08930": {
+    "industry": "Extraction of salt",
+    "section": "B"
+  },
+  "08990": {
+    "industry": "Other mining and quarrying n.e.c.",
+    "section": "B"
+  },
+  "09100": {
+    "industry": "Support activities for petroleum and natural gas mining",
+    "section": "B"
+  },
+  "09900": {
+    "industry": "Support activities for other mining and quarrying",
+    "section": "B"
+  },
+  "10110": {
+    "industry": "Processing and preserving of meat",
+    "section": "C"
+  },
+  "10120": {
+    "industry": "Processing and preserving of poultry meat",
+    "section": "C"
+  },
+  "10130": {
+    "industry": "Production of meat and poultry meat products",
+    "section": "C"
+  },
+  "10200": {
+    "industry": "Processing and preserving of fish, crustaceans and molluscs",
+    "section": "C"
+  },
+  "10310": {
+    "industry": "Processing and preserving of potatoes",
+    "section": "C"
+  },
+  "10320": {
+    "industry": "Manufacture of fruit and vegetable juice",
+    "section": "C"
+  },
+  "10390": {
+    "industry": "Other processing and preserving of fruit and vegetables",
+    "section": "C"
+  },
+  "10410": {
+    "industry": "Manufacture of oils and fats",
+    "section": "C"
+  },
+  "10420": {
+    "industry": "Manufacture of margarine and similar edible fats",
+    "section": "C"
+  },
+  "10511": {
+    "industry": "Liquid milk and cream production",
+    "section": "C"
+  },
+  "10512": {
+    "industry": "Butter and cheese production",
+    "section": "C"
+  },
+  "10519": {
+    "industry": "Manufacture of other milk products",
+    "section": "C"
+  },
+  "10520": {
+    "industry": "Manufacture of ice cream",
+    "section": "C"
+  },
+  "10611": {
+    "industry": "Grain milling",
+    "section": "C"
+  },
+  "10612": {
+    "industry": "Manufacture of breakfast cereals and cereals-based food",
+    "section": "C"
+  },
+  "10620": {
+    "industry": "Manufacture of starches and starch products",
+    "section": "C"
+  },
+  "10710": {
+    "industry": "Manufacture of bread; manufacture of fresh pastry goods and cakes",
+    "section": "C"
+  },
+  "10720": {
+    "industry": "Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes",
+    "section": "C"
+  },
+  "10730": {
+    "industry": "Manufacture of macaroni, noodles, couscous and similar farinaceous products",
+    "section": "C"
+  },
+  "10810": {
+    "industry": "Manufacture of sugar",
+    "section": "C"
+  },
+  "10821": {
+    "industry": "Manufacture of cocoa and chocolate confectionery",
+    "section": "C"
+  },
+  "10822": {
+    "industry": "Manufacture of sugar confectionery",
+    "section": "C"
+  },
+  "10831": {
+    "industry": "Tea processing",
+    "section": "C"
+  },
+  "10832": {
+    "industry": "Production of coffee and coffee substitutes",
+    "section": "C"
+  },
+  "10840": {
+    "industry": "Manufacture of condiments and seasonings",
+    "section": "C"
+  },
+  "10850": {
+    "industry": "Manufacture of prepared meals and dishes",
+    "section": "C"
+  },
+  "10860": {
+    "industry": "Manufacture of homogenized food preparations and dietetic food",
+    "section": "C"
+  },
+  "10890": {
+    "industry": "Manufacture of other food products n.e.c.",
+    "section": "C"
+  },
+  "10910": {
+    "industry": "Manufacture of prepared feeds for farm animals",
+    "section": "C"
+  },
+  "10920": {
+    "industry": "Manufacture of prepared pet foods",
+    "section": "C"
+  },
+  "11010": {
+    "industry": "Distilling, rectifying and blending of spirits",
+    "section": "C"
+  },
+  "11020": {
+    "industry": "Manufacture of wine from grape",
+    "section": "C"
+  },
+  "11030": {
+    "industry": "Manufacture of cider and other fruit wines",
+    "section": "C"
+  },
+  "11040": {
+    "industry": "Manufacture of other non-distilled fermented beverages",
+    "section": "C"
+  },
+  "11050": {
+    "industry": "Manufacture of beer",
+    "section": "C"
+  },
+  "11060": {
+    "industry": "Manufacture of malt",
+    "section": "C"
+  },
+  "11070": {
+    "industry": "Manufacture of soft drinks; production of mineral waters and other bottled waters",
+    "section": "C"
+  },
+  "12000": {
+    "industry": "Manufacture of tobacco products",
+    "section": "C"
+  },
+  "13100": {
+    "industry": "Preparation and spinning of textile fibres",
+    "section": "C"
+  },
+  "13200": {
+    "industry": "Weaving of textiles",
+    "section": "C"
+  },
+  "13300": {
+    "industry": "Finishing of textiles",
+    "section": "C"
+  },
+  "13910": {
+    "industry": "Manufacture of knitted and crocheted fabrics",
+    "section": "C"
+  },
+  "13921": {
+    "industry": "Manufacture of soft furnishings",
+    "section": "C"
+  },
+  "13922": {
+    "industry": "manufacture of canvas goods, sacks, etc.",
+    "section": "C"
+  },
+  "13923": {
+    "industry": "manufacture of household textiles",
+    "section": "C"
+  },
+  "13931": {
+    "industry": "Manufacture of woven or tufted carpets and rugs",
+    "section": "C"
+  },
+  "13939": {
+    "industry": "Manufacture of other carpets and rugs",
+    "section": "C"
+  },
+  "13940": {
+    "industry": "Manufacture of cordage, rope, twine and netting",
+    "section": "C"
+  },
+  "13950": {
+    "industry": "Manufacture of non-wovens and articles made from non-wovens, except apparel",
+    "section": "C"
+  },
+  "13960": {
+    "industry": "Manufacture of other technical and industrial textiles",
+    "section": "C"
+  },
+  "13990": {
+    "industry": "Manufacture of other textiles n.e.c.",
+    "section": "C"
+  },
+  "14110": {
+    "industry": "Manufacture of leather clothes",
+    "section": "C"
+  },
+  "14120": {
+    "industry": "Manufacture of workwear",
+    "section": "C"
+  },
+  "14131": {
+    "industry": "Manufacture of other men's outerwear",
+    "section": "C"
+  },
+  "14132": {
+    "industry": "Manufacture of other women's outerwear",
+    "section": "C"
+  },
+  "14141": {
+    "industry": "Manufacture of men's underwear",
+    "section": "C"
+  },
+  "14142": {
+    "industry": "Manufacture of women's underwear",
+    "section": "C"
+  },
+  "14190": {
+    "industry": "Manufacture of other wearing apparel and accessories n.e.c.",
+    "section": "C"
+  },
+  "14200": {
+    "industry": "Manufacture of articles of fur",
+    "section": "C"
+  },
+  "14310": {
+    "industry": "Manufacture of knitted and crocheted hosiery",
+    "section": "C"
+  },
+  "14390": {
+    "industry": "Manufacture of other knitted and crocheted apparel",
+    "section": "C"
+  },
+  "15110": {
+    "industry": "Tanning and dressing of leather; dressing and dyeing of fur",
+    "section": "C"
+  },
+  "15120": {
+    "industry": "Manufacture of luggage, handbags and the like, saddlery and harness",
+    "section": "C"
+  },
+  "15200": {
+    "industry": "Manufacture of footwear",
+    "section": "C"
+  },
+  "16100": {
+    "industry": "Sawmilling and planing of wood",
+    "section": "C"
+  },
+  "16210": {
+    "industry": "Manufacture of veneer sheets and wood-based panels",
+    "section": "C"
+  },
+  "16220": {
+    "industry": "Manufacture of assembled parquet floors",
+    "section": "C"
+  },
+  "16230": {
+    "industry": "Manufacture of other builders' carpentry and joinery",
+    "section": "C"
+  },
+  "16240": {
+    "industry": "Manufacture of wooden containers",
+    "section": "C"
+  },
+  "16290": {
+    "industry": "Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
+    "section": "C"
+  },
+  "17110": {
+    "industry": "Manufacture of pulp",
+    "section": "C"
+  },
+  "17120": {
+    "industry": "Manufacture of paper and paperboard",
+    "section": "C"
+  },
+  "17211": {
+    "industry": "Manufacture of corrugated paper and paperboard, sacks and bags",
+    "section": "C"
+  },
+  "17219": {
+    "industry": "Manufacture of other paper and paperboard containers",
+    "section": "C"
+  },
+  "17220": {
+    "industry": "Manufacture of household and sanitary goods and of toilet requisites",
+    "section": "C"
+  },
+  "17230": {
+    "industry": "Manufacture of paper stationery",
+    "section": "C"
+  },
+  "17240": {
+    "industry": "Manufacture of wallpaper",
+    "section": "C"
+  },
+  "17290": {
+    "industry": "Manufacture of other articles of paper and paperboard n.e.c.",
+    "section": "C"
+  },
+  "18110": {
+    "industry": "Printing of newspapers",
+    "section": "C"
+  },
+  "18121": {
+    "industry": "Manufacture of printed labels",
+    "section": "C"
+  },
+  "18129": {
+    "industry": "Printing n.e.c.",
+    "section": "C"
+  },
+  "18130": {
+    "industry": "Pre-press and pre-media services",
+    "section": "C"
+  },
+  "18140": {
+    "industry": "Binding and related services",
+    "section": "C"
+  },
+  "18201": {
+    "industry": "Reproduction of sound recording",
+    "section": "C"
+  },
+  "18202": {
+    "industry": "Reproduction of video recording",
+    "section": "C"
+  },
+  "18203": {
+    "industry": "Reproduction of computer media",
+    "section": "C"
+  },
+  "19100": {
+    "industry": "Manufacture of coke oven products",
+    "section": "C"
+  },
+  "19201": {
+    "industry": "Mineral oil refining",
+    "section": "C"
+  },
+  "19209": {
+    "industry": "Other treatment of petroleum products (excluding petrochemicals manufacture)",
+    "section": "C"
+  },
+  "20110": {
+    "industry": "Manufacture of industrial gases",
+    "section": "C"
+  },
+  "20120": {
+    "industry": "Manufacture of dyes and pigments",
+    "section": "C"
+  },
+  "20130": {
+    "industry": "Manufacture of other inorganic basic chemicals",
+    "section": "C"
+  },
+  "20140": {
+    "industry": "Manufacture of other organic basic chemicals",
+    "section": "C"
+  },
+  "20150": {
+    "industry": "Manufacture of fertilizers and nitrogen compounds",
+    "section": "C"
+  },
+  "20160": {
+    "industry": "Manufacture of plastics in primary forms",
+    "section": "C"
+  },
+  "20170": {
+    "industry": "Manufacture of synthetic rubber in primary forms",
+    "section": "C"
+  },
+  "20200": {
+    "industry": "Manufacture of pesticides and other agrochemical products",
+    "section": "C"
+  },
+  "20301": {
+    "industry": "Manufacture of paints, varnishes and similar coatings, mastics and sealants",
+    "section": "C"
+  },
+  "20302": {
+    "industry": "Manufacture of printing ink",
+    "section": "C"
+  },
+  "20411": {
+    "industry": "Manufacture of soap and detergents",
+    "section": "C"
+  },
+  "20412": {
+    "industry": "Manufacture of cleaning and polishing preparations",
+    "section": "C"
+  },
+  "20420": {
+    "industry": "Manufacture of perfumes and toilet preparations",
+    "section": "C"
+  },
+  "20510": {
+    "industry": "Manufacture of explosives",
+    "section": "C"
+  },
+  "20520": {
+    "industry": "Manufacture of glues",
+    "section": "C"
+  },
+  "20530": {
+    "industry": "Manufacture of essential oils",
+    "section": "C"
+  },
+  "20590": {
+    "industry": "Manufacture of other chemical products n.e.c.",
+    "section": "C"
+  },
+  "20600": {
+    "industry": "Manufacture of man-made fibres",
+    "section": "C"
+  },
+  "21100": {
+    "industry": "Manufacture of basic pharmaceutical products",
+    "section": "C"
+  },
+  "21200": {
+    "industry": "Manufacture of pharmaceutical preparations",
+    "section": "C"
+  },
+  "22110": {
+    "industry": "Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres",
+    "section": "C"
+  },
+  "22190": {
+    "industry": "Manufacture of other rubber products",
+    "section": "C"
+  },
+  "22210": {
+    "industry": "Manufacture of plastic plates, sheets, tubes and profiles",
+    "section": "C"
+  },
+  "22220": {
+    "industry": "Manufacture of plastic packing goods",
+    "section": "C"
+  },
+  "22230": {
+    "industry": "Manufacture of builders  ware of plastic",
+    "section": "C"
+  },
+  "22290": {
+    "industry": "Manufacture of other plastic products",
+    "section": "C"
+  },
+  "23110": {
+    "industry": "Manufacture of flat glass",
+    "section": "C"
+  },
+  "23120": {
+    "industry": "Shaping and processing of flat glass",
+    "section": "C"
+  },
+  "23130": {
+    "industry": "Manufacture of hollow glass",
+    "section": "C"
+  },
+  "23140": {
+    "industry": "Manufacture of glass fibres",
+    "section": "C"
+  },
+  "23190": {
+    "industry": "Manufacture and processing of other glass, including technical glassware",
+    "section": "C"
+  },
+  "23200": {
+    "industry": "Manufacture of refractory products",
+    "section": "C"
+  },
+  "23310": {
+    "industry": "Manufacture of ceramic tiles and flags",
+    "section": "C"
+  },
+  "23320": {
+    "industry": "Manufacture of bricks, tiles and construction products, in baked clay",
+    "section": "C"
+  },
+  "23410": {
+    "industry": "Manufacture of ceramic household and ornamental articles",
+    "section": "C"
+  },
+  "23420": {
+    "industry": "Manufacture of ceramic sanitary fixtures",
+    "section": "C"
+  },
+  "23430": {
+    "industry": "Manufacture of ceramic insulators and insulating fittings",
+    "section": "C"
+  },
+  "23440": {
+    "industry": "Manufacture of other technical ceramic products",
+    "section": "C"
+  },
+  "23490": {
+    "industry": "Manufacture of other ceramic products n.e.c.",
+    "section": "C"
+  },
+  "23510": {
+    "industry": "Manufacture of cement",
+    "section": "C"
+  },
+  "23520": {
+    "industry": "Manufacture of lime and plaster",
+    "section": "C"
+  },
+  "23610": {
+    "industry": "Manufacture of concrete products for construction purposes",
+    "section": "C"
+  },
+  "23620": {
+    "industry": "Manufacture of plaster products for construction purposes",
+    "section": "C"
+  },
+  "23630": {
+    "industry": "Manufacture of ready-mixed concrete",
+    "section": "C"
+  },
+  "23640": {
+    "industry": "Manufacture of mortars",
+    "section": "C"
+  },
+  "23650": {
+    "industry": "Manufacture of fibre cement",
+    "section": "C"
+  },
+  "23690": {
+    "industry": "Manufacture of other articles of concrete, plaster and cement",
+    "section": "C"
+  },
+  "23700": {
+    "industry": "Cutting, shaping and finishing of stone",
+    "section": "C"
+  },
+  "23910": {
+    "industry": "Production of abrasive products",
+    "section": "C"
+  },
+  "23990": {
+    "industry": "Manufacture of other non-metallic mineral products n.e.c.",
+    "section": "C"
+  },
+  "24100": {
+    "industry": "Manufacture of basic iron and steel and of ferro-alloys",
+    "section": "C"
+  },
+  "24200": {
+    "industry": "Manufacture of tubes, pipes, hollow profiles and related fittings, of steel",
+    "section": "C"
+  },
+  "24310": {
+    "industry": "Cold drawing of bars",
+    "section": "C"
+  },
+  "24320": {
+    "industry": "Cold rolling of narrow strip",
+    "section": "C"
+  },
+  "24330": {
+    "industry": "Cold forming or folding",
+    "section": "C"
+  },
+  "24340": {
+    "industry": "Cold drawing of wire",
+    "section": "C"
+  },
+  "24410": {
+    "industry": "Precious metals production",
+    "section": "C"
+  },
+  "24420": {
+    "industry": "Aluminium production",
+    "section": "C"
+  },
+  "24430": {
+    "industry": "Lead, zinc and tin production",
+    "section": "C"
+  },
+  "24440": {
+    "industry": "Copper production",
+    "section": "C"
+  },
+  "24450": {
+    "industry": "Other non-ferrous metal production",
+    "section": "C"
+  },
+  "24460": {
+    "industry": "Processing of nuclear fuel",
+    "section": "C"
+  },
+  "24510": {
+    "industry": "Casting of iron",
+    "section": "C"
+  },
+  "24520": {
+    "industry": "Casting of steel",
+    "section": "C"
+  },
+  "24530": {
+    "industry": "Casting of light metals",
+    "section": "C"
+  },
+  "24540": {
+    "industry": "Casting of other non-ferrous metals",
+    "section": "C"
+  },
+  "25110": {
+    "industry": "Manufacture of metal structures and parts of structures",
+    "section": "C"
+  },
+  "25120": {
+    "industry": "Manufacture of doors and windows of metal",
+    "section": "C"
+  },
+  "25210": {
+    "industry": "Manufacture of central heating radiators and boilers",
+    "section": "C"
+  },
+  "25290": {
+    "industry": "Manufacture of other tanks, reservoirs and containers of metal",
+    "section": "C"
+  },
+  "25300": {
+    "industry": "Manufacture of steam generators, except central heating hot water boilers",
+    "section": "C"
+  },
+  "25400": {
+    "industry": "Manufacture of weapons and ammunition",
+    "section": "C"
+  },
+  "25500": {
+    "industry": "Forging, pressing, stamping and roll-forming of metal; powder metallurgy",
+    "section": "C"
+  },
+  "25610": {
+    "industry": "Treatment and coating of metals",
+    "section": "C"
+  },
+  "25620": {
+    "industry": "Machining",
+    "section": "C"
+  },
+  "25710": {
+    "industry": "Manufacture of cutlery",
+    "section": "C"
+  },
+  "25720": {
+    "industry": "Manufacture of locks and hinges",
+    "section": "C"
+  },
+  "25730": {
+    "industry": "Manufacture of tools",
+    "section": "C"
+  },
+  "25910": {
+    "industry": "Manufacture of steel drums and similar containers",
+    "section": "C"
+  },
+  "25920": {
+    "industry": "Manufacture of light metal packaging",
+    "section": "C"
+  },
+  "25930": {
+    "industry": "Manufacture of wire products, chain and springs",
+    "section": "C"
+  },
+  "25940": {
+    "industry": "Manufacture of fasteners and screw machine products",
+    "section": "C"
+  },
+  "25990": {
+    "industry": "Manufacture of other fabricated metal products n.e.c.",
+    "section": "C"
+  },
+  "26110": {
+    "industry": "Manufacture of electronic components",
+    "section": "C"
+  },
+  "26120": {
+    "industry": "Manufacture of loaded electronic boards",
+    "section": "C"
+  },
+  "26200": {
+    "industry": "Manufacture of computers and peripheral equipment",
+    "section": "C"
+  },
+  "26301": {
+    "industry": "Manufacture of telegraph and telephone apparatus and equipment",
+    "section": "C"
+  },
+  "26309": {
+    "industry": "Manufacture of communication equipment other than telegraph, and telephone apparatus and equipment",
+    "section": "C"
+  },
+  "26400": {
+    "industry": "Manufacture of consumer electronics",
+    "section": "C"
+  },
+  "26511": {
+    "industry": "Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+    "section": "C"
+  },
+  "26512": {
+    "industry": "Manufacture of electronic industrial process control equipment",
+    "section": "C"
+  },
+  "26513": {
+    "industry": "Manufacture of non-electronic measuring, testing etc. equipment, not for industrial process control",
+    "section": "C"
+  },
+  "26514": {
+    "industry": "Manufacture of non-electronic industrial process control equipment",
+    "section": "C"
+  },
+  "26520": {
+    "industry": "Manufacture of watches and clocks",
+    "section": "C"
+  },
+  "26600": {
+    "industry": "Manufacture of irradiation, electromedical and electrotherapeutic equipment",
+    "section": "C"
+  },
+  "26701": {
+    "industry": "Manufacture of optical precision instruments",
+    "section": "C"
+  },
+  "26702": {
+    "industry": "Manufacture of photographic and cinematographic equipment",
+    "section": "C"
+  },
+  "26800": {
+    "industry": "Manufacture of magnetic and optical media",
+    "section": "C"
+  },
+  "27110": {
+    "industry": "Manufacture of electric motors, generators and transformers",
+    "section": "C"
+  },
+  "27120": {
+    "industry": "Manufacture of electricity distribution and control apparatus",
+    "section": "C"
+  },
+  "27200": {
+    "industry": "Manufacture of batteries and accumulators",
+    "section": "C"
+  },
+  "27310": {
+    "industry": "Manufacture of fibre optic cables",
+    "section": "C"
+  },
+  "27320": {
+    "industry": "Manufacture of other electronic and electric wires and cables",
+    "section": "C"
+  },
+  "27330": {
+    "industry": "Manufacture of wiring devices",
+    "section": "C"
+  },
+  "27400": {
+    "industry": "Manufacture of electric lighting equipment",
+    "section": "C"
+  },
+  "27510": {
+    "industry": "Manufacture of electric domestic appliances",
+    "section": "C"
+  },
+  "27520": {
+    "industry": "Manufacture of non-electric domestic appliances",
+    "section": "C"
+  },
+  "27900": {
+    "industry": "Manufacture of other electrical equipment",
+    "section": "C"
+  },
+  "28110": {
+    "industry": "Manufacture of engines and turbines, except aircraft, vehicle and cycle engines",
+    "section": "C"
+  },
+  "28120": {
+    "industry": "Manufacture of fluid power equipment",
+    "section": "C"
+  },
+  "28131": {
+    "industry": "Manufacture of pumps",
+    "section": "C"
+  },
+  "28132": {
+    "industry": "Manufacture of compressors",
+    "section": "C"
+  },
+  "28140": {
+    "industry": "Manufacture of taps and valves",
+    "section": "C"
+  },
+  "28150": {
+    "industry": "Manufacture of bearings, gears, gearing and driving elements",
+    "section": "C"
+  },
+  "28210": {
+    "industry": "Manufacture of ovens, furnaces and furnace burners",
+    "section": "C"
+  },
+  "28220": {
+    "industry": "Manufacture of lifting and handling equipment",
+    "section": "C"
+  },
+  "28230": {
+    "industry": "Manufacture of office machinery and equipment (except computers and peripheral equipment)",
+    "section": "C"
+  },
+  "28240": {
+    "industry": "Manufacture of power-driven hand tools",
+    "section": "C"
+  },
+  "28250": {
+    "industry": "Manufacture of non-domestic cooling and ventilation equipment",
+    "section": "C"
+  },
+  "28290": {
+    "industry": "Manufacture of other general-purpose machinery n.e.c.",
+    "section": "C"
+  },
+  "28301": {
+    "industry": "Manufacture of agricultural tractors",
+    "section": "C"
+  },
+  "28302": {
+    "industry": "Manufacture of agricultural and forestry machinery other than tractors",
+    "section": "C"
+  },
+  "28410": {
+    "industry": "Manufacture of metal forming machinery",
+    "section": "C"
+  },
+  "28490": {
+    "industry": "Manufacture of other machine tools",
+    "section": "C"
+  },
+  "28910": {
+    "industry": "Manufacture of machinery for metallurgy",
+    "section": "C"
+  },
+  "28921": {
+    "industry": "Manufacture of machinery for mining",
+    "section": "C"
+  },
+  "28922": {
+    "industry": "Manufacture of earthmoving equipment",
+    "section": "C"
+  },
+  "28923": {
+    "industry": "Manufacture of equipment for concrete crushing and screening and roadworks",
+    "section": "C"
+  },
+  "28930": {
+    "industry": "Manufacture of machinery for food, beverage and tobacco processing",
+    "section": "C"
+  },
+  "28940": {
+    "industry": "Manufacture of machinery for textile, apparel and leather production",
+    "section": "C"
+  },
+  "28950": {
+    "industry": "Manufacture of machinery for paper and paperboard production",
+    "section": "C"
+  },
+  "28960": {
+    "industry": "Manufacture of plastics and rubber machinery",
+    "section": "C"
+  },
+  "28990": {
+    "industry": "Manufacture of other special-purpose machinery n.e.c.",
+    "section": "C"
+  },
+  "29100": {
+    "industry": "Manufacture of motor vehicles",
+    "section": "C"
+  },
+  "29201": {
+    "industry": "Manufacture of bodies (coachwork) for motor vehicles (except caravans)",
+    "section": "C"
+  },
+  "29202": {
+    "industry": "Manufacture of trailers and semi-trailers",
+    "section": "C"
+  },
+  "29203": {
+    "industry": "Manufacture of caravans",
+    "section": "C"
+  },
+  "29310": {
+    "industry": "Manufacture of electrical and electronic equipment for motor vehicles and their engines",
+    "section": "C"
+  },
+  "29320": {
+    "industry": "Manufacture of other parts and accessories for motor vehicles",
+    "section": "C"
+  },
+  "30110": {
+    "industry": "Building of ships and floating structures",
+    "section": "C"
+  },
+  "30120": {
+    "industry": "Building of pleasure and sporting boats",
+    "section": "C"
+  },
+  "30200": {
+    "industry": "Manufacture of railway locomotives and rolling stock",
+    "section": "C"
+  },
+  "30300": {
+    "industry": "Manufacture of air and spacecraft and related machinery",
+    "section": "C"
+  },
+  "30400": {
+    "industry": "Manufacture of military fighting vehicles",
+    "section": "C"
+  },
+  "30910": {
+    "industry": "Manufacture of motorcycles",
+    "section": "C"
+  },
+  "30920": {
+    "industry": "Manufacture of bicycles and invalid carriages",
+    "section": "C"
+  },
+  "30990": {
+    "industry": "Manufacture of other transport equipment n.e.c.",
+    "section": "C"
+  },
+  "31010": {
+    "industry": "Manufacture of office and shop furniture",
+    "section": "C"
+  },
+  "31020": {
+    "industry": "Manufacture of kitchen furniture",
+    "section": "C"
+  },
+  "31030": {
+    "industry": "Manufacture of mattresses",
+    "section": "C"
+  },
+  "31090": {
+    "industry": "Manufacture of other furniture",
+    "section": "C"
+  },
+  "32110": {
+    "industry": "Striking of coins",
+    "section": "C"
+  },
+  "32120": {
+    "industry": "Manufacture of jewellery and related articles",
+    "section": "C"
+  },
+  "32130": {
+    "industry": "Manufacture of imitation jewellery and related articles",
+    "section": "C"
+  },
+  "32200": {
+    "industry": "Manufacture of musical instruments",
+    "section": "C"
+  },
+  "32300": {
+    "industry": "Manufacture of sports goods",
+    "section": "C"
+  },
+  "32401": {
+    "industry": "Manufacture of professional and arcade games and toys",
+    "section": "C"
+  },
+  "32409": {
+    "industry": "Manufacture of other games and toys, n.e.c.",
+    "section": "C"
+  },
+  "32500": {
+    "industry": "Manufacture of medical and dental instruments and supplies",
+    "section": "C"
+  },
+  "32910": {
+    "industry": "Manufacture of brooms and brushes",
+    "section": "C"
+  },
+  "32990": {
+    "industry": "Other manufacturing n.e.c.",
+    "section": "C"
+  },
+  "33110": {
+    "industry": "Repair of fabricated metal products",
+    "section": "C"
+  },
+  "33120": {
+    "industry": "Repair of machinery",
+    "section": "C"
+  },
+  "33130": {
+    "industry": "Repair of electronic and optical equipment",
+    "section": "C"
+  },
+  "33140": {
+    "industry": "Repair of electrical equipment",
+    "section": "C"
+  },
+  "33150": {
+    "industry": "Repair and maintenance of ships and boats",
+    "section": "C"
+  },
+  "33160": {
+    "industry": "Repair and maintenance of aircraft and spacecraft",
+    "section": "C"
+  },
+  "33170": {
+    "industry": "Repair and maintenance of other transport equipment n.e.c.",
+    "section": "C"
+  },
+  "33190": {
+    "industry": "Repair of other equipment",
+    "section": "C"
+  },
+  "33200": {
+    "industry": "Installation of industrial machinery and equipment",
+    "section": "C"
+  },
+  "35110": {
+    "industry": "Production of electricity",
+    "section": "D"
+  },
+  "35120": {
+    "industry": "Transmission of electricity",
+    "section": "D"
+  },
+  "35130": {
+    "industry": "Distribution of electricity",
+    "section": "D"
+  },
+  "35140": {
+    "industry": "Trade of electricity",
+    "section": "D"
+  },
+  "35210": {
+    "industry": "Manufacture of gas",
+    "section": "D"
+  },
+  "35220": {
+    "industry": "Distribution of gaseous fuels through mains",
+    "section": "D"
+  },
+  "35230": {
+    "industry": "Trade of gas through mains",
+    "section": "D"
+  },
+  "35300": {
+    "industry": "Steam and air conditioning supply",
+    "section": "D"
+  },
+  "36000": {
+    "industry": "Water collection, treatment and supply",
+    "section": "E"
+  },
+  "37000": {
+    "industry": "Sewerage",
+    "section": "E"
+  },
+  "38110": {
+    "industry": "Collection of non-hazardous waste",
+    "section": "E"
+  },
+  "38120": {
+    "industry": "Collection of hazardous waste",
+    "section": "E"
+  },
+  "38210": {
+    "industry": "Treatment and disposal of non-hazardous waste",
+    "section": "E"
+  },
+  "38220": {
+    "industry": "Treatment and disposal of hazardous waste",
+    "section": "E"
+  },
+  "38310": {
+    "industry": "Dismantling of wrecks",
+    "section": "E"
+  },
+  "38320": {
+    "industry": "Recovery of sorted materials",
+    "section": "E"
+  },
+  "39000": {
+    "industry": "Remediation activities and other waste management services",
+    "section": "E"
+  },
+  "41100": {
+    "industry": "Development of building projects",
+    "section": "F"
+  },
+  "41201": {
+    "industry": "Construction of commercial buildings",
+    "section": "F"
+  },
+  "41202": {
+    "industry": "Construction of domestic buildings",
+    "section": "F"
+  },
+  "42110": {
+    "industry": "Construction of roads and motorways",
+    "section": "F"
+  },
+  "42120": {
+    "industry": "Construction of railways and underground railways",
+    "section": "F"
+  },
+  "42130": {
+    "industry": "Construction of bridges and tunnels",
+    "section": "F"
+  },
+  "42210": {
+    "industry": "Construction of utility projects for fluids",
+    "section": "F"
+  },
+  "42220": {
+    "industry": "Construction of utility projects for electricity and telecommunications",
+    "section": "F"
+  },
+  "42910": {
+    "industry": "Construction of water projects",
+    "section": "F"
+  },
+  "42990": {
+    "industry": "Construction of other civil engineering projects n.e.c.",
+    "section": "F"
+  },
+  "43110": {
+    "industry": "Demolition",
+    "section": "F"
+  },
+  "43120": {
+    "industry": "Site preparation",
+    "section": "F"
+  },
+  "43130": {
+    "industry": "Test drilling and boring",
+    "section": "F"
+  },
+  "43210": {
+    "industry": "Electrical installation",
+    "section": "F"
+  },
+  "43220": {
+    "industry": "Plumbing, heat and air-conditioning installation",
+    "section": "F"
+  },
+  "43290": {
+    "industry": "Other construction installation",
+    "section": "F"
+  },
+  "43310": {
+    "industry": "Plastering",
+    "section": "F"
+  },
+  "43320": {
+    "industry": "Joinery installation",
+    "section": "F"
+  },
+  "43330": {
+    "industry": "Floor and wall covering",
+    "section": "F"
+  },
+  "43341": {
+    "industry": "Painting",
+    "section": "F"
+  },
+  "43342": {
+    "industry": "Glazing",
+    "section": "F"
+  },
+  "43390": {
+    "industry": "Other building completion and finishing",
+    "section": "F"
+  },
+  "43910": {
+    "industry": "Roofing activities",
+    "section": "F"
+  },
+  "43991": {
+    "industry": "Scaffold erection",
+    "section": "F"
+  },
+  "43999": {
+    "industry": "Other specialised construction activities n.e.c.",
+    "section": "F"
+  },
+  "45111": {
+    "industry": "Sale of new cars and light motor vehicles",
+    "section": "G"
+  },
+  "45112": {
+    "industry": "Sale of used cars and light motor vehicles",
+    "section": "G"
+  },
+  "45190": {
+    "industry": "Sale of other motor vehicles",
+    "section": "G"
+  },
+  "45200": {
+    "industry": "Maintenance and repair of motor vehicles",
+    "section": "G"
+  },
+  "45310": {
+    "industry": "Wholesale trade of motor vehicle parts and accessories",
+    "section": "G"
+  },
+  "45320": {
+    "industry": "Retail trade of motor vehicle parts and accessories",
+    "section": "G"
+  },
+  "45400": {
+    "industry": "Sale, maintenance and repair of motorcycles and related parts and accessories",
+    "section": "G"
+  },
+  "46110": {
+    "industry": "Agents selling agricultural raw materials, livestock, textile raw materials and semi-finished goods",
+    "section": "G"
+  },
+  "46120": {
+    "industry": "Agents involved in the sale of fuels, ores, metals and industrial chemicals",
+    "section": "G"
+  },
+  "46130": {
+    "industry": "Agents involved in the sale of timber and building materials",
+    "section": "G"
+  },
+  "46140": {
+    "industry": "Agents involved in the sale of machinery, industrial equipment, ships and aircraft",
+    "section": "G"
+  },
+  "46150": {
+    "industry": "Agents involved in the sale of furniture, household goods, hardware and ironmongery",
+    "section": "G"
+  },
+  "46160": {
+    "industry": "Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
+    "section": "G"
+  },
+  "46170": {
+    "industry": "Agents involved in the sale of food, beverages and tobacco",
+    "section": "G"
+  },
+  "46180": {
+    "industry": "Agents specialised in the sale of other particular products",
+    "section": "G"
+  },
+  "46190": {
+    "industry": "Agents involved in the sale of a variety of goods",
+    "section": "G"
+  },
+  "46210": {
+    "industry": "Wholesale of grain, unmanufactured tobacco, seeds and animal feeds",
+    "section": "G"
+  },
+  "46220": {
+    "industry": "Wholesale of flowers and plants",
+    "section": "G"
+  },
+  "46230": {
+    "industry": "Wholesale of live animals",
+    "section": "G"
+  },
+  "46240": {
+    "industry": "Wholesale of hides, skins and leather",
+    "section": "G"
+  },
+  "46310": {
+    "industry": "Wholesale of fruit and vegetables",
+    "section": "G"
+  },
+  "46320": {
+    "industry": "Wholesale of meat and meat products",
+    "section": "G"
+  },
+  "46330": {
+    "industry": "Wholesale of dairy products, eggs and edible oils and fats",
+    "section": "G"
+  },
+  "46341": {
+    "industry": "Wholesale of fruit and vegetable juices, mineral water and soft drinks",
+    "section": "G"
+  },
+  "46342": {
+    "industry": "Wholesale of wine, beer, spirits and other alcoholic beverages",
+    "section": "G"
+  },
+  "46350": {
+    "industry": "Wholesale of tobacco products",
+    "section": "G"
+  },
+  "46360": {
+    "industry": "Wholesale of sugar and chocolate and sugar confectionery",
+    "section": "G"
+  },
+  "46370": {
+    "industry": "Wholesale of coffee, tea, cocoa and spices",
+    "section": "G"
+  },
+  "46380": {
+    "industry": "Wholesale of other food, including fish, crustaceans and molluscs",
+    "section": "G"
+  },
+  "46390": {
+    "industry": "Non-specialised wholesale of food, beverages and tobacco",
+    "section": "G"
+  },
+  "46410": {
+    "industry": "Wholesale of textiles",
+    "section": "G"
+  },
+  "46420": {
+    "industry": "Wholesale of clothing and footwear",
+    "section": "G"
+  },
+  "46431": {
+    "industry": "Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
+    "section": "G"
+  },
+  "46439": {
+    "industry": "Wholesale of radio, television goods & electrical household appliances (other than records, tapes, CD's & video tapes and the equipment used for playing them)",
+    "section": "G"
+  },
+  "46440": {
+    "industry": "Wholesale of china and glassware and cleaning materials",
+    "section": "G"
+  },
+  "46450": {
+    "industry": "Wholesale of perfume and cosmetics",
+    "section": "G"
+  },
+  "46460": {
+    "industry": "Wholesale of pharmaceutical goods",
+    "section": "G"
+  },
+  "46470": {
+    "industry": "Wholesale of furniture, carpets and lighting equipment",
+    "section": "G"
+  },
+  "46480": {
+    "industry": "Wholesale of watches and jewellery",
+    "section": "G"
+  },
+  "46491": {
+    "industry": "Wholesale of musical instruments",
+    "section": "G"
+  },
+  "46499": {
+    "industry": "Wholesale of household goods (other than musical instruments) n.e.c",
+    "section": "G"
+  },
+  "46510": {
+    "industry": "Wholesale of computers, computer peripheral equipment and software",
+    "section": "G"
+  },
+  "46520": {
+    "industry": "Wholesale of electronic and telecommunications equipment and parts",
+    "section": "G"
+  },
+  "46610": {
+    "industry": "Wholesale of agricultural machinery, equipment and supplies",
+    "section": "G"
+  },
+  "46620": {
+    "industry": "Wholesale of machine tools",
+    "section": "G"
+  },
+  "46630": {
+    "industry": "Wholesale of mining, construction and civil engineering machinery",
+    "section": "G"
+  },
+  "46640": {
+    "industry": "Wholesale of machinery for the textile industry and of sewing and knitting machines",
+    "section": "G"
+  },
+  "46650": {
+    "industry": "Wholesale of office furniture",
+    "section": "G"
+  },
+  "46660": {
+    "industry": "Wholesale of other office machinery and equipment",
+    "section": "G"
+  },
+  "46690": {
+    "industry": "Wholesale of other machinery and equipment",
+    "section": "G"
+  },
+  "46711": {
+    "industry": "Wholesale of petroleum and petroleum products",
+    "section": "G"
+  },
+  "46719": {
+    "industry": "Wholesale of other fuels and related products",
+    "section": "G"
+  },
+  "46720": {
+    "industry": "Wholesale of metals and metal ores",
+    "section": "G"
+  },
+  "46730": {
+    "industry": "Wholesale of wood, construction materials and sanitary equipment",
+    "section": "G"
+  },
+  "46740": {
+    "industry": "Wholesale of hardware, plumbing and heating equipment and supplies",
+    "section": "G"
+  },
+  "46750": {
+    "industry": "Wholesale of chemical products",
+    "section": "G"
+  },
+  "46760": {
+    "industry": "Wholesale of other intermediate products",
+    "section": "G"
+  },
+  "46770": {
+    "industry": "Wholesale of waste and scrap",
+    "section": "G"
+  },
+  "46900": {
+    "industry": "Non-specialised wholesale trade",
+    "section": "G"
+  },
+  "47110": {
+    "industry": "Retail sale in non-specialised stores with food, beverages or tobacco predominating",
+    "section": "G"
+  },
+  "47190": {
+    "industry": "Other retail sale in non-specialised stores",
+    "section": "G"
+  },
+  "47210": {
+    "industry": "Retail sale of fruit and vegetables in specialised stores",
+    "section": "G"
+  },
+  "47220": {
+    "industry": "Retail sale of meat and meat products in specialised stores",
+    "section": "G"
+  },
+  "47230": {
+    "industry": "Retail sale of fish, crustaceans and molluscs in specialised stores",
+    "section": "G"
+  },
+  "47240": {
+    "industry": "Retail sale of bread, cakes, flour confectionery and sugar confectionery in specialised stores",
+    "section": "G"
+  },
+  "47250": {
+    "industry": "Retail sale of beverages in specialised stores",
+    "section": "G"
+  },
+  "47260": {
+    "industry": "Retail sale of tobacco products in specialised stores",
+    "section": "G"
+  },
+  "47290": {
+    "industry": "Other retail sale of food in specialised stores",
+    "section": "G"
+  },
+  "47300": {
+    "industry": "Retail sale of automotive fuel in specialised stores",
+    "section": "G"
+  },
+  "47410": {
+    "industry": "Retail sale of computers, peripheral units and software in specialised stores",
+    "section": "G"
+  },
+  "47421": {
+    "industry": "Retail sale of mobile telephones",
+    "section": "G"
+  },
+  "47429": {
+    "industry": "Retail sale of telecommunications equipment other than mobile telephones",
+    "section": "G"
+  },
+  "47430": {
+    "industry": "Retail sale of audio and video equipment in specialised stores",
+    "section": "G"
+  },
+  "47510": {
+    "industry": "Retail sale of textiles in specialised stores",
+    "section": "G"
+  },
+  "47520": {
+    "industry": "Retail sale of hardware, paints and glass in specialised stores",
+    "section": "G"
+  },
+  "47530": {
+    "industry": "Retail sale of carpets, rugs, wall and floor coverings in specialised stores",
+    "section": "G"
+  },
+  "47540": {
+    "industry": "Retail sale of electrical household appliances in specialised stores",
+    "section": "G"
+  },
+  "47591": {
+    "industry": "Retail sale of musical instruments and scores",
+    "section": "G"
+  },
+  "47599": {
+    "industry": "Retail of furniture, lighting, and similar (not musical instruments or scores) in specialised store",
+    "section": "G"
+  },
+  "47610": {
+    "industry": "Retail sale of books in specialised stores",
+    "section": "G"
+  },
+  "47620": {
+    "industry": "Retail sale of newspapers and stationery in specialised stores",
+    "section": "G"
+  },
+  "47630": {
+    "industry": "Retail sale of music and video recordings in specialised stores",
+    "section": "G"
+  },
+  "47640": {
+    "industry": "Retail sale of sports goods, fishing gear, camping goods, boats and bicycles",
+    "section": "G"
+  },
+  "47650": {
+    "industry": "Retail sale of games and toys in specialised stores",
+    "section": "G"
+  },
+  "47710": {
+    "industry": "Retail sale of clothing in specialised stores",
+    "section": "G"
+  },
+  "47721": {
+    "industry": "Retail sale of footwear in specialised stores",
+    "section": "G"
+  },
+  "47722": {
+    "industry": "Retail sale of leather goods in specialised stores",
+    "section": "G"
+  },
+  "47730": {
+    "industry": "Dispensing chemist in specialised stores",
+    "section": "G"
+  },
+  "47741": {
+    "industry": "Retail sale of hearing aids",
+    "section": "G"
+  },
+  "47749": {
+    "industry": "Retail sale of medical and orthopaedic goods in specialised stores (not incl. hearing aids) n.e.c.",
+    "section": "G"
+  },
+  "47750": {
+    "industry": "Retail sale of cosmetic and toilet articles in specialised stores",
+    "section": "G"
+  },
+  "47760": {
+    "industry": "Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
+    "section": "G"
+  },
+  "47770": {
+    "industry": "Retail sale of watches and jewellery in specialised stores",
+    "section": "G"
+  },
+  "47781": {
+    "industry": "Retail sale in commercial art galleries",
+    "section": "G"
+  },
+  "47782": {
+    "industry": "Retail sale by opticians",
+    "section": "G"
+  },
+  "47789": {
+    "industry": "Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)",
+    "section": "G"
+  },
+  "47791": {
+    "industry": "Retail sale of antiques including antique books in stores",
+    "section": "G"
+  },
+  "47799": {
+    "industry": "Retail sale of other second-hand goods in stores (not incl. antiques)",
+    "section": "G"
+  },
+  "47810": {
+    "industry": "Retail sale via stalls and markets of food, beverages and tobacco products",
+    "section": "G"
+  },
+  "47820": {
+    "industry": "Retail sale via stalls and markets of textiles, clothing and footwear",
+    "section": "G"
+  },
+  "47890": {
+    "industry": "Retail sale via stalls and markets of other goods",
+    "section": "G"
+  },
+  "47910": {
+    "industry": "Retail sale via mail order houses or via Internet",
+    "section": "G"
+  },
+  "47990": {
+    "industry": "Other retail sale not in stores, stalls or markets",
+    "section": "G"
+  },
+  "49100": {
+    "industry": "Passenger rail transport, interurban",
+    "section": "H"
+  },
+  "49200": {
+    "industry": "Freight rail transport",
+    "section": "H"
+  },
+  "49311": {
+    "industry": "Urban and suburban passenger railway transportation by underground, metro and similar systems",
+    "section": "H"
+  },
+  "49319": {
+    "industry": "Other urban, suburban or metropolitan passenger land transport (not underground, metro or similar)",
+    "section": "H"
+  },
+  "49320": {
+    "industry": "Taxi operation",
+    "section": "H"
+  },
+  "49390": {
+    "industry": "Other passenger land transport",
+    "section": "H"
+  },
+  "49410": {
+    "industry": "Freight transport by road",
+    "section": "H"
+  },
+  "49420": {
+    "industry": "Removal services",
+    "section": "H"
+  },
+  "49500": {
+    "industry": "Transport via pipeline",
+    "section": "H"
+  },
+  "50100": {
+    "industry": "Sea and coastal passenger water transport",
+    "section": "H"
+  },
+  "50200": {
+    "industry": "Sea and coastal freight water transport",
+    "section": "H"
+  },
+  "50300": {
+    "industry": "Inland passenger water transport",
+    "section": "H"
+  },
+  "50400": {
+    "industry": "Inland freight water transport",
+    "section": "H"
+  },
+  "51101": {
+    "industry": "Scheduled passenger air transport",
+    "section": "H"
+  },
+  "51102": {
+    "industry": "Non-scheduled passenger air transport",
+    "section": "H"
+  },
+  "51210": {
+    "industry": "Freight air transport",
+    "section": "H"
+  },
+  "51220": {
+    "industry": "Space transport",
+    "section": "H"
+  },
+  "52101": {
+    "industry": "Operation of warehousing and storage facilities for water transport activities",
+    "section": "H"
+  },
+  "52102": {
+    "industry": "Operation of warehousing and storage facilities for air transport activities",
+    "section": "H"
+  },
+  "52103": {
+    "industry": "Operation of warehousing and storage facilities for land transport activities",
+    "section": "H"
+  },
+  "52211": {
+    "industry": "Operation of rail freight terminals",
+    "section": "H"
+  },
+  "52212": {
+    "industry": "Operation of rail passenger facilities at railway stations",
+    "section": "H"
+  },
+  "52213": {
+    "industry": "Operation of bus and coach passenger facilities at bus and coach stations",
+    "section": "H"
+  },
+  "52219": {
+    "industry": "Other service activities incidental to land transportation, n.e.c.",
+    "section": "H"
+  },
+  "52220": {
+    "industry": "Service activities incidental to water transportation",
+    "section": "H"
+  },
+  "52230": {
+    "industry": "Service activities incidental to air transportation",
+    "section": "H"
+  },
+  "52241": {
+    "industry": "Cargo handling for water transport activities",
+    "section": "H"
+  },
+  "52242": {
+    "industry": "Cargo handling for air transport activities",
+    "section": "H"
+  },
+  "52243": {
+    "industry": "Cargo handling for land transport activities",
+    "section": "H"
+  },
+  "52290": {
+    "industry": "Other transportation support activities",
+    "section": "H"
+  },
+  "53100": {
+    "industry": "Postal activities under universal service obligation",
+    "section": "H"
+  },
+  "53201": {
+    "industry": "Licensed carriers",
+    "section": "H"
+  },
+  "53202": {
+    "industry": "Unlicensed carriers",
+    "section": "H"
+  },
+  "55100": {
+    "industry": "Hotels and similar accommodation",
+    "section": "I"
+  },
+  "55201": {
+    "industry": "Holiday centres and villages",
+    "section": "I"
+  },
+  "55202": {
+    "industry": "Youth hostels",
+    "section": "I"
+  },
+  "55209": {
+    "industry": "Other holiday and other collective accommodation",
+    "section": "I"
+  },
+  "55300": {
+    "industry": "Recreational vehicle parks, trailer parks and camping grounds",
+    "section": "I"
+  },
+  "55900": {
+    "industry": "Other accommodation",
+    "section": "I"
+  },
+  "56101": {
+    "industry": "Licenced restaurants",
+    "section": "I"
+  },
+  "56102": {
+    "industry": "Unlicenced restaurants and cafes",
+    "section": "I"
+  },
+  "56103": {
+    "industry": "Take-away food shops and mobile food stands",
+    "section": "I"
+  },
+  "56210": {
+    "industry": "Event catering activities",
+    "section": "I"
+  },
+  "56290": {
+    "industry": "Other food services",
+    "section": "I"
+  },
+  "56301": {
+    "industry": "Licenced clubs",
+    "section": "I"
+  },
+  "56302": {
+    "industry": "Public houses and bars",
+    "section": "I"
+  },
+  "58110": {
+    "industry": "Book publishing",
+    "section": "J"
+  },
+  "58120": {
+    "industry": "Publishing of directories and mailing lists",
+    "section": "J"
+  },
+  "58130": {
+    "industry": "Publishing of newspapers",
+    "section": "J"
+  },
+  "58141": {
+    "industry": "Publishing of learned journals",
+    "section": "J"
+  },
+  "58142": {
+    "industry": "Publishing of  consumer and business journals and periodicals",
+    "section": "J"
+  },
+  "58190": {
+    "industry": "Other publishing activities",
+    "section": "J"
+  },
+  "58210": {
+    "industry": "Publishing of computer games",
+    "section": "J"
+  },
+  "58290": {
+    "industry": "Other software publishing",
+    "section": "J"
+  },
+  "59111": {
+    "industry": "Motion picture production activities",
+    "section": "J"
+  },
+  "59112": {
+    "industry": "Video production activities",
+    "section": "J"
+  },
+  "59113": {
+    "industry": "Television programme production activities",
+    "section": "J"
+  },
+  "59120": {
+    "industry": "Motion picture, video and television programme post-production activities",
+    "section": "J"
+  },
+  "59131": {
+    "industry": "Motion picture distribution activities",
+    "section": "J"
+  },
+  "59132": {
+    "industry": "Video distribution activities",
+    "section": "J"
+  },
+  "59133": {
+    "industry": "Television programme distribution activities",
+    "section": "J"
+  },
+  "59140": {
+    "industry": "Motion picture projection activities",
+    "section": "J"
+  },
+  "59200": {
+    "industry": "Sound recording and music publishing activities",
+    "section": "J"
+  },
+  "60100": {
+    "industry": "Radio broadcasting",
+    "section": "J"
+  },
+  "60200": {
+    "industry": "Television programming and broadcasting activities",
+    "section": "J"
+  },
+  "61100": {
+    "industry": "Wired telecommunications activities",
+    "section": "J"
+  },
+  "61200": {
+    "industry": "Wireless telecommunications activities",
+    "section": "J"
+  },
+  "61300": {
+    "industry": "Satellite telecommunications activities",
+    "section": "J"
+  },
+  "61900": {
+    "industry": "Other telecommunications activities",
+    "section": "J"
+  },
+  "62011": {
+    "industry": "Ready-made interactive leisure and entertainment software development",
+    "section": "J"
+  },
+  "62012": {
+    "industry": "Business and domestic software development",
+    "section": "J"
+  },
+  "62020": {
+    "industry": "Information technology consultancy activities",
+    "section": "J"
+  },
+  "62030": {
+    "industry": "Computer facilities management activities",
+    "section": "J"
+  },
+  "62090": {
+    "industry": "Other information technology service activities",
+    "section": "J"
+  },
+  "63110": {
+    "industry": "Data processing, hosting and related activities",
+    "section": "J"
+  },
+  "63120": {
+    "industry": "Web portals",
+    "section": "J"
+  },
+  "63910": {
+    "industry": "News agency activities",
+    "section": "J"
+  },
+  "63990": {
+    "industry": "Other information service activities n.e.c.",
+    "section": "J"
+  },
+  "64110": {
+    "industry": "Central banking",
+    "section": "K"
+  },
+  "64191": {
+    "industry": "Banks",
+    "section": "K"
+  },
+  "64192": {
+    "industry": "Building societies",
+    "section": "K"
+  },
+  "64201": {
+    "industry": "Activities of agricultural holding companies",
+    "section": "K"
+  },
+  "64202": {
+    "industry": "Activities of production holding companies",
+    "section": "K"
+  },
+  "64203": {
+    "industry": "Activities of construction holding companies",
+    "section": "K"
+  },
+  "64204": {
+    "industry": "Activities of distribution holding companies",
+    "section": "K"
+  },
+  "64205": {
+    "industry": "Activities of financial services holding companies",
+    "section": "K"
+  },
+  "64209": {
+    "industry": "Activities of other holding companies n.e.c.",
+    "section": "K"
+  },
+  "64301": {
+    "industry": "Activities of investment trusts",
+    "section": "K"
+  },
+  "64302": {
+    "industry": "Activities of unit trusts",
+    "section": "K"
+  },
+  "64303": {
+    "industry": "Activities of venture and development capital companies",
+    "section": "K"
+  },
+  "64304": {
+    "industry": "Activities of open-ended investment companies",
+    "section": "K"
+  },
+  "64305": {
+    "industry": "Activities of property unit trusts",
+    "section": "K"
+  },
+  "64306": {
+    "industry": "Activities of real estate investment trusts",
+    "section": "K"
+  },
+  "64910": {
+    "industry": "Financial leasing",
+    "section": "K"
+  },
+  "64921": {
+    "industry": "Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors",
+    "section": "K"
+  },
+  "64922": {
+    "industry": "Activities of mortgage finance companies",
+    "section": "K"
+  },
+  "64929": {
+    "industry": "Other credit granting n.e.c.",
+    "section": "K"
+  },
+  "64991": {
+    "industry": "Security dealing on own account",
+    "section": "K"
+  },
+  "64992": {
+    "industry": "Factoring",
+    "section": "K"
+  },
+  "64999": {
+    "industry": "Financial intermediation not elsewhere classified",
+    "section": "K"
+  },
+  "65110": {
+    "industry": "Life insurance",
+    "section": "K"
+  },
+  "65120": {
+    "industry": "Non-life insurance",
+    "section": "K"
+  },
+  "65201": {
+    "industry": "Life reinsurance",
+    "section": "K"
+  },
+  "65202": {
+    "industry": "Non-life reinsurance",
+    "section": "K"
+  },
+  "65300": {
+    "industry": "Pension funding",
+    "section": "K"
+  },
+  "66110": {
+    "industry": "Administration of financial markets",
+    "section": "K"
+  },
+  "66120": {
+    "industry": "Security and commodity contracts dealing activities",
+    "section": "K"
+  },
+  "66190": {
+    "industry": "Activities auxiliary to financial intermediation n.e.c.",
+    "section": "K"
+  },
+  "66210": {
+    "industry": "Risk and damage evaluation",
+    "section": "K"
+  },
+  "66220": {
+    "industry": "Activities of insurance agents and brokers",
+    "section": "K"
+  },
+  "66290": {
+    "industry": "Other activities auxiliary to insurance and pension funding",
+    "section": "K"
+  },
+  "66300": {
+    "industry": "Fund management activities",
+    "section": "K"
+  },
+  "68100": {
+    "industry": "Buying and selling of own real estate",
+    "section": "L"
+  },
+  "68201": {
+    "industry": "Renting and operating of Housing Association real estate",
+    "section": "L"
+  },
+  "68202": {
+    "industry": "Letting and operating of conference and exhibition centres",
+    "section": "L"
+  },
+  "68209": {
+    "industry": "Other letting and operating of own or leased real estate",
+    "section": "L"
+  },
+  "68310": {
+    "industry": "Real estate agencies",
+    "section": "L"
+  },
+  "68320": {
+    "industry": "Management of real estate on a fee or contract basis",
+    "section": "L"
+  },
+  "69101": {
+    "industry": "Barristers at law",
+    "section": "M"
+  },
+  "69102": {
+    "industry": "Solicitors",
+    "section": "M"
+  },
+  "69109": {
+    "industry": "Activities of patent and copyright agents; other legal activities n.e.c.",
+    "section": "M"
+  },
+  "69201": {
+    "industry": "Accounting and auditing activities",
+    "section": "M"
+  },
+  "69202": {
+    "industry": "Bookkeeping activities",
+    "section": "M"
+  },
+  "69203": {
+    "industry": "Tax consultancy",
+    "section": "M"
+  },
+  "70100": {
+    "industry": "Activities of head offices",
+    "section": "M"
+  },
+  "70210": {
+    "industry": "Public relations and communications activities",
+    "section": "M"
+  },
+  "70221": {
+    "industry": "Financial management",
+    "section": "M"
+  },
+  "70229": {
+    "industry": "Management consultancy activities other than financial management",
+    "section": "M"
+  },
+  "71111": {
+    "industry": "Architectural activities",
+    "section": "M"
+  },
+  "71112": {
+    "industry": "Urban planning and landscape architectural activities",
+    "section": "M"
+  },
+  "71121": {
+    "industry": "Engineering design activities for industrial process and production",
+    "section": "M"
+  },
+  "71122": {
+    "industry": "Engineering related scientific and technical consulting activities",
+    "section": "M"
+  },
+  "71129": {
+    "industry": "Other engineering activities",
+    "section": "M"
+  },
+  "71200": {
+    "industry": "Technical testing and analysis",
+    "section": "M"
+  },
+  "72110": {
+    "industry": "Research and experimental development on biotechnology",
+    "section": "M"
+  },
+  "72190": {
+    "industry": "Other research and experimental development on natural sciences and engineering",
+    "section": "M"
+  },
+  "72200": {
+    "industry": "Research and experimental development on social sciences and humanities",
+    "section": "M"
+  },
+  "73110": {
+    "industry": "Advertising agencies",
+    "section": "M"
+  },
+  "73120": {
+    "industry": "Media representation services",
+    "section": "M"
+  },
+  "73200": {
+    "industry": "Market research and public opinion polling",
+    "section": "M"
+  },
+  "74100": {
+    "industry": "specialised design activities",
+    "section": "M"
+  },
+  "74201": {
+    "industry": "Portrait photographic activities",
+    "section": "M"
+  },
+  "74202": {
+    "industry": "Other specialist photography",
+    "section": "M"
+  },
+  "74203": {
+    "industry": "Film processing",
+    "section": "M"
+  },
+  "74209": {
+    "industry": "Photographic activities not elsewhere classified",
+    "section": "M"
+  },
+  "74300": {
+    "industry": "Translation and interpretation activities",
+    "section": "M"
+  },
+  "74901": {
+    "industry": "Environmental consulting activities",
+    "section": "M"
+  },
+  "74902": {
+    "industry": "Quantity surveying activities",
+    "section": "M"
+  },
+  "74909": {
+    "industry": "Other professional, scientific and technical activities n.e.c.",
+    "section": "M"
+  },
+  "74990": {
+    "industry": "Non-trading company non trading",
+    "section": "M"
+  },
+  "75000": {
+    "industry": "Veterinary activities",
+    "section": "M"
+  },
+  "77110": {
+    "industry": "Renting and leasing of cars and light motor vehicles",
+    "section": "N"
+  },
+  "77120": {
+    "industry": "Renting and leasing of trucks and other heavy vehicles",
+    "section": "N"
+  },
+  "77210": {
+    "industry": "Renting and leasing of recreational and sports goods",
+    "section": "N"
+  },
+  "77220": {
+    "industry": "Renting of video tapes and disks",
+    "section": "N"
+  },
+  "77291": {
+    "industry": "Renting and leasing of media entertainment equipment",
+    "section": "N"
+  },
+  "77299": {
+    "industry": "Renting and leasing of other personal and household goods",
+    "section": "N"
+  },
+  "77310": {
+    "industry": "Renting and leasing of agricultural machinery and equipment",
+    "section": "N"
+  },
+  "77320": {
+    "industry": "Renting and leasing of construction and civil engineering machinery and equipment",
+    "section": "N"
+  },
+  "77330": {
+    "industry": "Renting and leasing of office machinery and equipment (including computers)",
+    "section": "N"
+  },
+  "77341": {
+    "industry": "Renting and leasing of passenger water transport equipment",
+    "section": "N"
+  },
+  "77342": {
+    "industry": "Renting and leasing of freight water transport equipment",
+    "section": "N"
+  },
+  "77351": {
+    "industry": "Renting and leasing of air passenger transport equipment",
+    "section": "N"
+  },
+  "77352": {
+    "industry": "Renting and leasing of freight air transport equipment",
+    "section": "N"
+  },
+  "77390": {
+    "industry": "Renting and leasing of other machinery, equipment and tangible goods n.e.c.",
+    "section": "N"
+  },
+  "77400": {
+    "industry": "Leasing of intellectual property and similar products, except copyright works",
+    "section": "N"
+  },
+  "78101": {
+    "industry": "Motion picture, television and other theatrical casting activities",
+    "section": "N"
+  },
+  "78109": {
+    "industry": "Other activities of employment placement agencies",
+    "section": "N"
+  },
+  "78200": {
+    "industry": "Temporary employment agency activities",
+    "section": "N"
+  },
+  "78300": {
+    "industry": "Human resources provision and management of human resources functions",
+    "section": "N"
+  },
+  "79110": {
+    "industry": "Travel agency activities",
+    "section": "N"
+  },
+  "79120": {
+    "industry": "Tour operator activities",
+    "section": "N"
+  },
+  "79901": {
+    "industry": "Activities of tourist guides",
+    "section": "N"
+  },
+  "79909": {
+    "industry": "Other reservation service activities n.e.c.",
+    "section": "N"
+  },
+  "80100": {
+    "industry": "Private security activities",
+    "section": "N"
+  },
+  "80200": {
+    "industry": "Security systems service activities",
+    "section": "N"
+  },
+  "80300": {
+    "industry": "Investigation activities",
+    "section": "N"
+  },
+  "81100": {
+    "industry": "Combined facilities support activities",
+    "section": "N"
+  },
+  "81210": {
+    "industry": "General cleaning of buildings",
+    "section": "N"
+  },
+  "81221": {
+    "industry": "Window cleaning services",
+    "section": "N"
+  },
+  "81222": {
+    "industry": "Specialised cleaning services",
+    "section": "N"
+  },
+  "81223": {
+    "industry": "Furnace and chimney cleaning services",
+    "section": "N"
+  },
+  "81229": {
+    "industry": "Other building and industrial cleaning activities",
+    "section": "N"
+  },
+  "81291": {
+    "industry": "Disinfecting and exterminating services",
+    "section": "N"
+  },
+  "81299": {
+    "industry": "Other cleaning services",
+    "section": "N"
+  },
+  "81300": {
+    "industry": "Landscape service activities",
+    "section": "N"
+  },
+  "82110": {
+    "industry": "Combined office administrative service activities",
+    "section": "N"
+  },
+  "82190": {
+    "industry": "Photocopying, document preparation and other specialised office support activities",
+    "section": "N"
+  },
+  "82200": {
+    "industry": "Activities of call centres",
+    "section": "N"
+  },
+  "82301": {
+    "industry": "Activities of exhibition and fair organisers",
+    "section": "N"
+  },
+  "82302": {
+    "industry": "Activities of conference organisers",
+    "section": "N"
+  },
+  "82911": {
+    "industry": "Activities of collection agencies",
+    "section": "N"
+  },
+  "82912": {
+    "industry": "Activities of credit bureaus",
+    "section": "N"
+  },
+  "82920": {
+    "industry": "Packaging activities",
+    "section": "N"
+  },
+  "82990": {
+    "industry": "Other business support service activities n.e.c.",
+    "section": "N"
+  },
+  "84110": {
+    "industry": "General public administration activities",
+    "section": "O"
+  },
+  "84120": {
+    "industry": "Regulation of health care, education, cultural and other social services, not incl. social security",
+    "section": "O"
+  },
+  "84130": {
+    "industry": "Regulation of and contribution to more efficient operation of businesses",
+    "section": "O"
+  },
+  "84210": {
+    "industry": "Foreign affairs",
+    "section": "O"
+  },
+  "84220": {
+    "industry": "Defence activities",
+    "section": "O"
+  },
+  "84230": {
+    "industry": "Justice and judicial activities",
+    "section": "O"
+  },
+  "84240": {
+    "industry": "Public order and safety activities",
+    "section": "O"
+  },
+  "84250": {
+    "industry": "Fire service activities",
+    "section": "O"
+  },
+  "84300": {
+    "industry": "Compulsory social security activities",
+    "section": "O"
+  },
+  "85100": {
+    "industry": "Pre-primary education",
+    "section": "P"
+  },
+  "85200": {
+    "industry": "Primary education",
+    "section": "P"
+  },
+  "85310": {
+    "industry": "General secondary education",
+    "section": "P"
+  },
+  "85320": {
+    "industry": "Technical and vocational secondary education",
+    "section": "P"
+  },
+  "85410": {
+    "industry": "Post-secondary non-tertiary education",
+    "section": "P"
+  },
+  "85421": {
+    "industry": "First-degree level higher education",
+    "section": "P"
+  },
+  "85422": {
+    "industry": "Post-graduate level higher education",
+    "section": "P"
+  },
+  "85510": {
+    "industry": "Sports and recreation education",
+    "section": "P"
+  },
+  "85520": {
+    "industry": "Cultural education",
+    "section": "P"
+  },
+  "85530": {
+    "industry": "Driving school activities",
+    "section": "P"
+  },
+  "85590": {
+    "industry": "Other education n.e.c.",
+    "section": "P"
+  },
+  "85600": {
+    "industry": "Educational support services",
+    "section": "P"
+  },
+  "86101": {
+    "industry": "Hospital activities",
+    "section": "Q"
+  },
+  "86102": {
+    "industry": "Medical nursing home activities",
+    "section": "Q"
+  },
+  "86210": {
+    "industry": "General medical practice activities",
+    "section": "Q"
+  },
+  "86220": {
+    "industry": "Specialists medical practice activities",
+    "section": "Q"
+  },
+  "86230": {
+    "industry": "Dental practice activities",
+    "section": "Q"
+  },
+  "86900": {
+    "industry": "Other human health activities",
+    "section": "Q"
+  },
+  "87100": {
+    "industry": "Residential nursing care facilities",
+    "section": "Q"
+  },
+  "87200": {
+    "industry": "Residential care activities for learning difficulties, mental health and substance abuse",
+    "section": "Q"
+  },
+  "87300": {
+    "industry": "Residential care activities for the elderly and disabled",
+    "section": "Q"
+  },
+  "87900": {
+    "industry": "Other residential care activities n.e.c.",
+    "section": "Q"
+  },
+  "88100": {
+    "industry": "Social work activities without accommodation for the elderly and disabled",
+    "section": "Q"
+  },
+  "88910": {
+    "industry": "Child day-care activities",
+    "section": "Q"
+  },
+  "88990": {
+    "industry": "Other social work activities without accommodation n.e.c.",
+    "section": "Q"
+  },
+  "90010": {
+    "industry": "Performing arts",
+    "section": "R"
+  },
+  "90020": {
+    "industry": "Support activities to performing arts",
+    "section": "R"
+  },
+  "90030": {
+    "industry": "Artistic creation",
+    "section": "R"
+  },
+  "90040": {
+    "industry": "Operation of arts facilities",
+    "section": "R"
+  },
+  "91011": {
+    "industry": "Library activities",
+    "section": "R"
+  },
+  "91012": {
+    "industry": "Archives activities",
+    "section": "R"
+  },
+  "91020": {
+    "industry": "Museums activities",
+    "section": "R"
+  },
+  "91030": {
+    "industry": "Operation of historical sites and buildings and similar visitor attractions",
+    "section": "R"
+  },
+  "91040": {
+    "industry": "Botanical and zoological gardens and nature reserves activities",
+    "section": "R"
+  },
+  "92000": {
+    "industry": "Gambling and betting activities",
+    "section": "R"
+  },
+  "93110": {
+    "industry": "Operation of sports facilities",
+    "section": "R"
+  },
+  "93120": {
+    "industry": "Activities of sport clubs",
+    "section": "R"
+  },
+  "93130": {
+    "industry": "Fitness facilities",
+    "section": "R"
+  },
+  "93191": {
+    "industry": "Activities of racehorse owners",
+    "section": "R"
+  },
+  "93199": {
+    "industry": "Other sports activities",
+    "section": "R"
+  },
+  "93210": {
+    "industry": "Activities of amusement parks and theme parks",
+    "section": "R"
+  },
+  "93290": {
+    "industry": "Other amusement and recreation activities n.e.c.",
+    "section": "R"
+  },
+  "94110": {
+    "industry": "Activities of business and employers membership organisations",
+    "section": "S"
+  },
+  "94120": {
+    "industry": "Activities of professional membership organisations",
+    "section": "S"
+  },
+  "94200": {
+    "industry": "Activities of trade unions",
+    "section": "S"
+  },
+  "94910": {
+    "industry": "Activities of religious organisations",
+    "section": "S"
+  },
+  "94920": {
+    "industry": "Activities of political organisations",
+    "section": "S"
+  },
+  "94990": {
+    "industry": "Activities of other membership organisations n.e.c.",
+    "section": "S"
+  },
+  "95110": {
+    "industry": "Repair of computers and peripheral equipment",
+    "section": "S"
+  },
+  "95120": {
+    "industry": "Repair of communication equipment",
+    "section": "S"
+  },
+  "95210": {
+    "industry": "Repair of consumer electronics",
+    "section": "S"
+  },
+  "95220": {
+    "industry": "Repair of household appliances and home and garden equipment",
+    "section": "S"
+  },
+  "95230": {
+    "industry": "Repair of footwear and leather goods",
+    "section": "S"
+  },
+  "95240": {
+    "industry": "Repair of furniture and home furnishings",
+    "section": "S"
+  },
+  "95250": {
+    "industry": "Repair of watches, clocks and jewellery",
+    "section": "S"
+  },
+  "95290": {
+    "industry": "Repair of personal and household goods n.e.c.",
+    "section": "S"
+  },
+  "96010": {
+    "industry": "Washing and (dry-)cleaning of textile and fur products",
+    "section": "S"
+  },
+  "96020": {
+    "industry": "Hairdressing and other beauty treatment",
+    "section": "S"
+  },
+  "96030": {
+    "industry": "Funeral and related activities",
+    "section": "S"
+  },
+  "96040": {
+    "industry": "Physical well-being activities",
+    "section": "S"
+  },
+  "96090": {
+    "industry": "Other service activities n.e.c.",
+    "section": "S"
+  },
+  "97000": {
+    "industry": "Activities of households as employers of domestic personnel",
+    "section": "T"
+  },
+  "98000": {
+    "industry": "Residents property management",
+    "section": "T"
+  },
+  "98100": {
+    "industry": "Undifferentiated goods-producing activities of private households for own use",
+    "section": "T"
+  },
+  "98200": {
+    "industry": "Undifferentiated service-producing activities of private households for own use",
+    "section": "T"
+  },
+  "99000": {
+    "industry": "Activities of extraterritorial organisations and bodies",
+    "section": "U"
+  },
+  "99999": {
+    "industry": "Dormant Company",
+    "section": "U"
+  }
+}
