@@ -5,10 +5,12 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
+cache/
 
 # exclude data files
 *.csv
 *.xlsx
+*.geojson
 
 # exclude images
 *.png
