@@ -14,14 +14,13 @@ st.markdown('<style>div[data-testid="stForm"]{background-color: #fcfbfb;}</style
 st.markdown('<style>section[data-testid="stSidebar"]{background-color: #dfdedd;}</style>',unsafe_allow_html=True)
 
 st.title('Cycling rates in London')
-#st.markdown("[![Foo](https://github.com/Lisa-Ho/Lisa-Ho/blob/main/Github-readme-twitter-icon.png)](https://twitter.com/LisaHornung_)")
 
 
 # ========== DATA & SETUP
 # Load data
 @st.cache
 def load_data():
-    df = pd.read_csv("cycling_rates_london_2016-2021.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/Lisa-Ho/data-a-and-v/main/2210-london-cycling/cycling_rates_london_cleaned_2016-2021.csv")
     return df
     
 df = load_data()
@@ -49,13 +48,13 @@ st.sidebar.subheader("Customise visual")
 with st.form(key ='Form1'):
     with st.sidebar:
         main_title = st.text_input("Title", "Cycling rates in London")
-        title_fontsize = st.sidebar.number_input("Title fontsize", 25)
-        clr_title = st.sidebar.color_picker('Title colour', '#184e77')
-        clr_background = st.sidebar.color_picker('Background colour', '#f7f6f4')
-        clr_value = st.sidebar.color_picker('Highlight value colour', '#1e6091')
-        clr_line = st.sidebar.color_picker('Line colour', '#168aad')
-        clr_area = st.sidebar.color_picker('Area colour', '#76c893')
-        alpha_area = st.sidebar.number_input("Area opacity (0=transparent, 1=solid)",min_value=0.00, max_value=1.00, value=0.5)
+        title_fontsize = st.number_input("Title fontsize", 25)
+        clr_title = st.color_picker('Title colour', '#184e77')
+        clr_background = st.color_picker('Background colour', '#f7f6f4')
+        clr_value = st.color_picker('Highlight value colour', '#1e6091')
+        clr_line = st.color_picker('Line colour', '#168aad')
+        clr_area = st.color_picker('Area colour', '#76c893')
+        alpha_area = st.number_input("Area opacity (0=transparent, 1=solid)",min_value=0.00, max_value=1.00, value=0.5)
         submitted = st.form_submit_button('Update map')
 
 # =========== FILTER SELECTIONS
@@ -71,8 +70,8 @@ with st.form(key='columns_in_form'):
         frequency = st.radio("Cycling frequency", ('At least once per month', 'At least once per week', 'At least 3 times per week', 'At least 5 times per week'))
     submitted = st.form_submit_button('Update map')
 
-footer = "Source: Active Life Survey | Design: Lisa Hornung"
-subtitle = "Proportion of people cycling " + frequency.lower() + " for " + purpose.lower() + " purposes (%)"
+footer = "Source: Active Lives Survey | Design: Lisa Hornung"
+subtitle = "Proportion of people cycling " + frequency.lower() + " for " + purpose.lower() + " purpose (%)"
 
 st.write("")
 
@@ -193,30 +192,26 @@ st.write("")
 st.write("")
 
 # download data
-@st.cache
-def convert_df(data):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun
-    return data.to_csv().encode('utf-8')
-
-csv = convert_df(data)
+csv = data[['ONS Code', 'Area name','2016', '2017', '2018','2019', '2020', '2021']].to_csv(index=False)
 
 st.download_button(
     label="Download data as CSV",
     data=csv,
-    file_name='cycling_rates_london.csv',
+    file_name='london_cycling_rates_%s_%s.csv' % (purpose.lower(), frequency.lower()),
     mime='text/csv',
 )
 
-plt.savefig("cycling_rates_london.png",bbox_inches="tight", pad_inches=0.2)
-with open("cycling_rates_london.png", "rb") as file:
+#download image
+plt.savefig("london_cycling_rates.png",bbox_inches="tight", pad_inches=0.2)
+with open("london_cycling_rates.png", "rb") as file:
     btn = st.download_button(
             label="Download image",
             data=file,
-            file_name="cycling_rates_london.png",
+            file_name="london_cycling_rates.png",
             mime="image/png"
           )
 
 st.write("")
 st.subheader("About")
-st.markdown("Data source: DfT [Active Travel Survey 2021](https://www.gov.uk/government/statistics/walking-and-cycling-statistics-england-2021)")
+st.markdown("Data source: [Active Lives Survey 2021](https://www.gov.uk/government/statistics/walking-and-cycling-statistics-england-2021)")
 st.markdown("App created by Lisa Hornung. Follow me on [Twitter](https://twitter.com/LisaHornung_) or checkout my [website](https://inside-numbers.com/)")
