@@ -48,7 +48,7 @@ st.sidebar.subheader("Customise visual")
 with st.form(key ='Form1'):
     with st.sidebar:
         main_title = st.text_input("Title", "Cycling rates in London")
-        title_fontsize = st.number_input("Title fontsize", 25)
+        title_fontsize = st.number_input("Title fontsize", min_value=10, max_value=30, value25)
         clr_title = st.color_picker('Title colour', '#184e77')
         clr_background = st.color_picker('Background colour', '#f7f6f4')
         clr_value = st.color_picker('Highlight value colour', '#1e6091')
