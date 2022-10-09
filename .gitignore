@@ -20,5 +20,8 @@ cache/
 *.jpeg
 *.svg
 
+#exclude docs
+*.docx
+
 #exclude design files
 *.ai
