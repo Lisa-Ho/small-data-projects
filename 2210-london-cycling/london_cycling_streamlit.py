@@ -48,7 +48,7 @@ st.sidebar.subheader("Customise visual")
 with st.form(key ='Form1'):
     with st.sidebar:
         main_title = st.text_input("Title", "Cycling rates in London")
-        title_fontsize = st.number_input("Title fontsize", min_value=10, max_value=30, value25)
+        title_fontsize = st.number_input("Title fontsize", min_value=10, max_value=35, value=30)
         clr_title = st.color_picker('Title colour', '#184e77')
         clr_background = st.color_picker('Background colour', '#f7f6f4')
         clr_value = st.color_picker('Highlight value colour', '#1e6091')
@@ -163,14 +163,14 @@ plt.gca().annotate('borough', xy=(min(x_values)+0.2, height-1), xycoords='data',
 
 #=============== Text           
 ## Add titles and footer
-y_pos = 1.0
+y_pos = 1.05
 x_pos = 0.05
 
 fig.text(x_pos, y_pos, main_title, fontsize=title_fontsize, ha='left',va="top",
              fontweight="bold",  color=clr_title)
-fig.text(x_pos, y_pos-(title_fontsize*0.2*0.01), subtitle, fontsize=14, ha='left',va="top",
+fig.text(x_pos, y_pos-(title_fontsize*0.2*0.01), subtitle, fontsize=15, ha='left',va="top",
              fontweight="normal",   color="#111111")
-fig.text(x_pos, 0, footer, fontsize=11, ha='left',va="center",
+fig.text(x_pos, -0.05, footer, fontsize=11, ha='left',va="center",
              fontweight="normal",  linespacing=1.5, color="#111111")
 
 
@@ -214,4 +214,4 @@ with open("london_cycling_rates.png", "rb") as file:
 st.write("")
 st.subheader("About")
 st.markdown("Data source: [Active Lives Survey 2021](https://www.gov.uk/government/statistics/walking-and-cycling-statistics-england-2021)")
-st.markdown("App created by Lisa Hornung. Follow me on [Twitter](https://twitter.com/LisaHornung_) or checkout my [website](https://inside-numbers.com/)")
+st.markdown("App created by Lisa Hornung. Visit my [website](https://inside-numbers.com/) or follow me on [Github](https://github.com/Lisa-Ho), [Mastodon](https://fosstodon.org/@LisaHornung), [Twitter](https://twitter.com/LisaHornung_).")
