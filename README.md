@@ -69,6 +69,13 @@ Continued playing around with cycling data for London. Updated the tilegrid map 
 <img src="https://user-images.githubusercontent.com/50448656/213873978-e80b3788-3e8c-46c4-b34e-df7cd5c5f624.png" height="250"><img src="https://user-images.githubusercontent.com/50448656/213873988-6559bea2-7b41-4cdb-98a6-9e7b1d269866.png" height="250"><img src="https://user-images.githubusercontent.com/50448656/213874002-72192250-c7a7-4eb9-8917-18f412e13564.png" height="250">
 
 
+### 01/2023 Cultural venues in London
+
+Follow up from maps I created as part of the #30DayMapChallenge 2022. Fun to play around with fishnet grids in python and created some maps that display aggregate data per square km (here: cultural venues in London). Definitely something I'll come back to at some point.
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2301-culture-venues-london/cultural-venues-london-maps.ipynb)
+
+<img src="https://user-images.githubusercontent.com/50448656/213877448-3f26169e-0bee-45c4-82b8-adf9dc6a551a.png" width="550">
 
 
 
