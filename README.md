@@ -75,8 +75,6 @@ Follow up from maps I created as part of the #30DayMapChallenge 2022. Fun to pla
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2301-culture-venues-london/cultural-venues-london-maps.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/213877448-3f26169e-0bee-45c4-82b8-adf9dc6a551a.png" width="550">
-
-
+<img src="https://user-images.githubusercontent.com/50448656/213877655-1c1503a5-33dc-4fb4-b455-60203ea47fa4.png" width="550">
 
 
