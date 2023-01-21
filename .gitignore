@@ -25,3 +25,6 @@ cache/
 
 #exclude design files
 *.ai
+
+#config files
+*.cfg
