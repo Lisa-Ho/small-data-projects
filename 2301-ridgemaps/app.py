@@ -2,20 +2,25 @@ import folium
 from folium.plugins import Draw
 import streamlit as st
 from streamlit_folium import st_folium
+from streamlit_image_select import image_select
 
 import geopandas as gpd
 from shapely.geometry import Polygon
 import matplotlib.pyplot as plt
 from ridge_map import RidgeMap
 
+#========= Page config
 st.set_page_config(
-    page_title="RidgeMaps",
-    page_icon="bicyclist",
+    page_title="ridgemap",
+    page_icon="🖼️",
+    initial_sidebar_state="collapsed"
     #layout="wide",
      )
-st.title('RidgeMaps')
+#st.markdown('<style>div.appview-container{background-color: #f7f6f4;}</style>',unsafe_allow_html=True)
+#st.markdown('<style>div[data-testid="stForm"]{background-color: #fcfbfb;}</style>',unsafe_allow_html=True)
+#st.markdown('<style>section[data-testid="stSidebar"]{background-color: #dfdedd;}</style>',unsafe_allow_html=True)
 
-#========== Function for map creation
+#========== Functions
 def create_map():
     #define variable values depending on input
     figsizedict = {"square": (12,12), "rectangle": (14.8,10.5)}
@@ -46,15 +51,19 @@ def create_map():
                 ha=titleposdict[_title_pos][2],
                 fontsize=_title_fontsize, color=_title_color, fontname=_title_font, linespacing=1.5,
                 bbox=dict(facecolor=_bgcolor, linewidth=0, pad=10, alpha=1))
-    
-    #plt.savefig("ridgemap.png", bbox_inches='tight', dpi=300, transparent=False, pad_inches=0)
+
     return fig
 
-# ========== Make selection
-# Draw rectangle on map and get coordinates to use
-st.markdown('### Select area')
-st.markdown("Areas that are too large (e.g. a whole country) might not be able to show")
 
+
+st.title('ridgemap')
+
+#========== Sidebar
+
+
+# ========= Make selection
+# Draw rectangle on map and get coordinates to use
+st.markdown('Draw rectangle to select area')
 m = folium.Map()
 Draw(draw_options={
                 "polyline": False,
@@ -71,96 +80,96 @@ if map_selection["last_active_drawing"]!= None:
     bl = map_selection["last_active_drawing"]["geometry"]['coordinates'][0][0]
     tr = map_selection["last_active_drawing"]["geometry"]['coordinates'][0][2]
 
-
+#=========== Select style from image
+st.markdown('Select style')
+img = image_select(
+    label="",
+    images=[
+        "examples/example1.png",
+        "examples/example2.png",
+        "examples/example3.png",
+        "examples/example4.png"
+    ],
+    index = 0,
+    return_value ="index"
+)
+st.write(img)
 # ========== Create and customise map
-st.markdown('### Create map')   
 with st.form(key="Create map"):
+    st.markdown("Customise map style")
     col1, col2 = st.columns([2,1], gap="medium")
     with col1:
         _title = st.text_input("Title (optional)", "")
     with col2:
-        _figsize = st.selectbox('Map shape',('square', 'rectangle'))
-    with st.expander("Customise map style"):
+        _figsize = st.selectbox('Shape',('square', 'rectangle'))
 
-        st.markdown("**Background**")
-        _bgcolor = st.color_picker("Colour", '#111111', key=0)
+    with st.expander("More style options"):
+        #st.markdown("**Background**")
+        _bgcolor = st.color_picker("Background colour", '#111111', key=0)
         st.markdown("")
+
         st.markdown("**Title**")
         col3,col4,col5,col6 = st.columns([1.2,1.7,1,1], gap="small")
         with col3:
             _title_pos = st.selectbox('Position',('top left', 'top right', 'bottom left', 'bottom right'))
         with col4:
-            _title_font = st.selectbox('Font',('Courier New', 'Ubuntu'))
+            _title_font = st.selectbox('Font',('Courier New', 'Lato','Myriad Pro', 'Open Sans', 'Oswald', 'Times New Roman', 'Ubuntu'))
         with col5:
-            _title_fontsize = st.number_input("Font size", min_value=10, max_value=60, value=35)
+            _title_fontsize = st.slider("Font size", min_value=10, max_value=60, value=35)
         with col6:
             _title_color = st.color_picker('Colour', '#ffffff', key=1)
         st.markdown("")
+
         st.markdown("**Ridge lines**")
-        col7,col8,col9 = st.columns([1,1,1], gap="small")
+        col7,col8,col9 = st.columns([1,1,2], gap="small")
         with col7:
-            _num_lines = st.number_input("Number of lines", min_value=30, max_value=150, value=80)
+            _num_lines = st.slider("Number of lines", min_value=30, max_value=150, value=80)
         with col8:
-            _linewidth = st.number_input("Width", min_value=0.1, max_value=8.0, value=1.0)
+            _linewidth = st.slider("Linewidth", min_value=1, max_value=6, value=1)
         with col9:
             _line_color = st.color_picker('Colour', '#ffffff', key=2)
-
         col10,col11,col12,col13 = st.columns([1,1,1,1], gap="small")
         with col10:
-            _elevation_pts = st.number_input("Elevation points", min_value=10, max_value=200, value=150)
+            _elevation_pts = st.slider("Elevation points", min_value=10, max_value=200, value=150, help="The more points, the smoother the ridge lines")
         with col11:
-            _vertical_ratio = st.number_input("Vertical ratio", min_value=10, max_value=150, value=80)
+            _vertical_ratio = st.slider("Vertical ratio", min_value=10, max_value=150, value=80, help="How steep or flat hills are displayed")
         with col12:
-            _water_ntile = st.number_input("Water ntile", min_value=0, max_value=8, value=2)
+            _water_ntile = st.slider("Water ntile", min_value=0, max_value=8, value=2, help="Set to 0 if you do not want any water marked")
         with col13:
-            _lake_flatness = st.number_input("Lake flatness", min_value=0, max_value=8, value=3)
+            _lake_flatness = st.slider("Lake flatness", min_value=0, max_value=8, value=3, help="Set to 0 if you do not want any water marked")
 
-    button_create_map = st.form_submit_button('Create map')
+    button_create_map = st.form_submit_button('Update')
 
-
-if "button_create_map" not in st.session_state:
-    st.session_state.button_create_map = False
-
+if "create_map" not in st.session_state:
+    st.session_state.create_map = False
 if button_create_map:
-        st.session_state.button_create_map = True
+        st.session_state.create_map = True
 
-#fig = "None" 
-
-if (st.session_state.button_create_map) & (map_selection["last_active_drawing"]!= None):
+# Create map if button is clicked and area selected
+if (st.session_state.create_map) & (map_selection["last_active_drawing"]!= None):
     fig = create_map()
     st.pyplot(fig)
-elif ( st.session_state.button_create_map) & (map_selection["last_active_drawing"]== None):
+elif ( st.session_state.create_map) & (map_selection["last_active_drawing"]== None):
     st.markdown('**Select area first**')
     fig = "None" 
 else:
     fig = "None" 
 
 
-#st.write(fig)  
+#export image
 if fig != "None":
-    col14,col15,col16 = st.columns([1,1,1], gap="small")
-    with col14:
-        plt.savefig("ridgemaps.png", bbox_inches="tight", dpi=300, pad_inches=0)
-        with open("ridgemaps.png", "rb") as file:
-            png = st.download_button(
-                label="Download png",
-                data=file,
-                file_name="ridgemaps.png",
-                mime="image/png"
-            )
-    with col15:
-        plt.savefig("ridgemaps.svg", bbox_inches="tight", pad_inches=0)
-        with open("ridgemaps.svg", "rb") as file:
-            svg = st.download_button(
-                label="Download svg",
-                data=file,
-                file_name="ridgemaps.svg",
-                mime="image/png"
-            )
-
-
-test = st.button("test")
-if test:
-    st.write("test")
-
-
+    plt.savefig("ridgemaps.png", bbox_inches="tight", dpi=300, pad_inches=0)
+    with open("ridgemaps.png", "rb") as image:
+        png = st.download_button(
+            label="Download png",
+            data=image,
+            file_name="ridgemap.png",
+            mime="image/png"
+        )
+    plt.savefig("ridgemaps.svg", bbox_inches="tight", pad_inches=0)
+    with open("ridgemaps.svg", "rb") as svg:
+        svg = st.download_button(
+            label="Download svg",
+            data=svg,
+            file_name="ridgemaps.svg"
+        )
