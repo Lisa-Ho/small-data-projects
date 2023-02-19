@@ -86,5 +86,8 @@ For #MapPromptMonday bivariate, created this quick map of cycling rates versus c
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2302-car-ownership/cycling-vs-carowners-london-bivariate.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/219890293-a0dff182-fa6e-4fc2-a029-709270b97afc.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/219940282-353a8426-1b38-42b9-aff9-6cef9cc0d521.png" width="550">
+
+
+
 
