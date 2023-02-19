@@ -1,0 +1,22 @@
+{ "Style1" :
+    {"title": "",
+    "figshape":"square",
+    "bg_transparent": false
+    },
+"Style2" :
+    {"title": "Test",
+    "figshape":"square",
+    "bg_transparent": false
+    },
+"Style3" :
+    {"title": "Test3",
+    "figshape":"square",
+    "bg_transparent": false
+    },
+"Style4" :
+    {"title": "Test4",
+    "figshape":"square",
+    "bg_transparent": false
+    }
+
+}

@@ -3,22 +3,24 @@ from folium.plugins import Draw
 import streamlit as st
 from streamlit_folium import st_folium
 from streamlit_image_select import image_select
+import json
 
 import geopandas as gpd
 from shapely.geometry import Polygon
 import matplotlib.pyplot as plt
-from ridge_map import RidgeMap
+from ridge_map import RidgeMap, FontManager
 
 #========= Page config
 st.set_page_config(
-    page_title="ridgemap",
+    page_title="ridgemapp",
     page_icon="🖼️",
     initial_sidebar_state="collapsed"
     #layout="wide",
      )
-#st.markdown('<style>div.appview-container{background-color: #f7f6f4;}</style>',unsafe_allow_html=True)
-#st.markdown('<style>div[data-testid="stForm"]{background-color: #fcfbfb;}</style>',unsafe_allow_html=True)
-#st.markdown('<style>section[data-testid="stSidebar"]{background-color: #dfdedd;}</style>',unsafe_allow_html=True)
+
+#load example styles
+with open('map_styles.json', 'r') as json_file:
+    map_styles = json.load(json_file)
 
 #========== Functions
 def create_map():
@@ -26,6 +28,10 @@ def create_map():
     figsizedict = {"square": (12,12), "rectangle": (14.8,10.5)}
     titleposdict = {"top left": [.16, .78, "left"], "top right":[.86, .78,  "right"], 
                  "bottom left": [.16, .22, "left"], "bottom right":[.86, .22, "right"] }
+    if _bg_transparent == True:
+        bg_alpha = 0
+    else:
+        bg_alpha = 1
     
     #===== PLOT
     #Setup figure
@@ -40,6 +46,7 @@ def create_map():
                 kind='elevation',
                 label=None,
                 line_color = _line_color,
+                bg_alpha = bg_alpha,
                 #line_color = "Reds",
                 background_color = _bgcolor,
                 ax=ax,
@@ -49,21 +56,22 @@ def create_map():
     #title
     plt.figtext(titleposdict[_title_pos][0], titleposdict[_title_pos][1], _title.upper(), va='top', 
                 ha=titleposdict[_title_pos][2],
-                fontsize=_title_fontsize, color=_title_color, fontname=_title_font, linespacing=1.5,
+                fontsize=_title_fontsize, color=_title_color, fontname=_title_font, linespacing=1,
                 bbox=dict(facecolor=_bgcolor, linewidth=0, pad=10, alpha=1))
 
     return fig
 
 
+#========== APP
 
-st.title('ridgemap')
-
+st.title('ridgemapp')
+st.markdown("## Create your own print ready design")
 #========== Sidebar
 
 
 # ========= Make selection
 # Draw rectangle on map and get coordinates to use
-st.markdown('Draw rectangle to select area')
+st.markdown('Draw an rectangle to select the area to map')
 m = folium.Map()
 Draw(draw_options={
                 "polyline": False,
@@ -76,13 +84,13 @@ Draw(draw_options={
 
 map_selection = st_folium(m, width=800, height=450)
 if map_selection["last_active_drawing"]!= None:
-    #st.write(output["last_active_drawing"])
     bl = map_selection["last_active_drawing"]["geometry"]['coordinates'][0][0]
     tr = map_selection["last_active_drawing"]["geometry"]['coordinates'][0][2]
 
 #=========== Select style from image
 st.markdown('Select style')
-img = image_select(
+captions=["Style1", "Style2", "Style3", "Style4"]
+style_id = image_select(
     label="",
     images=[
         "examples/example1.png",
@@ -90,11 +98,17 @@ img = image_select(
         "examples/example3.png",
         "examples/example4.png"
     ],
+    captions=captions,
     index = 0,
     return_value ="index"
 )
-st.write(img)
-# ========== Create and customise map
+style_selected = map_styles[captions[style_id]]
+for key in style_selected.keys():
+    st.write(style_selected[key])
+
+
+
+# ========== Customise map
 with st.form(key="Create map"):
     st.markdown("Customise map style")
     col1, col2 = st.columns([2,1], gap="medium")
@@ -104,10 +118,14 @@ with st.form(key="Create map"):
         _figsize = st.selectbox('Shape',('square', 'rectangle'))
 
     with st.expander("More style options"):
-        #st.markdown("**Background**")
-        _bgcolor = st.color_picker("Background colour", '#111111', key=0)
-        st.markdown("")
+        st.markdown("**Background**")
+        col3a, col3b, col3c = st.columns([1,1,2], gap="small")
+        with col3a:
+            _bg_transparent = st.checkbox('Transparent',value=False)
+        with col3b:
+            _bgcolor = st.color_picker("Colour", '#111111', key=0)
 
+        st.markdown("")
         st.markdown("**Title**")
         col3,col4,col5,col6 = st.columns([1.2,1.7,1,1], gap="small")
         with col3:
@@ -118,8 +136,8 @@ with st.form(key="Create map"):
             _title_fontsize = st.slider("Font size", min_value=10, max_value=60, value=35)
         with col6:
             _title_color = st.color_picker('Colour', '#ffffff', key=1)
+        
         st.markdown("")
-
         st.markdown("**Ridge lines**")
         col7,col8,col9 = st.columns([1,1,2], gap="small")
         with col7:
@@ -158,7 +176,7 @@ else:
 
 #export image
 if fig != "None":
-    plt.savefig("ridgemaps.png", bbox_inches="tight", dpi=300, pad_inches=0)
+    plt.savefig("ridgemaps.png", bbox_inches="tight", dpi=300, pad_inches=0, transparent=_bg_transparent)
     with open("ridgemaps.png", "rb") as image:
         png = st.download_button(
             label="Download png",
