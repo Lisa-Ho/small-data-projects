@@ -1,22 +1,77 @@
-{ "Style1" :
-    {"title": "",
-    "figshape":"square",
-    "bg_transparent": false
+{ "Dark" :
+    {"fig_shape": "square",
+    "bg_transparent": false,
+    "bg_color":  "#111111",
+    "title": "",
+    "title_pos": "bottom left",
+    "title_font": "Ubuntu",
+    "title_fontsize": 35,
+    "title_color": "#ffffff",
+    "title_bg_color": "#111111",
+    "title_bg_alpha": 1.0,
+    "num_lines": 80,
+    "linewidth": 2,
+    "line_color": "#ffffff",
+    "elevation_pts": 150,
+    "vertical_ratio": 80,
+    "water_ntile": 2,
+    "lake_flatness": 3
     },
-"Style2" :
-    {"title": "Test",
-    "figshape":"square",
-    "bg_transparent": false
+"Transparent" :
+    {"fig_shape": "square",
+    "bg_transparent": true,
+    "bg_color":  "#ffffff",
+    "title": "",
+    "title_pos": "bottom right",
+    "title_font": "DejaVu Sans",
+    "title_fontsize": 35,
+    "title_color": "#000000",
+    "title_bg_color": "#0A717F",
+    "title_bg_alpha": 0.6,
+    "num_lines": 100,
+    "linewidth": 2,
+    "line_color": "#0A717F",
+    "elevation_pts": 120,
+    "vertical_ratio": 50,
+    "water_ntile": 1,
+    "lake_flatness": 1
     },
-"Style3" :
-    {"title": "Test3",
-    "figshape":"square",
-    "bg_transparent": false
+"Comic" :
+    {"fig_shape": "square",
+    "bg_transparent": false,
+    "bg_color":  "#ffffff",
+    "title": "",
+    "title_pos": "top left",
+    "title_font": "Impact",
+    "title_fontsize": 45,
+    "title_color": "#ffffff",
+    "title_bg_color": "#AF3636",
+    "title_bg_alpha": 1.0,
+    "num_lines": 150,
+    "linewidth": 1,
+    "line_color": "#000000",
+    "elevation_pts": 140,
+    "vertical_ratio": 150,
+    "water_ntile": 3,
+    "lake_flatness": 3
     },
-"Style4" :
-    {"title": "Test4",
-    "figshape":"square",
-    "bg_transparent": false
+"Flat" :
+    {"fig_shape": "square",
+    "bg_transparent": false,
+    "bg_color":  "#ffffff",
+    "title": "",
+    "title_pos": "top right",
+    "title_font": "Segoe Print",
+    "title_fontsize": 40,
+    "title_color": "#000000",
+    "title_bg_color": "#ffffff",
+    "title_bg_alpha": 1.0,
+    "num_lines": 70,
+    "linewidth": 3,
+    "line_color": "#d80062",
+    "elevation_pts": 50,
+    "vertical_ratio": 40,
+    "water_ntile": 0,
+    "lake_flatness": 0
     }
-
 }
