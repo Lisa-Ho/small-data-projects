@@ -88,6 +88,12 @@ For #MapPromptMonday bivariate, created this quick map of cycling rates versus c
 
 <img src="https://user-images.githubusercontent.com/50448656/219940282-353a8426-1b38-42b9-aff9-6cef9cc0d521.png" width="550">
 
+### 04/2023 Artificial grass
 
+A few weeks ago, I read an article about an increase in number of households replacing their lawns with artificial grass. I was wondering how sellers are promoting artificial grass and manually scraped some websites. Good project to get back to some NLP and text analysis. And I've always wanted to create a histogram that shows text instead of bars. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2304-artificial-grass/artificial-grass-marketing.ipynb)
+
+<img src="https://user-images.githubusercontent.com/50448656/235359833-66d6cb17-f11e-43b2-9210-ac3d52b00545.png" width="550">
 
 
