@@ -90,7 +90,7 @@ For #MapPromptMonday bivariate, created this quick map of cycling rates versus c
 
 ### 04/2023 Artificial grass
 
-A few weeks ago, I read an article about an increase in number of households replacing their lawns with artificial grass. I was wondering how sellers are promoting artificial grass and manually scraped some websites. Good projects to get back to some NLP analysis and always wanted to create a histogram that shows text instead of bars. 
+A few weeks ago, I read an article about an increase in number of households replacing their lawns with artificial grass. I was wondering how sellers are promoting artificial grass and manually scraped some websites. Good project to get back to some NLP and text analysis. And I've always wanted to create a histogram that shows text instead of bars. 
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2304-artificial-grass/artificial-grass-marketing.ipynb)
 
