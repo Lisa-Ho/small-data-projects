@@ -96,4 +96,11 @@ A few weeks ago, I read an article about an increase in number of households rep
 
 <img src="https://user-images.githubusercontent.com/50448656/235359833-66d6cb17-f11e-43b2-9210-ac3d52b00545.png" width="550">
 
+### 05/2023 Google Search Autocomplete
+
+Fun playing around with data from Google Search Autcomplete on "Why do cyclists ...". Managed to create a more complex layout in matplotlib using paths and bezier curves. Quite happy with the end result. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2305-google-search-autocomplete/google-search-autocomplete.ipynb)
+
+<img src="https://user-images.githubusercontent.com/50448656/235903239-f5a90892-eb03-4f68-8342-a9bceabd9913.png" width="550">
 
