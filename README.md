@@ -104,3 +104,10 @@ Fun playing around with data from Google Search Autcomplete on "Why do cyclists 
 
 <img src="https://user-images.githubusercontent.com/50448656/235903239-f5a90892-eb03-4f68-8342-a9bceabd9913.png" width="550">
 
+### 06/2023 Trees of London
+
+Map for #MapPromptMonday Plants showing total trees and main type per 4sqkm. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2306-trees-london/trees-london.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/9bcbc61a-4b5b-4900-826a-d9edcfbf3590" width="550">
