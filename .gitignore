@@ -11,6 +11,7 @@ cache/
 *.csv
 *.xlsx
 *.geojson
+*.json
 
 !cycling_rates_london_cleaned_2016-2021.csv
 
@@ -28,3 +29,6 @@ cache/
 
 #config files
 *.cfg
+
+# qgis files
+*.qgs
