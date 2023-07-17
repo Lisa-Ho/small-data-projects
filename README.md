@@ -111,3 +111,14 @@ Map for #MapPromptMonday Plants showing total trees and main type per 4sqkm.
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2306-trees-london/trees-london.ipynb)
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/9bcbc61a-4b5b-4900-826a-d9edcfbf3590" width="550">
+
+### 07/2023 Gelaterias of Italy
+
+Map for  #MapPromptMonday Desserts showing Ice cream shops in Italy. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2307-gelaterias/gelaterias-map.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/64d0397e-b0ae-466b-8ea8-1ee43ef4c841" width="450">
+
+
+
