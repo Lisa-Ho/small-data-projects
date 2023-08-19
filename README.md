@@ -120,5 +120,13 @@ Map for  #MapPromptMonday Desserts showing Ice cream shops in Italy.
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/64d0397e-b0ae-466b-8ea8-1ee43ef4c841" width="450">
 
+### 08/2023 Fix your bike voucher scheme
+
+Came across the evaluation report for the Fix Your Bike voucher scheme that was run by the UK Department for Transport in 2020-2021 in an effort to increase active travel. The evaluation shows that reported levels of cycling have increased for people who have used their vouchers and got their bikes fixed. Read the full report [here](https://www.gov.uk/government/publications/fix-your-bike-voucher-scheme-evaluation)
+
+Rough sketch for the chart made in python, final design tweaks in Figma. [Code here](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2308-fix-it-boris/fix-it-boris.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/f20bf0b8-0d38-4b4e-a667-cfea07c561be" width="550">
+
 
 
