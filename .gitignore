@@ -12,6 +12,7 @@ cache/
 *.xlsx
 *.geojson
 *.json
+*.txt
 
 !cycling_rates_london_cleaned_2016-2021.csv
 
