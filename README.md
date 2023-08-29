@@ -8,7 +8,7 @@ Analysis using a new dataset that classifies and tags all active and inactive ch
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2021/2112-charity-class/notebooks/Charity-classification-analysis.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187970817-49afe9b8-abb5-4560-a7ef-c2d2897176a5.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/187970817-49afe9b8-abb5-4560-a7ef-c2d2897176a5.png" width="500">
 
 ### 03/2022 Star Wars characters
 
@@ -16,7 +16,7 @@ Been playing around with some Star Wars data using [SWAPI](https://t.co/KSn5X00P
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2022/2203-starwars-table/notebooks/most-popular-characters-table-viz.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187971376-06c19d63-4133-4537-8d24-3779935cd7b6.png" width="450">
+<img src="https://user-images.githubusercontent.com/50448656/187971376-06c19d63-4133-4537-8d24-3779935cd7b6.png" width="350">
 
 ### 04/2022 Sourdough Google searches
 
@@ -24,7 +24,7 @@ First time using a new library ([pytrends](https://pypi.org/project/pytrends/)) 
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2022/2204-sourdough-google-trends/sourdough-google-trends-2019-2022.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187973494-33df8246-ee3f-467c-a090-e7a94771acce.png" width="450">
+<img src="https://user-images.githubusercontent.com/50448656/187973494-33df8246-ee3f-467c-a090-e7a94771acce.png" width="500">
 
 ### 04/2022 Google searches of 'bike' across Europe
 
@@ -34,7 +34,7 @@ Heavily inspired by Google Trends [The New Normal](http://thenewnormal.is).
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2022/2204-bike-europe-google-trends/bike-searches-pandemic-europe.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187972006-03a0b617-79bf-4716-8fcc-d82aa0d5185b.png" width="450">
+<img src="https://user-images.githubusercontent.com/50448656/187972006-03a0b617-79bf-4716-8fcc-d82aa0d5185b.png" width="350">
 
 ### 04/2022 Cycling rates in London
 
@@ -42,7 +42,7 @@ Been looking at London cycling rates and found rates of regular cyclists are hig
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2022/2204-prop-cycling-London-borough/cycling-rates-london-grid-tile-map.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187972669-bcd007ef-b0ec-46e9-8ae3-d765be3668d6.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/187972669-bcd007ef-b0ec-46e9-8ae3-d765be3668d6.png" width="500">
 
 ### 07/2022 Gender pay gap (WIP)
 
@@ -50,7 +50,7 @@ Triggered by #TidyTuesday, got my hands on some gender pay gap data again. Worke
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2022/2207-gender-pay-gap/GenderPayGap.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/187974455-73488cdf-e77b-4413-8684-2bd19e24e465.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/187974455-73488cdf-e77b-4413-8684-2bd19e24e465.png" width="500">
 
 ### 08/2022 Exploring OSMnx for mapping in python
 
@@ -74,7 +74,7 @@ Follow up from maps I created as part of the #30DayMapChallenge 2022. Fun to pla
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2301-culture-venues-london/cultural-venues-london-maps.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/213877655-1c1503a5-33dc-4fb4-b455-60203ea47fa4.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/213877655-1c1503a5-33dc-4fb4-b455-60203ea47fa4.png" width="500">
 
 ### 01/2023 Ridgemapp (WIP)
 
@@ -86,7 +86,7 @@ For #MapPromptMonday bivariate, created this quick map of cycling rates versus c
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2302-car-ownership/cycling-vs-carowners-london-bivariate.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/219940282-353a8426-1b38-42b9-aff9-6cef9cc0d521.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/219940282-353a8426-1b38-42b9-aff9-6cef9cc0d521.png" width="500">
 
 ### 04/2023 Artificial grass
 
@@ -94,7 +94,7 @@ A few weeks ago, I read an article about an increase in number of households rep
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2304-artificial-grass/artificial-grass-marketing.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/235359833-66d6cb17-f11e-43b2-9210-ac3d52b00545.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/235359833-66d6cb17-f11e-43b2-9210-ac3d52b00545.png" width="500">
 
 ### 05/2023 Google Search Autocomplete
 
@@ -102,7 +102,7 @@ Fun playing around with data from Google Search Autcomplete on "Why do cyclists 
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2305-google-search-autocomplete/google-search-autocomplete.ipynb)
 
-<img src="https://user-images.githubusercontent.com/50448656/235903239-f5a90892-eb03-4f68-8342-a9bceabd9913.png" width="550">
+<img src="https://user-images.githubusercontent.com/50448656/235903239-f5a90892-eb03-4f68-8342-a9bceabd9913.png" width="500">
 
 ### 06/2023 Trees of London
 
@@ -110,7 +110,7 @@ Map for #MapPromptMonday Plants showing total trees and main type per 4sqkm.
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2306-trees-london/trees-london.ipynb)
 
-<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/9bcbc61a-4b5b-4900-826a-d9edcfbf3590" width="550">
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/9bcbc61a-4b5b-4900-826a-d9edcfbf3590" width="500">
 
 ### 07/2023 Gelaterias of Italy
 
@@ -118,7 +118,7 @@ Map for  #MapPromptMonday Desserts showing Ice cream shops in Italy.
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2307-gelaterias/gelaterias-map.ipynb)
 
-<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/64d0397e-b0ae-466b-8ea8-1ee43ef4c841" width="450">
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/64d0397e-b0ae-466b-8ea8-1ee43ef4c841" width="350">
 
 ### 08/2023 Fix your bike voucher scheme
 
@@ -126,7 +126,14 @@ Came across the evaluation report for the Fix Your Bike voucher scheme that was 
 
 Rough sketch for the chart made in python, final design tweaks in Figma. [Code here](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2308-fix-it-boris/fix-it-boris.ipynb)
 
-<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/f20bf0b8-0d38-4b4e-a667-cfea07c561be" width="550">
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/f20bf0b8-0d38-4b4e-a667-cfea07c561be" width="500">
 
+### 08/2023 Star Wars Scripts - Each line of Anakin episode 1
+
+Found data for all six Star Wars scripts in [this Github repository](https://github.com/jcwieme/data-scripts-star-wars) by Jean Wieme. He kindly made this data available for others to experiment and use it in data viz. So I did. Wanted to plot each line of Anakin and who he speaks to for the first three episodes, but the addressant is only available for the first one. So I focused on getting the chart right for just one episode. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2308-fix-it-boris/fix-it-boris.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/67b09cc7-f596-4dfa-8666-123621d2309b" width="350">
 
 
