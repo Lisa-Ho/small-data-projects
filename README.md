@@ -132,7 +132,7 @@ Rough sketch for the chart made in python, final design tweaks in Figma. [Code h
 
 Found data for all six Star Wars scripts in [this Github repository](https://github.com/jcwieme/data-scripts-star-wars) by Jean Wieme. He kindly made this data available for others to experiment and use it in data viz. So I did. Wanted to plot each line of Anakin and who he speaks to for the first three episodes, but the addressant is only available for the first one. So I focused on getting the chart right for just one episode. 
 
-[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2308-fix-it-boris/fix-it-boris.ipynb)
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2308-star-wars-scripts/star-wars-scripts.ipynb)
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/67b09cc7-f596-4dfa-8666-123621d2309b" width="350">
 
