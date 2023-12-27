@@ -136,4 +136,14 @@ Found data for all six Star Wars scripts in [this Github repository](https://git
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/67b09cc7-f596-4dfa-8666-123621d2309b" width="350">
 
+### 10/2023 US grant opportunities
+
+Contribution to #TidyTuesday exploring grant opportunities in the US. Found a great tutorial on how to create streamgraphs in python with the exact type of curve smoothing I wanted. Can't wait to use it for making a bumpchart. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2310-us-grants/us-grant-opportunities.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/78567697-4cd3-4189-b154-73d113fe4570" width="500">
+
+
+
 
