@@ -145,5 +145,12 @@ Contribution to #TidyTuesday exploring grant opportunities in the US. Found a gr
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/78567697-4cd3-4189-b154-73d113fe4570" width="500">
 
 
+### 12/2023 What C-3PO says
+
+Reused data from Star Wars scripts I cleaned before to try bigram analysis (ie. co-occurence) of words said by 3-CPO. Network graph shows most common words that occured together. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2023/2312-starwars-what-XY-says/starwars-what-XY-says.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/f7c310b4-8a2d-4b39-aa2c-05e6fbf0960a" width="450">
 
 
