@@ -153,4 +153,11 @@ Reused data from Star Wars scripts I cleaned before to try bigram analysis (ie. 
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/f7c310b4-8a2d-4b39-aa2c-05e6fbf0960a" width="450">
 
+### 01/2024 Birthdays of Canadian NHL Players
+
+Chart for #TidyTuesday week 2 exploring birth dates of NHL players. Settled on a dotplot/stripplot and spent some time figuring out how to create a broken y-axis. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2401-canadian-nhl-players/canadian-nhl-players.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/e118b643-c056-46e0-95d2-35c129ca82f0" width="450">
 
