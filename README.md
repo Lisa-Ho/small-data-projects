@@ -161,3 +161,12 @@ Chart for #TidyTuesday week 2 exploring birth dates of NHL players. Settled on a
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/e118b643-c056-46e0-95d2-35c129ca82f0" width="450">
 
+
+### 01/2024 Highest Paid Athletes
+
+Chart for #MakeoverMonday looking at the World's Highest Paid Athletes. Used this simple data set to explore `plottable` - an awesome python library for creating stunning tables. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2401-highest-paid-athletes/highest-paid-athletes.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/7c55b18f-84ab-449b-83bc-2ce29d4ee43c" width="500">
+
