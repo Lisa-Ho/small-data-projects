@@ -18,6 +18,21 @@ data/
 !cycling_rates_london_cleaned_2016-2021.csv
 !episode1_each_line_of_anakin_clean.csv
 
+#geofiles
+*.qgz
+*.gpkg
+*.gpx
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.xml
+*.shx
+*.hexjson
+*.geojson
+*.lyr
+*.tif
+
 # exclude images
 *.png
 *.jpg
@@ -26,6 +41,7 @@ data/
 
 #exclude docs
 *.docx
+*.pdf
 
 #exclude design files
 *.ai
