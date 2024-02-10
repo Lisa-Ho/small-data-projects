@@ -170,3 +170,14 @@ Chart for #MakeoverMonday looking at the World's Highest Paid Athletes. Used thi
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/7c55b18f-84ab-449b-83bc-2ce29d4ee43c" width="500">
 
+
+### 02/2024 Du Bois Visualization Challenge: 2024
+
+Contributions to the [Du Bois Visualization Challenge 2024](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024).
+
+The goal is to celebrate the data visualization legacy of W.E.B Du Bois by recreating the visualizations from the 1900 Paris Exposition using modern tools - in my case Python.
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2402-dubois-challenge/dubois-challenge.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/b8902f90-a90c-49e7-8813-b893e58c3ae5" width="300">
+
