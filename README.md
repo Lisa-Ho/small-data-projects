@@ -179,5 +179,6 @@ The goal is to celebrate the data visualization legacy of W.E.B Du Bois by recre
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2402-dubois-challenge/dubois-challenge.ipynb)
 
-<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/b8902f90-a90c-49e7-8813-b893e58c3ae5" width="300">
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/b8902f90-a90c-49e7-8813-b893e58c3ae5" width="250"><img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/e03740b1-77a0-441b-b14a-dd4dfd81802e" width="250">
+
 
