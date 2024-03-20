@@ -181,4 +181,10 @@ The goal is to celebrate the data visualization legacy of W.E.B Du Bois by recre
 
 <img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/b8902f90-a90c-49e7-8813-b893e58c3ae5" width="250"><img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/e03740b1-77a0-441b-b14a-dd4dfd81802e" width="250">
 
+### 03/2024 Recycling rates London
 
+Since I first used `pyWaffle` it's been updated and you can now display a waffle chart in specific axes - so I wanted to try it out and made a little tile grid map of London displaying the proportion of household waste sent for recyling in 2022/23. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2403-recycling-rates/london-recycling-rates.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/7ac11320-119d-4913-b8c6-03b3bffb0f34" width="500">
