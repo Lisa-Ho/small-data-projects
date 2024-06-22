@@ -2,6 +2,17 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 06/2024 Songs about cycling
+
+I've always wanted to explore the Spotify API. So I combined it with my love of cycling and looked at songs about bikes. Songs about bikes comes from [Wikipedia](https://en.wikipedia.org/wiki/List_of_songs_about_bicycles) which links to a more definite list of 2,300 songs from [Bike&Chain](https://drive.google.com/file/d/15euF9Sz1qbj0Cnhty6tJSrDUwadhBD82/view?usp=share_link). Track features (valence, energy, popularity) comes from Spotify API.
+
+Played around with custom colour maps and gradients for the visualisations. Not sure gradient bar charts are best practice, but def fun! :D 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2405-bicycle-songs/bicycle-songs.ipynb)
+
+<img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/4f125bd1-2f0c-498d-925d-435bf532d8ff" width="500"><img src="https://github.com/Lisa-Ho/small-data-projects/assets/50448656/95d55b08-c38a-4afb-8ae9-9515313cfb09" width="500">
+
+
 ### 03/2024 Recycling rates London
 
 Since I first used `pyWaffle` it's been updated and you can now display a waffle chart in specific axes - so I wanted to try it out and made a little tile grid map of London displaying the proportion of household waste sent for recyling in 2022/23. 
