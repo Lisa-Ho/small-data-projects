@@ -2,6 +2,17 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 07/2024 Global bike ownership
+
+Came across an [interesting paper](https://www.sciencedirect.com/science/article/abs/pii/S2214140515006787) from 2015 about tracking global bicycle ownership. Couldn't find any updates since then, so decided it's worth to map even if slightly outdated. 
+
+Good chance to play around with [pypalettes](https://github.com/JosephBARBIERDARNAL/pypalettes) - a great new python library that makes finding a nice colour map a breeze! 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2407-bike-ownership-rates/bike-owernship-world.ipynb)
+
+<img src="https://github.com/user-attachments/assets/a0682318-2e41-40c9-a5b8-5d71f06fe3da" width="500">
+
+
 ### 06/2024 Songs about cycling
 
 I've always wanted to explore the Spotify API. So I combined it with my love of cycling and looked at songs about bikes. Songs about bikes comes from [Wikipedia](https://en.wikipedia.org/wiki/List_of_songs_about_bicycles) which links to a more definite list of 2,300 songs from [Bike&Chain](https://drive.google.com/file/d/15euF9Sz1qbj0Cnhty6tJSrDUwadhBD82/view?usp=share_link). Track features (valence, energy, popularity) comes from Spotify API.
