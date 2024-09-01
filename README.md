@@ -2,6 +2,17 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 09/2024 Power Rangers
+
+Been a while since I did a #TidyTuesday challenge. Week 35 was all about the Power Rangers Franchise. I didn't even know it was still going, which is incredible! 
+
+So I made a stripplot exploring average ratings of episodes + seasons. Looks like the latest ones (2019, 2020) were quite good :D 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2408-power-rangers/power-rangers-episodes.ipynb)
+
+<img src="https://github.com/user-attachments/assets/a93e3d43-9a19-4a47-9184-7975344c2286" width="500">
+
+
 ### 07/2024 Global bike ownership
 
 Came across an [interesting paper](https://www.sciencedirect.com/science/article/abs/pii/S2214140515006787) from 2015 about tracking global bicycle ownership. Couldn't find any updates since then, so decided it's worth to map even if slightly outdated. 
