@@ -50,6 +50,7 @@ data/
 
 #config files
 *.cfg
+*.yml
 
 # qgis files
 *.qgs
