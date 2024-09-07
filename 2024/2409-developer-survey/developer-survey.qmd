@@ -1,0 +1,17 @@
+---
+title: "Developer survey"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+toc: true
+number-sections: true
+---
+
+Contribution to #TidyTuesday week 36. First time trying Quarto. 
+
+## Why?
+
+```{python}
+import seaborn as sns
+```
