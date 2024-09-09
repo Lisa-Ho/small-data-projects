@@ -1,5 +1,5 @@
 ---
-title: "New developers feel less positive about AI"
+title: "New coders use AI more in their work but also see it as a threat"
 format:
   html:
     code-fold: true
@@ -10,9 +10,7 @@ toc: true
 number-sections: false
 ---
 
-Contribution to #TidyTuesday analysing data from the Stackoverflow Developer Survey 2024.
-
-Also my first time trying Quarto. 
+Contribution to #TidyTuesday analysing data from the [Stackoverflow Developer Survey 2024](https://survey.stackoverflow.co/). Analysis and charts made with python, site made with Quarto. 
 <br/><br/>
 ---
 
@@ -65,15 +63,109 @@ df['years_code_pro_bin'] = pd.cut(df['years_code_pro'], bins=_bins, labels=label
 
 ## Who uses AI?
 
+```{python}
+#data -------------------------
+pivot = df.groupby(["age","age_l"])["ai_select_l"].value_counts(normalize=True).unstack() *100
+pivot = pivot["Yes"].to_frame().reset_index()
+pivot["age"] = pivot["age"].replace(8,0)
+pivot = pivot.sort_values(by="age")
+
+#chart setup ------------
+fig, ax = plt.subplots(figsize=(6,5), dpi=82)
+cols = {"bg": "None", "text": "#D6DEEC","title": "#32A6FE", "grid": "#2C3952", "subtitle": "#8EA1C4"}
+fig.set_facecolor(cols["bg"])
+
+#colormap ---------------
+norm = mpl.colors.Normalize(vmin=0, vmax=1)
+m = cm.ScalarMappable(norm=norm, cmap=cmap)
+
+#plot data --------------------
+ax.barh(pivot["age_l"], pivot["Yes"], height=0.55, color=m.to_rgba(1), zorder=3)
+
+#format axes
+ax.set_facecolor(cols["bg"])
+ax.invert_yaxis()
+for pos in ["top", "right", "bottom"]:
+    ax.spines[pos].set_visible(False)
+ax.spines["left"].set(color=cols["grid"], linewidth=1)
+ax.grid(visible=True, axis='x', zorder=2, color=cols["grid"], linewidth=0.5, alpha=0.4)
+ax.tick_params(axis='both', bottom=False, left=False, pad=10,)
+ax.set_xticks(ax.get_xticks(), [str(int(i))+"%"for i in ax.get_xticks()], 
+              fontproperties=label_font, fontsize=14, color=cols["text"])
+ax.set_yticks(ax.get_yticks(), pivot["age_l"], fontproperties=label_font, fontsize=14, color=cols["text"])
+
+#title and footer --------------
+plt.figtext(-0.19,1.15, "Young developers use AI more in their work", fontproperties = title_font, fontsize=22, ha="left", color=cols["title"])
+plt.figtext(-0.19,1.03, "Proportion of developers who currently use AI in their development\nprocess by age", fontproperties = label_font, 
+            fontsize=16, ha="left",color=cols["subtitle"] , va="center", linespacing=1.8)
+plt.figtext(0.4,-0.09, "Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung", fontsize=11,  ha="center",fontproperties = label_font,  alpha=0.8, color=cols["subtitle"])
+plt.show()
+```
+
+
+
 
 ```{python}
+#data--------------------------------------
+pivot = df.groupby(["years_code_bin"], observed=True)["ai_select_l"].value_counts(normalize=True).unstack()*100
+pivot = pivot["Yes"].to_frame().reset_index()
+pivot2 = df.groupby(["years_code_pro_bin"], observed=True)["ai_select_l"].value_counts(normalize=True).unstack()*100
+pivot2 = pivot2["Yes"].to_frame().reset_index()
 
+# Chart setup ------------
+fig, ax = plt.subplots(figsize=(6,6), dpi=82)
+cols = {"bg": "None", "text": "#D6DEEC","title": "#32A6FE", "grid": "#2C3952", "subtitle": "#8EA1C4"}
+fig.set_facecolor(cols["bg"])
 
+# colormap ---------------
+norm = mpl.colors.Normalize(vmin=0, vmax=1)
+m = cm.ScalarMappable(norm=norm, cmap=cmap)
+
+# plot data --------------------
+bar_height = 0.3
+ax.barh(pivot.index-bar_height/2, pivot["Yes"], height=bar_height, color=m.to_rgba(0.95), zorder=3)
+ax.barh(pivot2.index+bar_height/2, pivot2["Yes"], height=bar_height, color=m.to_rgba(0.15), zorder=3)
+
+# format axes
+ax.set_facecolor(cols["bg"])
+ax.invert_yaxis()
+for pos in ["top", "right", "bottom"]:
+    ax.spines[pos].set_visible(False)
+ax.spines["left"].set(color=cols["grid"], linewidth=1)
+ax.grid(visible=True, axis='x', zorder=2, color=cols["grid"], linewidth=0.5, alpha=0.4)
+ax.tick_params(axis='both', bottom=False, left=False, pad=10,)
+ax.set_xticks(ax.get_xticks(), [str(int(i))+"%"for i in ax.get_xticks()], 
+              fontproperties=label_font, fontsize=14, color=cols["text"])
+ax.set_yticks(pivot.index, [x + " years" for x in pivot["years_code_bin"]], fontproperties=label_font, fontsize=14, color=cols["text"])
+
+#legend -------------------------------
+lg = fig.add_axes([0.13,0.9,0.48,0.05])
+kw = dict(marker='o', s=150, alpha=0.9, linewidths=0.45, ec="black")
+lg.scatter(x=[2,3], y=[0.8]*2,  color=[m.to_rgba(0.95),m.to_rgba(0.15)], **kw, clip_on=False)
+labels = ["Coding incl education", "Professional coding",]
+for i, x_pos in enumerate([3,2][::-1]):
+    lg.text(x_pos+0.07, 0.8, labels[i], fontsize=14, ha="left", va="center", fontproperties=label_font, color=cols["text"])
+lg.axis("off")
+
+# title and footer --------------
+plt.figtext(-0.19,1.18, "AI usage decreases with coding experience", fontproperties = title_font, fontsize=22, ha="left", color=cols["title"])
+plt.figtext(-0.19,1.07, "Proportion of developers who currently use AI in their\ndevelopment process by years coding", fontproperties = label_font, 
+            fontsize=16, ha="left",color=cols["subtitle"] , va="center", linespacing=1.8)
+plt.figtext(0.4,-0.05, "Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung", fontsize=11,  ha="center",fontproperties = label_font,  alpha=0.8, color=cols["subtitle"])
+plt.show()
 ```
+
 
 <br/><br/>
 
-## Is AI threating jobs?
+## How do developers feel about using AI?
+
+
+
+
+<br/><br/>
+
+## Do developers fear for their jobs?
 
 Younger developers and those with less coding experience are more likely to believe AI is a threat to their jobs. But even those aged 35 years or higher can feel their jobs are at risk when they've been coding fewer years than other peers in their age group.
 
@@ -124,8 +216,8 @@ fig.set_facecolor(cols["bg"])
 # plot data --------------------
 ax_scatter.scatter(pivot_scatter["years_code_bin"],pivot_scatter["age"], s=[i*80 for i in pivot_scatter["Yes"]],
                    c=pivot_scatter["Yes"], cmap=cmap,clip_on=False, vmin=8, vmax=17, zorder=3)
-ax_bary.barh(pivot_bary["age"], pivot_bary["Yes"], height=0.35, color=m.to_rgba(pivot_bary["Yes"]), zorder=3)
-ax_barx.bar(pivot_barx["years_code_bin"],pivot_barx["Yes"], width=0.35, color=m.to_rgba(pivot_barx["Yes"]) , zorder=3)
+ax_bary.barh(pivot_bary["age"], pivot_bary["Yes"], height=0.4, color=m.to_rgba(pivot_bary["Yes"]), zorder=3)
+ax_barx.bar(pivot_barx["years_code_bin"],pivot_barx["Yes"], width=0.4, color=m.to_rgba(pivot_barx["Yes"]) , zorder=3)
 
 # format axes --------------------
 for ax in [ax_scatter, ax_bary]:
@@ -169,8 +261,8 @@ cb.outline.set_visible(False)
 cbaxes.tick_params(color=cols["subtitle"])
 
 # title and footer --------------
-plt.figtext(-0.1,1.15, "Less experienced developers see AI more as a threat", fontproperties = title_font, fontsize=22, ha="left", color=cols["title"])
-plt.figtext(-0.1,1.03, "Proportion of developers who believe AI is a threat\nto their current job by age and years of coding ", fontproperties = label_font, 
+plt.figtext(-0.17,1.15, "Less experienced developers see AI more as a threat", fontproperties = title_font, fontsize=22, ha="left", color=cols["title"])
+plt.figtext(-0.17,1.03, "Proportion of developers who believe AI is a threat\nto their current job by age and years of coding ", fontproperties = label_font, 
             fontsize=16, ha="left",color=cols["subtitle"] , va="center", linespacing=1.8)
 plt.figtext(0.4,-0.1, "Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung", fontsize=11,  ha="center",fontproperties = label_font,  alpha=0.8, color=cols["subtitle"])
 

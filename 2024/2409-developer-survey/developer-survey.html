@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>New developers feel less positive about AI</title>
+<title>New coders use AI more in their work but also see it as a threat</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#who-uses-ai" id="toc-who-uses-ai" class="nav-link active" data-scroll-target="#who-uses-ai">Who uses AI?</a></li>
-  <li><a href="#is-ai-threating-jobs" id="toc-is-ai-threating-jobs" class="nav-link" data-scroll-target="#is-ai-threating-jobs">Is AI threating jobs?</a></li>
+  <li><a href="#how-do-developers-feel-about-using-ai" id="toc-how-do-developers-feel-about-using-ai" class="nav-link" data-scroll-target="#how-do-developers-feel-about-using-ai">How do developers feel about using AI?</a></li>
+  <li><a href="#do-developers-fear-for-their-jobs" id="toc-do-developers-fear-for-their-jobs" class="nav-link" data-scroll-target="#do-developers-fear-for-their-jobs">Do developers fear for their jobs?</a></li>
   </ul>
 </nav>
 </div>
@@ -88,7 +89,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">New developers feel less positive about AI</h1>
+<h1 class="title">New coders use AI more in their work but also see it as a threat</h1>
 </div>
 
 
@@ -105,12 +106,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Contribution to #TidyTuesday analysing data from the Stackoverflow Developer Survey 2024.</p>
-<p>Also my first time trying Quarto. <br><br></p>
+<p>Contribution to #TidyTuesday analysing data from the <a href="https://survey.stackoverflow.co/">Stackoverflow Developer Survey 2024</a>. Analysis and charts made with python, site made with Quarto. <br><br></p>
 <hr>
 <p><strong>Setup</strong></p>
 <p>To start, we’ll need to load all the libraries and data we need. Feel free to skip the boring bit …</p>
-<div id="91357ae4" class="cell" data-execution_count="1">
+<div id="9ba083be" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load libraries</span></span>
@@ -136,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Now we’ll clean the data and derive additional variables.</p>
-<div id="83aa2a12" class="cell" data-execution_count="2">
+<div id="32a62206" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># map labels to questions</span></span>
@@ -156,115 +156,226 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br><br></p>
 <section id="who-uses-ai" class="level2">
 <h2 class="anchored" data-anchor-id="who-uses-ai">Who uses AI?</h2>
-<p><br><br></p>
-</section>
-<section id="is-ai-threating-jobs" class="level2">
-<h2 class="anchored" data-anchor-id="is-ai-threating-jobs">Is AI threating jobs?</h2>
-<p>Younger developers and those with less coding experience are more likely to believe AI is a threat to their jobs. But even those aged 35 years or higher can feel their jobs are at risk when they’ve been coding fewer years than other peers in their age group.</p>
-<div id="91490a24" class="cell" data-execution_count="3">
+<div id="0801ad23" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data ------------------------</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># by age + years coding </span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># filter to remove values where sample size &lt; 100</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"Under 18 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">10</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"18-24 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">10</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"25-34 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">20</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"35-44 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">6</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"35-44 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">25</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"45-54 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">21</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"55-64 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">21</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((df[<span class="st">"code_filter"</span>] <span class="op">!=</span> <span class="dv">1</span>) <span class="op">&amp;</span> (<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>, <span class="st">"55-64 years old"</span>])))</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>pivot_scatter <span class="op">=</span> df[_filter].groupby([<span class="st">"age"</span>, <span class="st">"years_code_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack() <span class="op">*</span><span class="dv">100</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>pivot_scatter <span class="op">=</span> pivot_scatter[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>pivot_scatter[<span class="st">"age"</span>] <span class="op">=</span> pivot_scatter[<span class="st">"age"</span>].replace(<span class="dv">8</span>,<span class="dv">0</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># by age</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>,])))</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> df[_filter].groupby([<span class="st">"age"</span>, <span class="st">"age_l"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack() <span class="op">*</span><span class="dv">100</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> pivot_bary[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>pivot_bary[<span class="st">"age"</span>] <span class="op">=</span> pivot_bary[<span class="st">"age"</span>].replace(<span class="dv">8</span>,<span class="dv">0</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> pivot_bary.sort_values(by<span class="op">=</span><span class="st">"age"</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># by years coding</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>,])))</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>pivot_barx <span class="op">=</span> df[_filter].groupby([<span class="st">"years_code_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack()<span class="op">*</span><span class="dv">100</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>pivot_barx <span class="op">=</span> pivot_barx[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># colormap -----------------------------------------</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> mpl.colors.Normalize(vmin<span class="op">=</span><span class="dv">8</span>, vmax<span class="op">=</span><span class="dv">17</span>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>norm, cmap<span class="op">=</span>cmap)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart setup -------------------------------------------------------</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>), dpi<span class="op">=</span><span class="dv">82</span>)</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> GridSpec(<span class="dv">5</span>, <span class="dv">5</span>)</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>ax_scatter <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">0</span>:<span class="dv">4</span>])</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax_barx <span class="op">=</span> fig.add_subplot(gs[<span class="dv">0</span>,<span class="dv">0</span>:<span class="dv">4</span>])</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax_bary <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">4</span>])</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.5</span>, hspace<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> {<span class="st">"bg"</span>: <span class="st">"None"</span>, <span class="st">"text"</span>: <span class="st">"#D6DEEC"</span>,<span class="st">"title"</span>: <span class="st">"#32A6FE"</span>, <span class="st">"grid"</span>: <span class="st">"#2C3952"</span>, <span class="st">"subtitle"</span>: <span class="st">"#8EA1C4"</span>}</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>fig.set_facecolor(cols[<span class="st">"bg"</span>])</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data --------------------</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>ax_scatter.scatter(pivot_scatter[<span class="st">"years_code_bin"</span>],pivot_scatter[<span class="st">"age"</span>], s<span class="op">=</span>[i<span class="op">*</span><span class="dv">80</span> <span class="cf">for</span> i <span class="kw">in</span> pivot_scatter[<span class="st">"Yes"</span>]],</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>                   c<span class="op">=</span>pivot_scatter[<span class="st">"Yes"</span>], cmap<span class="op">=</span>cmap,clip_on<span class="op">=</span><span class="va">False</span>, vmin<span class="op">=</span><span class="dv">8</span>, vmax<span class="op">=</span><span class="dv">17</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>ax_bary.barh(pivot_bary[<span class="st">"age"</span>], pivot_bary[<span class="st">"Yes"</span>], height<span class="op">=</span><span class="fl">0.35</span>, color<span class="op">=</span>m.to_rgba(pivot_bary[<span class="st">"Yes"</span>]), zorder<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>ax_barx.bar(pivot_barx[<span class="st">"years_code_bin"</span>],pivot_barx[<span class="st">"Yes"</span>], width<span class="op">=</span><span class="fl">0.35</span>, color<span class="op">=</span>m.to_rgba(pivot_barx[<span class="st">"Yes"</span>]) , zorder<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="co"># format axes --------------------</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> [ax_scatter, ax_bary]:</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(ymin<span class="op">=-</span><span class="fl">0.5</span>, ymax<span class="op">=</span><span class="fl">5.5</span>)</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    ax.invert_yaxis()</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> [ax_scatter, ax_barx]:</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(xmin<span class="op">=-</span><span class="fl">0.5</span>, xmax<span class="op">=</span><span class="fl">6.5</span>)</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>ax_bary.set_xlim(xmin<span class="op">=</span><span class="dv">0</span>,xmax<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>ax_barx.set_ylim(ymin<span class="op">=</span><span class="dv">0</span>,ymax<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co">#spines</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos <span class="kw">in</span> [<span class="st">"top"</span>, <span class="st">"right"</span>]:</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    ax_barx.spines[pos].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    ax_bary.spines[pos].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    ax_scatter.spines[pos].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>ax_bary.spines[<span class="st">"bottom"</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>ax_barx.spines[<span class="st">"left"</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>ax_barx.spines[<span class="st">"bottom"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>ax_bary.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>ax_scatter.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>ax_scatter.spines[<span class="st">"bottom"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="co"># ticks and grids</span></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>ax_barx.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, bottom<span class="op">=</span><span class="va">False</span>, left<span class="op">=</span><span class="va">False</span>, labelbottom<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span>, labelleft<span class="op">=</span><span class="va">False</span>, )</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>ax_bary.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, left<span class="op">=</span><span class="va">False</span>,bottom<span class="op">=</span><span class="va">False</span>, labelleft<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span>,  labelbottom<span class="op">=</span><span class="va">False</span>, )</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>ax_scatter.grid(visible<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="st">'both'</span>, zorder<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>ax_scatter.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, left<span class="op">=</span><span class="va">False</span>, bottom<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span> )</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_yticks(np.arange(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">1</span>), pivot_bary[<span class="st">"age_l"</span>], fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_xticks(ax_scatter.get_xticks(), ax_scatter.get_xticklabels(), fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_xlabel(<span class="st">"Years coding"</span>, labelpad<span class="op">=</span><span class="dv">15</span>, fontproperties<span class="op">=</span>title_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_ylabel(<span class="st">"Age"</span>, labelpad<span class="op">=</span><span class="dv">15</span>, fontproperties<span class="op">=</span>title_font, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="co"># colorbar ------------------</span></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>cbaxes <span class="op">=</span> fig.add_axes([<span class="fl">0.68</span>, <span class="fl">1.03</span>, <span class="fl">0.18</span>, <span class="fl">0.02</span>]) <span class="co">#axes to hold colorbar</span></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>cmappable <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>mpl.colors.Normalize(<span class="dv">0</span>,<span class="dv">1</span>), cmap<span class="op">=</span>cmap)              </span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>cb <span class="op">=</span> plt.colorbar(cmappable, cax<span class="op">=</span>cbaxes, anchor<span class="op">=</span>(<span class="dv">1</span>,<span class="fl">1.2</span>), orientation<span class="op">=</span><span class="st">'horizontal'</span>, drawedges<span class="op">=</span><span class="va">False</span>, ticks<span class="op">=</span>[<span class="fl">0.02</span>, <span class="fl">0.5</span>,<span class="fl">0.97</span>])</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>cb.set_ticks(ticks<span class="op">=</span>[<span class="fl">0.02</span>, <span class="fl">0.5</span>,<span class="fl">0.97</span>],labels<span class="op">=</span>[<span class="st">"7%"</span>, <span class="st">"12%"</span>, <span class="st">"17%"</span>] , color<span class="op">=</span>cols[<span class="st">"text"</span>], fontproperties<span class="op">=</span>legend_font, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>cb.outline.set_visible(<span class="va">False</span>)</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>cbaxes.tick_params(color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="co"># title and footer --------------</span></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.1</span>,<span class="fl">1.15</span>, <span class="st">"Less experienced developers see AI more as a threat"</span>, fontproperties <span class="op">=</span> title_font, fontsize<span class="op">=</span><span class="dv">22</span>, ha<span class="op">=</span><span class="st">"left"</span>, color<span class="op">=</span>cols[<span class="st">"title"</span>])</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.1</span>,<span class="fl">1.03</span>, <span class="st">"Proportion of developers who believe AI is a threat</span><span class="ch">\n</span><span class="st">to their current job by age and years of coding "</span>, fontproperties <span class="op">=</span> label_font, </span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">16</span>, ha<span class="op">=</span><span class="st">"left"</span>,color<span class="op">=</span>cols[<span class="st">"subtitle"</span>] , va<span class="op">=</span><span class="st">"center"</span>, linespacing<span class="op">=</span><span class="fl">1.8</span>)</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="fl">0.4</span>,<span class="op">-</span><span class="fl">0.1</span>, <span class="st">"Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung"</span>, fontsize<span class="op">=</span><span class="dv">11</span>,  ha<span class="op">=</span><span class="st">"center"</span>,fontproperties <span class="op">=</span> label_font,  alpha<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#data -------------------------</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pivot <span class="op">=</span> df.groupby([<span class="st">"age"</span>,<span class="st">"age_l"</span>])[<span class="st">"ai_select_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack() <span class="op">*</span><span class="dv">100</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pivot <span class="op">=</span> pivot[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>pivot[<span class="st">"age"</span>] <span class="op">=</span> pivot[<span class="st">"age"</span>].replace(<span class="dv">8</span>,<span class="dv">0</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>pivot <span class="op">=</span> pivot.sort_values(by<span class="op">=</span><span class="st">"age"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#chart setup ------------</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">82</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> {<span class="st">"bg"</span>: <span class="st">"None"</span>, <span class="st">"text"</span>: <span class="st">"#D6DEEC"</span>,<span class="st">"title"</span>: <span class="st">"#32A6FE"</span>, <span class="st">"grid"</span>: <span class="st">"#2C3952"</span>, <span class="st">"subtitle"</span>: <span class="st">"#8EA1C4"</span>}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>fig.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#colormap ---------------</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> mpl.colors.Normalize(vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>norm, cmap<span class="op">=</span>cmap)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#plot data --------------------</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.barh(pivot[<span class="st">"age_l"</span>], pivot[<span class="st">"Yes"</span>], height<span class="op">=</span><span class="fl">0.55</span>, color<span class="op">=</span>m.to_rgba(<span class="dv">1</span>), zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#format axes</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.invert_yaxis()</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos <span class="kw">in</span> [<span class="st">"top"</span>, <span class="st">"right"</span>, <span class="st">"bottom"</span>]:</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    ax.spines[pos].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax.grid(visible<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="st">'x'</span>, zorder<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, bottom<span class="op">=</span><span class="va">False</span>, left<span class="op">=</span><span class="va">False</span>, pad<span class="op">=</span><span class="dv">10</span>,)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(ax.get_xticks(), [<span class="bu">str</span>(<span class="bu">int</span>(i))<span class="op">+</span><span class="st">"%"</span>for i <span class="kw">in</span> ax.get_xticks()], </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>              fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax.set_yticks(ax.get_yticks(), pivot[<span class="st">"age_l"</span>], fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#title and footer --------------</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.19</span>,<span class="fl">1.15</span>, <span class="st">"Young developers use AI more in their work"</span>, fontproperties <span class="op">=</span> title_font, fontsize<span class="op">=</span><span class="dv">22</span>, ha<span class="op">=</span><span class="st">"left"</span>, color<span class="op">=</span>cols[<span class="st">"title"</span>])</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.19</span>,<span class="fl">1.03</span>, <span class="st">"Proportion of developers who currently use AI in their development</span><span class="ch">\n</span><span class="st">process by age"</span>, fontproperties <span class="op">=</span> label_font, </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">16</span>, ha<span class="op">=</span><span class="st">"left"</span>,color<span class="op">=</span>cols[<span class="st">"subtitle"</span>] , va<span class="op">=</span><span class="st">"center"</span>, linespacing<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="fl">0.4</span>,<span class="op">-</span><span class="fl">0.09</span>, <span class="st">"Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung"</span>, fontsize<span class="op">=</span><span class="dv">11</span>,  ha<span class="op">=</span><span class="st">"center"</span>,fontproperties <span class="op">=</span> label_font,  alpha<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="developer-survey_files/figure-html/cell-4-output-1.png" width="712" height="650" class="figure-img"></p>
+<p><img src="developer-survey_files/figure-html/cell-4-output-1.png" width="623" height="543" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="ad890934" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#data--------------------------------------</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pivot <span class="op">=</span> df.groupby([<span class="st">"years_code_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_select_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack()<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>pivot <span class="op">=</span> pivot[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>pivot2 <span class="op">=</span> df.groupby([<span class="st">"years_code_pro_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_select_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack()<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>pivot2 <span class="op">=</span> pivot2[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart setup ------------</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>), dpi<span class="op">=</span><span class="dv">82</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> {<span class="st">"bg"</span>: <span class="st">"None"</span>, <span class="st">"text"</span>: <span class="st">"#D6DEEC"</span>,<span class="st">"title"</span>: <span class="st">"#32A6FE"</span>, <span class="st">"grid"</span>: <span class="st">"#2C3952"</span>, <span class="st">"subtitle"</span>: <span class="st">"#8EA1C4"</span>}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>fig.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># colormap ---------------</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> mpl.colors.Normalize(vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>norm, cmap<span class="op">=</span>cmap)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data --------------------</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>bar_height <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.barh(pivot.index<span class="op">-</span>bar_height<span class="op">/</span><span class="dv">2</span>, pivot[<span class="st">"Yes"</span>], height<span class="op">=</span>bar_height, color<span class="op">=</span>m.to_rgba(<span class="fl">0.95</span>), zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>ax.barh(pivot2.index<span class="op">+</span>bar_height<span class="op">/</span><span class="dv">2</span>, pivot2[<span class="st">"Yes"</span>], height<span class="op">=</span>bar_height, color<span class="op">=</span>m.to_rgba(<span class="fl">0.15</span>), zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># format axes</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>ax.invert_yaxis()</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos <span class="kw">in</span> [<span class="st">"top"</span>, <span class="st">"right"</span>, <span class="st">"bottom"</span>]:</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    ax.spines[pos].set_visible(<span class="va">False</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>ax.grid(visible<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="st">'x'</span>, zorder<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>ax.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, bottom<span class="op">=</span><span class="va">False</span>, left<span class="op">=</span><span class="va">False</span>, pad<span class="op">=</span><span class="dv">10</span>,)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(ax.get_xticks(), [<span class="bu">str</span>(<span class="bu">int</span>(i))<span class="op">+</span><span class="st">"%"</span>for i <span class="kw">in</span> ax.get_xticks()], </span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>              fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>ax.set_yticks(pivot.index, [x <span class="op">+</span> <span class="st">" years"</span> <span class="cf">for</span> x <span class="kw">in</span> pivot[<span class="st">"years_code_bin"</span>]], fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">#legend -------------------------------</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>lg <span class="op">=</span> fig.add_axes([<span class="fl">0.13</span>,<span class="fl">0.9</span>,<span class="fl">0.48</span>,<span class="fl">0.05</span>])</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>kw <span class="op">=</span> <span class="bu">dict</span>(marker<span class="op">=</span><span class="st">'o'</span>, s<span class="op">=</span><span class="dv">150</span>, alpha<span class="op">=</span><span class="fl">0.9</span>, linewidths<span class="op">=</span><span class="fl">0.45</span>, ec<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>lg.scatter(x<span class="op">=</span>[<span class="dv">2</span>,<span class="dv">3</span>], y<span class="op">=</span>[<span class="fl">0.8</span>]<span class="op">*</span><span class="dv">2</span>,  color<span class="op">=</span>[m.to_rgba(<span class="fl">0.95</span>),m.to_rgba(<span class="fl">0.15</span>)], <span class="op">**</span>kw, clip_on<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">"Coding incl education"</span>, <span class="st">"Professional coding"</span>,]</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, x_pos <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="dv">3</span>,<span class="dv">2</span>][::<span class="op">-</span><span class="dv">1</span>]):</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    lg.text(x_pos<span class="op">+</span><span class="fl">0.07</span>, <span class="fl">0.8</span>, labels[i], fontsize<span class="op">=</span><span class="dv">14</span>, ha<span class="op">=</span><span class="st">"left"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontproperties<span class="op">=</span>label_font, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>lg.axis(<span class="st">"off"</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co"># title and footer --------------</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.19</span>,<span class="fl">1.18</span>, <span class="st">"AI usage decreases with coding experience"</span>, fontproperties <span class="op">=</span> title_font, fontsize<span class="op">=</span><span class="dv">22</span>, ha<span class="op">=</span><span class="st">"left"</span>, color<span class="op">=</span>cols[<span class="st">"title"</span>])</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.19</span>,<span class="fl">1.07</span>, <span class="st">"Proportion of developers who currently use AI in their</span><span class="ch">\n</span><span class="st">development process by years coding"</span>, fontproperties <span class="op">=</span> label_font, </span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">16</span>, ha<span class="op">=</span><span class="st">"left"</span>,color<span class="op">=</span>cols[<span class="st">"subtitle"</span>] , va<span class="op">=</span><span class="st">"center"</span>, linespacing<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="fl">0.4</span>,<span class="op">-</span><span class="fl">0.05</span>, <span class="st">"Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung"</span>, fontsize<span class="op">=</span><span class="dv">11</span>,  ha<span class="op">=</span><span class="st">"center"</span>,fontproperties <span class="op">=</span> label_font,  alpha<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="developer-survey_files/figure-html/cell-5-output-1.png" width="566" height="640" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+</section>
+<section id="how-do-developers-feel-about-using-ai" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-developers-feel-about-using-ai">How do developers feel about using AI?</h2>
+<p><br><br></p>
+</section>
+<section id="do-developers-fear-for-their-jobs" class="level2">
+<h2 class="anchored" data-anchor-id="do-developers-fear-for-their-jobs">Do developers fear for their jobs?</h2>
+<p>Younger developers and those with less coding experience are more likely to believe AI is a threat to their jobs. But even those aged 35 years or higher can feel their jobs are at risk when they’ve been coding fewer years than other peers in their age group.</p>
+<div id="4c725116" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data ------------------------</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># by age + years coding </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># filter to remove values where sample size &lt; 100</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"Under 18 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">10</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"18-24 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">10</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"25-34 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">20</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"35-44 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">6</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"35-44 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&gt;</span><span class="dv">25</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"45-54 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">21</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>df.loc[(df[<span class="st">"age_l"</span>] <span class="op">==</span><span class="st">"55-64 years old"</span>) <span class="op">&amp;</span> (df[<span class="st">"years_code"</span>]<span class="op">&lt;</span><span class="dv">21</span>), <span class="st">"code_filter"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((df[<span class="st">"code_filter"</span>] <span class="op">!=</span> <span class="dv">1</span>) <span class="op">&amp;</span> (<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>, <span class="st">"55-64 years old"</span>])))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>pivot_scatter <span class="op">=</span> df[_filter].groupby([<span class="st">"age"</span>, <span class="st">"years_code_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack() <span class="op">*</span><span class="dv">100</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pivot_scatter <span class="op">=</span> pivot_scatter[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>pivot_scatter[<span class="st">"age"</span>] <span class="op">=</span> pivot_scatter[<span class="st">"age"</span>].replace(<span class="dv">8</span>,<span class="dv">0</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># by age</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>,])))</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> df[_filter].groupby([<span class="st">"age"</span>, <span class="st">"age_l"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack() <span class="op">*</span><span class="dv">100</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> pivot_bary[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>pivot_bary[<span class="st">"age"</span>] <span class="op">=</span> pivot_bary[<span class="st">"age"</span>].replace(<span class="dv">8</span>,<span class="dv">0</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>pivot_bary <span class="op">=</span> pivot_bary.sort_values(by<span class="op">=</span><span class="st">"age"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># by years coding</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>_filter <span class="op">=</span> ((<span class="op">~</span>df[<span class="st">"age_l"</span>].isin([<span class="st">"65 years or older"</span>, <span class="st">"Prefer not to say"</span>,])))</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>pivot_barx <span class="op">=</span> df[_filter].groupby([<span class="st">"years_code_bin"</span>], observed<span class="op">=</span><span class="va">True</span>)[<span class="st">"ai_threat_l"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>).unstack()<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>pivot_barx <span class="op">=</span> pivot_barx[<span class="st">"Yes"</span>].to_frame().reset_index()</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># colormap -----------------------------------------</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> mpl.colors.Normalize(vmin<span class="op">=</span><span class="dv">8</span>, vmax<span class="op">=</span><span class="dv">17</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>norm, cmap<span class="op">=</span>cmap)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart setup -------------------------------------------------------</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>), dpi<span class="op">=</span><span class="dv">82</span>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> GridSpec(<span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>ax_scatter <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">0</span>:<span class="dv">4</span>])</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>ax_barx <span class="op">=</span> fig.add_subplot(gs[<span class="dv">0</span>,<span class="dv">0</span>:<span class="dv">4</span>])</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>ax_bary <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">4</span>])</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.5</span>, hspace<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> {<span class="st">"bg"</span>: <span class="st">"None"</span>, <span class="st">"text"</span>: <span class="st">"#D6DEEC"</span>,<span class="st">"title"</span>: <span class="st">"#32A6FE"</span>, <span class="st">"grid"</span>: <span class="st">"#2C3952"</span>, <span class="st">"subtitle"</span>: <span class="st">"#8EA1C4"</span>}</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>fig.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data --------------------</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>ax_scatter.scatter(pivot_scatter[<span class="st">"years_code_bin"</span>],pivot_scatter[<span class="st">"age"</span>], s<span class="op">=</span>[i<span class="op">*</span><span class="dv">80</span> <span class="cf">for</span> i <span class="kw">in</span> pivot_scatter[<span class="st">"Yes"</span>]],</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>                   c<span class="op">=</span>pivot_scatter[<span class="st">"Yes"</span>], cmap<span class="op">=</span>cmap,clip_on<span class="op">=</span><span class="va">False</span>, vmin<span class="op">=</span><span class="dv">8</span>, vmax<span class="op">=</span><span class="dv">17</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>ax_bary.barh(pivot_bary[<span class="st">"age"</span>], pivot_bary[<span class="st">"Yes"</span>], height<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span>m.to_rgba(pivot_bary[<span class="st">"Yes"</span>]), zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>ax_barx.bar(pivot_barx[<span class="st">"years_code_bin"</span>],pivot_barx[<span class="st">"Yes"</span>], width<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span>m.to_rgba(pivot_barx[<span class="st">"Yes"</span>]) , zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="co"># format axes --------------------</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> [ax_scatter, ax_bary]:</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(ymin<span class="op">=-</span><span class="fl">0.5</span>, ymax<span class="op">=</span><span class="fl">5.5</span>)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    ax.invert_yaxis()</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> [ax_scatter, ax_barx]:</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(xmin<span class="op">=-</span><span class="fl">0.5</span>, xmax<span class="op">=</span><span class="fl">6.5</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    ax.set_facecolor(cols[<span class="st">"bg"</span>])</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>ax_bary.set_xlim(xmin<span class="op">=</span><span class="dv">0</span>,xmax<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>ax_barx.set_ylim(ymin<span class="op">=</span><span class="dv">0</span>,ymax<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="co">#spines</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos <span class="kw">in</span> [<span class="st">"top"</span>, <span class="st">"right"</span>]:</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    ax_barx.spines[pos].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    ax_bary.spines[pos].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    ax_scatter.spines[pos].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>ax_bary.spines[<span class="st">"bottom"</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>ax_barx.spines[<span class="st">"left"</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>ax_barx.spines[<span class="st">"bottom"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>ax_bary.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>ax_scatter.spines[<span class="st">"left"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>ax_scatter.spines[<span class="st">"bottom"</span>].<span class="bu">set</span>(color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="co"># ticks and grids</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>ax_barx.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, bottom<span class="op">=</span><span class="va">False</span>, left<span class="op">=</span><span class="va">False</span>, labelbottom<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span>, labelleft<span class="op">=</span><span class="va">False</span>, )</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>ax_bary.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, left<span class="op">=</span><span class="va">False</span>,bottom<span class="op">=</span><span class="va">False</span>, labelleft<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span>,  labelbottom<span class="op">=</span><span class="va">False</span>, )</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>ax_scatter.grid(visible<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="st">'both'</span>, zorder<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>cols[<span class="st">"grid"</span>], linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>ax_scatter.tick_params(axis<span class="op">=</span><span class="st">'both'</span>, left<span class="op">=</span><span class="va">False</span>, bottom<span class="op">=</span><span class="va">False</span>,pad<span class="op">=</span><span class="dv">10</span> )</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_yticks(np.arange(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">1</span>), pivot_bary[<span class="st">"age_l"</span>], fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_xticks(ax_scatter.get_xticks(), ax_scatter.get_xticklabels(), fontproperties<span class="op">=</span>label_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_xlabel(<span class="st">"Years coding"</span>, labelpad<span class="op">=</span><span class="dv">15</span>, fontproperties<span class="op">=</span>title_font, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>ax_scatter.set_ylabel(<span class="st">"Age"</span>, labelpad<span class="op">=</span><span class="dv">15</span>, fontproperties<span class="op">=</span>title_font, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span>cols[<span class="st">"text"</span>])</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="co"># colorbar ------------------</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>cbaxes <span class="op">=</span> fig.add_axes([<span class="fl">0.68</span>, <span class="fl">1.03</span>, <span class="fl">0.18</span>, <span class="fl">0.02</span>]) <span class="co">#axes to hold colorbar</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>cmappable <span class="op">=</span> cm.ScalarMappable(norm<span class="op">=</span>mpl.colors.Normalize(<span class="dv">0</span>,<span class="dv">1</span>), cmap<span class="op">=</span>cmap)              </span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>cb <span class="op">=</span> plt.colorbar(cmappable, cax<span class="op">=</span>cbaxes, anchor<span class="op">=</span>(<span class="dv">1</span>,<span class="fl">1.2</span>), orientation<span class="op">=</span><span class="st">'horizontal'</span>, drawedges<span class="op">=</span><span class="va">False</span>, ticks<span class="op">=</span>[<span class="fl">0.02</span>, <span class="fl">0.5</span>,<span class="fl">0.97</span>])</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>cb.set_ticks(ticks<span class="op">=</span>[<span class="fl">0.02</span>, <span class="fl">0.5</span>,<span class="fl">0.97</span>],labels<span class="op">=</span>[<span class="st">"7%"</span>, <span class="st">"12%"</span>, <span class="st">"17%"</span>] , color<span class="op">=</span>cols[<span class="st">"text"</span>], fontproperties<span class="op">=</span>legend_font, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>cb.outline.set_visible(<span class="va">False</span>)</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>cbaxes.tick_params(color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="co"># title and footer --------------</span></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.17</span>,<span class="fl">1.15</span>, <span class="st">"Less experienced developers see AI more as a threat"</span>, fontproperties <span class="op">=</span> title_font, fontsize<span class="op">=</span><span class="dv">22</span>, ha<span class="op">=</span><span class="st">"left"</span>, color<span class="op">=</span>cols[<span class="st">"title"</span>])</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="op">-</span><span class="fl">0.17</span>,<span class="fl">1.03</span>, <span class="st">"Proportion of developers who believe AI is a threat</span><span class="ch">\n</span><span class="st">to their current job by age and years of coding "</span>, fontproperties <span class="op">=</span> label_font, </span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">16</span>, ha<span class="op">=</span><span class="st">"left"</span>,color<span class="op">=</span>cols[<span class="st">"subtitle"</span>] , va<span class="op">=</span><span class="st">"center"</span>, linespacing<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="fl">0.4</span>,<span class="op">-</span><span class="fl">0.1</span>, <span class="st">"Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung"</span>, fontsize<span class="op">=</span><span class="dv">11</span>,  ha<span class="op">=</span><span class="st">"center"</span>,fontproperties <span class="op">=</span> label_font,  alpha<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span>cols[<span class="st">"subtitle"</span>])</span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="developer-survey_files/figure-html/cell-6-output-1.png" width="718" height="650" class="figure-img"></p>
 </figure>
 </div>
 </div>
