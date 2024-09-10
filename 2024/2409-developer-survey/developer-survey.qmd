@@ -1,9 +1,12 @@
 ---
 title: "New coders use AI more in their work but also see it as a threat"
+from: markdown+emoji
 format:
   html:
     code-fold: true
-    theme: cyborg
+    theme: 
+        - cyborg
+        - custom.scss
     code-copy: true
 jupyter: python3
 toc: true
@@ -268,3 +271,8 @@ plt.figtext(0.4,-0.1, "Data: Stackoverflow Developer Survey 2024   |   Design: L
 
 plt.show()
 ```
+
+<br/><br/>
+<br/><br/>
+
+Made with :blue_heart: by Lisa Hornung.  \ Follow me on \ [![](logo-github.png){height=20 fig-alt="Logo of Github"}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-mastodon.png){height=20 fig-alt="Logo of Mastodon."}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-linkedin.png){width=20 fig-alt="Logo of Linkedin."}](https://en.wikipedia.org/wiki/Elephant)
