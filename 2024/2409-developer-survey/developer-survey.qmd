@@ -6,8 +6,8 @@ format:
     code-fold: true
     theme: 
         - cyborg
-        - custom.scss
     code-copy: true
+    css: custom-styles.css
 jupyter: python3
 toc: true
 number-sections: false
@@ -340,4 +340,4 @@ Data was excluded from the last chart (threat by age and years coding), where th
 
 <br/><br/>
 
-Made with :blue_heart: by Lisa Hornung.  \ Follow me on \ [![](logo-github.png){height=20 fig-alt="Logo of Github"}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-mastodon.png){height=20 fig-alt="Logo of Mastodon."}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-linkedin.png){width=20 fig-alt="Logo of Linkedin."}](https://en.wikipedia.org/wiki/Elephant)
+Made with :blue_heart: by Lisa Hornung.  \ Follow me on \ [![](logo-github.png){height=20 fig-alt="Logo of Github"}](https://github.com/Lisa-Ho) \ [![](logo-mastodon.png){height=20 fig-alt="Logo of Mastodon."}](https://fosstodon.org/@LisaHornung) \ [![](logo-linkedin.png){width=20 fig-alt="Logo of Linkedin."}](https://www.linkedin.com/in/lisa-maria-hornung/)
