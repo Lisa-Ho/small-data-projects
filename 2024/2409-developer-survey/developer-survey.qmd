@@ -13,7 +13,7 @@ toc: true
 number-sections: false
 ---
 
-Contribution to #TidyTuesday analysing data from the [Stackoverflow Developer Survey 2024](https://survey.stackoverflow.co/). Analysis and charts made with python, site made with Quarto. 
+Contribution to #TidyTuesday analysing data from the [Stackoverflow Developer Survey 2024](https://survey.stackoverflow.co/). Analysis and charts created with python, site made with Quarto. 
 <br/><br/>
 ---
 
@@ -165,6 +165,62 @@ plt.show()
 
 
 
+```{python}
+#data--------------------------------------
+ai_sent_r = {"Very favorable": 1,
+             "Favorable" :2,
+             "Indifferent": 3,
+             "Unfavorable": 4,
+             "Very unfavorable": 5
+            }
+df["ai_sent_r"] = df["ai_sent_l"].map(ai_sent_r)
+pivot = df[df["ai_sent_l"]!="Unsure"].groupby(["years_code_bin"], observed=True)["ai_sent_r"].value_counts(normalize=True).unstack()*100
+
+# Chart setup ------------
+cols = {"bg": "None", "text": "#D6DEEC","title": "#32A6FE", "grid": "#2C3952", "subtitle": "#8EA1C4"}
+fig, ax = plt.subplots(figsize=(8,5), dpi=82)
+fig.set_facecolor(cols["bg"])
+
+#colors
+norm = mpl.colors.Normalize(vmin=0, vmax=1)
+m = cm.ScalarMappable(norm=norm, cmap=cmap)
+color_list = [m.to_rgba([0.95, 0.65, 0.5,0.3, 0.05])][0]
+
+#create stacked bar chart
+pivot.plot(kind='barh', stacked=True, color=color_list, ax=ax, zorder=3, width=0.6, legend=False)
+
+# format axes
+ax.set_facecolor(cols["bg"])
+ax.invert_yaxis()
+for pos in ["top", "right", "bottom"]:
+    ax.spines[pos].set_visible(False)
+ax.spines["left"].set(color=cols["grid"], linewidth=1)
+ax.grid(visible=True, axis='x', zorder=2, color=cols["grid"], linewidth=0.5, alpha=0.4)
+ax.tick_params(axis='both', bottom=False, left=False, pad=10,)
+ax.set_xticks(ax.get_xticks(), [str(int(i))+"%"for i in ax.get_xticks()], 
+              fontproperties=label_font, fontsize=14, color=cols["text"])
+ax.set_xlim(xmin=0, xmax=100)
+ax.set_yticks(np.arange(0,len(pivot),1), [x + " years" for x in pivot.index.astype(str)], fontproperties=label_font, fontsize=14, color=cols["text"])
+ax.set_ylabel("")
+
+#legend -------------------------------
+lg = fig.add_axes([0.04,0.93,0.68,0.05])
+labels = list(ai_sent_r.keys())
+for i, x_pos in enumerate([1,2.2,3,4,5]):
+    lg.text(x_pos, 0.8, labels[i], fontsize=14, ha="left", va="center", fontproperties=title_font, color=color_list[i])
+lg.set_xlim(xmin=0.9,xmax=5.1)
+lg.axis("off")
+
+# title and footer --------------
+plt.figtext(-0.05,1.27, "New coders are more favourable towards using AI", fontproperties = title_font, fontsize=22, ha="left", color=cols["title"])
+plt.figtext(-0.05,1.15, "Proportion of developers and their stance towards using AI in their\ndevelopment process by years coding", fontproperties = label_font, 
+            fontsize=16, ha="left",color=cols["subtitle"] , va="center", linespacing=1.8)
+plt.figtext(0.4,-0.09, "Data: Stackoverflow Developer Survey 2024   |   Design: Lisa Hornung", fontsize=11,  ha="center",fontproperties = label_font,  alpha=0.8, color=cols["subtitle"])
+
+plt.show()
+
+```
+
 
 <br/><br/>
 
@@ -272,7 +328,16 @@ plt.figtext(0.4,-0.1, "Data: Stackoverflow Developer Survey 2024   |   Design: L
 plt.show()
 ```
 
+
+
 <br/><br/>
+---
+
+**Note**
+
+Data was excluded from the last chart (threat by age and years coding), where the sample size was smaller than 100 respondents. 
+
+
 <br/><br/>
 
 Made with :blue_heart: by Lisa Hornung.  \ Follow me on \ [![](logo-github.png){height=20 fig-alt="Logo of Github"}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-mastodon.png){height=20 fig-alt="Logo of Mastodon."}](https://en.wikipedia.org/wiki/Elephant) \ [![](logo-linkedin.png){width=20 fig-alt="Logo of Linkedin."}](https://en.wikipedia.org/wiki/Elephant)
