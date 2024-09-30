@@ -2,6 +2,15 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 09/2024 Developer survey
+
+Analysed data from Stackoverflow Developer survey provided by #TidyTuesday and turned it into a [little article](https://inside-numbers.quarto.pub/developer-survey-ai-usage-and-sentiment/) using Quarto. Really late to the party, but love how smooth it is to go from a jupyter notebook to a static site in Quarto.
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2024/2409-developer-survey/developer-survey-exploration.ipynb)
+
+<img src="https://github.com/user-attachments/assets/66c5dc59-841b-4c4f-b024-9d2736167d85" width="600">
+
+
 ### 09/2024 Power Rangers
 
 Been a while since I did a #TidyTuesday challenge. Week 35 was all about the Power Rangers Franchise. I didn't even know it was still going, which is incredible! 
