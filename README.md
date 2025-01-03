@@ -2,6 +2,14 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 01/2025 Grid map of europe
+
+Bauhaus inspired tile grid map of europe. Each country is coloured by the first letter of their ISO name. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2501-eurogrid-names/europe-grid-iso-names.ipynb)
+
+<img src="https://github.com/user-attachments/assets/86f76998-08e9-4dd7-b4c4-1a8ae02d43e2" width="500">
+
 ### 09/2024 Developer survey
 
 Analysed data from Stackoverflow Developer survey provided by #TidyTuesday and turned it into a [little article](https://inside-numbers.quarto.pub/developer-survey-ai-usage-and-sentiment/) using Quarto. Really late to the party, but love how smooth it is to go from a jupyter notebook to a static site in Quarto.
