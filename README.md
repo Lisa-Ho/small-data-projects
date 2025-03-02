@@ -2,6 +2,18 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 03/2025 Marvel money tree
+
+Proof of concept for creating a radial tree diagram in python using numpy, matplotlib and bezier curves. Data from [Information is Beautiful](https://informationisbeautiful.net/visualizations/which-is-the-best-performing-marvel-movie/) via [Makeover Monday](https://data.world/makeovermonday/what-is-the-best-performing-marvel-movie). 
+
+Disclaimer: Code is not the prettiest, but I made it work :D 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2502-radial-tree/radial-tree.ipynb)
+
+<img src="https://github.com/user-attachments/assets/6c0fc652-cd17-49db-969d-0d6ab59cfb5b" width="500">
+
+
+
 ### 01/2025 Grid map of europe
 
 Bauhaus inspired tile grid map of europe. Each country is coloured by the first letter of their ISO name. 
