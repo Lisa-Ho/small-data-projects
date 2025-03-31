@@ -2,6 +2,16 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 04/2025 Animal rescue incidents
+
+Little chart for the #30DayChartChallenge Day 1: Fractions. Pictogram made in python with custom svg markers and pyfonts to load Google fonts. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2504-lfb-animal-rescue/lbf-animal-rescue.ipynb)
+
+<img src="https://github.com/user-attachments/assets/1b9a56e4-a910-4a5b-8c24-39f58b655635" width="550">
+
+
+
 ### 03/2025 Marvel money tree
 
 Proof of concept for creating a radial tree diagram in python using numpy, matplotlib and bezier curves. Data from [Information is Beautiful](https://informationisbeautiful.net/visualizations/which-is-the-best-performing-marvel-movie/) via [Makeover Monday](https://data.world/makeovermonday/what-is-the-best-performing-marvel-movie). 
