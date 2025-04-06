@@ -4,7 +4,7 @@ Repository for small-ish analysis and data viz projects.
 
 ### 04/2025 Cat and dog rescues
 
-Another chart using the animal rescue incidents data for the #30DayChartChallenge (Day 3 - Circular).  [Cere](https://github.com/Lisa-Ho/small-data-projects/tree/main/2025/2504-lfb-animal-rescue-radar),[interactive chart](https://inside-numbers.quarto.pub/london-animal-rescues/) 
+Another chart using the animal rescue incidents data for the #30DayChartChallenge (Day 3 - Circular).  [Code](https://github.com/Lisa-Ho/small-data-projects/tree/main/2025/2504-lfb-animal-rescue-radar),[interactive chart](https://inside-numbers.quarto.pub/london-animal-rescues/) 
 
 First time using Observable Plot and python together in Quarto. Came across Nicola's great blog on [Observable for R Users](https://nrennie.rbind.io/blog/observable-r-users/) and finally gave it a shot.
 
