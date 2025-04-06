@@ -79,7 +79,7 @@ labelscale = d3.scaleLinear([0, 0.5], [0, maxValue])
 
 ### <span style="color:#DE1069">Cats</span> get lost in summer, <span style="color:#276EEA">dogs</span> need help all year round
 
-#### Total cat and dog rescue incidents attended by the London fire brigade, 2010 to 2024
+#### Total cat and dog rescue incidents attended by the London fire brigade, 2009 to 2024
 
 <br>
 
@@ -200,5 +200,5 @@ Plot.plot({
 
 
 <br><br>
-Contribution to the #30DayChartChallenge Day 3 Circular. Data processed with Python, charts made with Observable Plot, site made with Quarto. Full code [here]().
+Contribution to the #30DayChartChallenge Day 3 Circular. Data processed with Python, charts made with Observable Plot, site made with Quarto. Full code [here](https://github.com/Lisa-Ho/small-data-projects/tree/main?tab=readme-ov-file#042025-cat-and-dog-rescues).
 

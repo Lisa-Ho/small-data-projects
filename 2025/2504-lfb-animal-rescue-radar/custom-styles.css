@@ -4,9 +4,9 @@
 
 h1 {
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 0.67em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.0em;
     margin-left: 0;
     margin-right: 0;
     font-weight: 600;
@@ -16,7 +16,7 @@ h3 {
     display: block;
     color: black;
     font-size: 1.7em;
-    margin-top: 0.33em;
+    margin-top: 0.0em;
     margin-bottom: 0.83em;
     margin-left: 0;
     margin-right: 0;
