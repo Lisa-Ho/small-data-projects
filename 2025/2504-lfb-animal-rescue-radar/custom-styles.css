@@ -1,0 +1,34 @@
+#quarto-content {
+    padding-top:40px;
+  }
+
+h1 {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.25em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 600;
+  }
+
+h3 {
+    display: block;
+    color: black;
+    font-size: 1.7em;
+    margin-top: 0.33em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+h4 {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: light;
+  }

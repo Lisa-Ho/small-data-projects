@@ -1,0 +1,204 @@
+---
+title: "London animal rescues"
+execute:
+  echo: false
+from: markdown+emoji
+format:
+  html:
+    theme: 
+        - cosmo
+    code-copy: true
+    css: custom-styles.css
+jupyter: python3
+toc: false
+number-sections: false
+---
+
+
+```{python}
+import pandas as pd
+
+#import data
+df = pd.read_csv("Animal Rescue incidents attended by LFB from Jan 2009.csv")
+
+#clean data
+date_format = "%d/%m/%Y %H:%M"
+df["DateTimeOfCall"] = pd.to_datetime(df["DateTimeOfCall"], format=date_format)
+df["AnimalGroupParent"] = df["AnimalGroupParent"].str.lower().fillna("Unknown")
+df = df[df["CalYear"]<2025]
+df["Month_number"] = df["DateTimeOfCall"].dt.month
+df["Month"] = df["DateTimeOfCall"].dt.strftime('%b')
+#df["AnimalGroupParent"].value_counts()
+```
+
+
+```{python}
+#prepare data and convert to dictionary for observable plot
+pivot = df
+pivot = pivot[["Month_number", "Month","AnimalGroupParent"]].value_counts(sort=False).unstack()
+pivot["total"] = pivot.sum(axis=1)
+pivot = pivot.reset_index().drop(columns="Month_number").set_index("Month")
+pivot = pivot[["dog", "cat",]]
+pivot = pivot.to_dict(orient="dict", index=True)
+pydata = []
+for key, value in pivot.items():
+  value['name'] = key
+  pydata.append(value)
+
+#transfer over to observable
+ojs_define(pydata = pydata)
+```
+
+
+
+```{ojs}
+//get python dict and flatten it, add facet position (fx, fy)
+data = pydata
+points = {
+  const points = data.flatMap(({ name, ...values }, i) =>
+    Object.entries(values).map(([key, value]) => ({
+      name,
+      key,
+      value,
+      fx: (1 + i) % 2, // trellis (facets); we leave facet <0,0> empty for the legend
+      fy: 2
+    }))
+  );
+  return points;
+}
+```
+
+
+```{ojs}
+//create scales to calculate correct coordinate system
+maxValue = Math.round(d3.max(points, d => d.value) / 100) * 100
+longitude = d3.scalePoint(new Set(Plot.valueof(points, "key")), [180, -180]).padding(0.5).align(1)
+latitude = d3.scaleLinear([0, maxValue], [0, 0.5])
+labelscale = d3.scaleLinear([0, 0.5], [0, maxValue])
+```
+
+### <span style="color:#DE1069">Cats</span> get lost in summer, <span style="color:#276EEA">dogs</span> need help all year round
+
+#### Total cat and dog rescue incidents attended by the London fire brigade, 2010 to 2024
+
+<br>
+
+```{ojs}
+Plot.plot({
+  width: 700,
+
+  projection: {
+    type: "azimuthal-equidistant",
+    rotate: [0, -90],
+    
+    // Note: 0.63° corresponds to max. length (here, 0.5), plus enough room for the labels
+    domain: d3.geoCircle().center([0, 90]).radius(0.63)()
+  },
+  facet: {
+    data: points,
+    x: "fx",
+    y: "fy",
+    axis: null
+  },
+  color: { legend: false,  type: "categorical", range: ["#DE1069", "#276EEA"]},
+  marks: [
+
+    Plot.text(points, Plot.selectFirst({text: "name", frameAnchor: "top", fontWeight: "400", fontSize: 18,  dy: -17, dx:0})),
+
+    // grey discs
+    Plot.geo([100, 250, 400, 550, 700], {
+      geometry: (r) => d3.geoCircle().center([0, 90]).radius(latitude(r))(),
+      stroke: "black",
+      fill: "black",
+      strokeOpacity: 0.3,
+      fillOpacity: 0.0,
+      strokeWidth: 0.5
+    }),
+
+    // white axes
+    Plot.link(longitude.domain(), {
+      x1: longitude,
+      y1: 90 - 0.57,
+      x2: 0,
+      y2: 90,
+      stroke: "white",
+      strokeOpacity: 0.5,
+      strokeWidth: 2.5
+    }),
+
+    // tick labels
+    Plot.text([100, 250, 400, 550, 700], {
+      x: 180,
+      y: (d) => 90 - latitude(d),
+      dx: 2,
+      textAnchor: "start",
+      text: (d) => `${d}`,
+      fill: "currentColor",
+      stroke: "white",
+      fontSize: 10,
+   
+    }),
+
+    // axes labels
+    Plot.text(longitude.domain(), {
+      x: longitude,
+      y: 90 - 0.57,
+      text: Plot.identity,
+      lineWidth: 5,
+      fontSize: 14,
+      fontWeight: "bold"
+    }),
+
+
+    // areas
+    Plot.area(points, {
+      x1: ({ key }) => longitude(key),
+      y1: ({ value }) => 90 - latitude(value),
+      x2: 0,
+      y2: 90,
+      fill: "name",
+      stroke: "name",
+      curve: "cardinal-closed"
+    }),
+
+    // points
+    Plot.dot(points, {
+      x: ({ key }) => longitude(key),
+      y: ({ value }) => 90 - latitude(value),
+      fill: "name",
+      stroke: "name"
+    }),
+
+    // interactive labels
+    Plot.text(
+      points,
+      Plot.pointer({
+        x: ({ key }) => longitude(key),
+        y: ({ value }) => 90 - latitude(value),
+        text: (d) => `${(d.value).toFixed(0)}`,
+        textAnchor: "start",
+        dx: 4,
+        fill: "currentColor",
+        stroke: "white",
+        maxRadius: 10
+      })
+    ),
+
+    // interactive opacity on the areas
+    () =>
+      svg`<style>
+          g[aria-label=area] path {fill-opacity: 0.1; transition: fill-opacity .2s;}
+          g[aria-label=area]:hover path:not(:hover) {fill-opacity: 0.05; transition: fill-opacity .2s;}
+          g[aria-label=area] path:hover {fill-opacity: 0.3; transition: fill-opacity .2s;}
+      `
+  ]
+})
+```
+
+
+<span style="font-size:14px">Data: London Datastore &nbsp;| &nbsp; Design: Lisa Hornung</span>
+
+
+<br><br>
+Contribution to the #30DayChartChallenge Day 3 Circular. Data processed with Python, charts made with Observable Plot, site made with Quarto. Full code [here]().
+
