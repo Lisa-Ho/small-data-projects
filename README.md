@@ -2,6 +2,15 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 04/2025 Cat and dog rescues
+
+Another chart using the animal rescue incidents data for the #30DayChartChallenge (Day 3 - Circular). Interactive version [here](https://inside-numbers.quarto.pub/london-animal-rescues/).
+
+First time using Observable Plot and python together in Quarto. Came across Nicola's great blog on [Observable for R Users](https://nrennie.rbind.io/blog/observable-r-users/) and finally gave it a shot.
+
+<img src="https://github.com/user-attachments/assets/51fdfa2a-b1a0-451f-9766-24a8e392dde0" width="550">
+
+
 ### 04/2025 Animal rescue incidents
 
 Little chart for the #30DayChartChallenge Day 1: Fractions. Pictogram made in python with custom svg markers and pyfonts to load Google fonts. 
