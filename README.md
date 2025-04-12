@@ -2,6 +2,17 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 04/2025 Bob's Burgers dialogue
+
+I'm a big lover of the TV show, so this had to happen at some point. Viz exploring mentions of fart(s/ing/ed) and butt(s) by episode. 
+
+For #30DayChartChallenge Day 11 - Stripes, made in python
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2504-bobs-burger/bobs-burger.ipynb)
+
+<img src="https://github.com/user-attachments/assets/f8401fb5-a8e9-4a63-a773-7499955c6226" width="550">
+
+
 ### 04/2025 Cat and dog rescues
 
 Another chart using the animal rescue incidents data for the #30DayChartChallenge (Day 3 - Circular).  [Code](https://github.com/Lisa-Ho/small-data-projects/tree/main/2025/2504-lfb-animal-rescue-radar),[interactive chart](https://inside-numbers.quarto.pub/london-animal-rescues/) 
