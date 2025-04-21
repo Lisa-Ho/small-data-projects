@@ -1,0 +1,189 @@
+---
+title: "More cycle lanes = more cyclists?"
+execute:
+  echo: false
+from: markdown+emoji
+format:
+  html:
+    theme: 
+        - cosmo
+    code-copy: true
+    css: custom-styles.css
+jupyter: python3
+toc: false
+number-sections: false
+
+---
+
+Intro text
+<br/><br/>
+
+<!-- Setup --->
+```{python} 
+#setup -------------------------------
+
+#load libraries
+import os
+import configparser
+import geopandas as gpd
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+#set filepaths
+project_root = os.path.abspath(os.getcwd())
+root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
+config_file =  os.path.join(root, 'config.cfg')
+
+# geodata for shapefiles
+config = configparser.ConfigParser()
+config.read(config_file)
+gdata_root = config['geodata']['path']
+```
+
+<!-- Load data --->
+```{python}
+#load data ---------------------
+#london boroughs shapefile
+london = gpd.read_file(os.path.join(gdata_root, 'london-shapefiles\\London_Borough_Excluding_MHW.shp'))
+london = london.to_crs(4326)
+
+# load preprocessed osm data
+osm_stats_df = pd.read_csv("osm_road_cycleways_stats.csv").rename(columns={"ratio":"road_cycleway_ratio"})
+
+# load TfL data
+tfl_cycle_routes = gpd.GeoDataFrame.from_file('TfL_CycleRoutes.json')
+tfl_cycle_routes_stats = pd.read_csv("tfl_cycle_routes_stats.csv")
+
+#load cycle hangar stats
+hangar_stats = pd.read_csv("cycle_hangar_stats.csv")
+
+#load rates
+rates = pd.read_excel("cw0302-proportion-of-adults-that-cycle-by-frequency-purpose-and-local-authority.xlsx",
+                       sheet_name="CW0302", skiprows=4)
+rates = rates[rates["ONS Code"].isin(london["GSS_CODE"])].reset_index(drop=True)
+rates = rates.drop(columns=["Area name", "Class", "Mode"])
+years = ['2016', '2017', '2018','2019', '2020', '2021', '2022', '2023']
+with pd.option_context('future.no_silent_downcasting', True):
+    rates[years] = rates[years].replace("[u]", np.nan)
+
+#load household estimates
+households = pd.read_excel("roundedhouseholdestimates2023.xlsx",
+                       sheet_name="2023", skiprows=6, 
+                       usecols=[0,1,2],
+                       names=["GSS_CODE", "NAME", "no_households"]
+                         )
+#load funding
+funding = pd.read_csv("transport_bids.csv",
+                        skiprows=2, usecols=[0,2,3], 
+                        header=None,
+                        names=["GSS_CODE","transport_bid", "transport_funding"])
+```
+
+
+<!-- Process data --->
+```{python}
+#start with London borough shapefile
+gdf = london[['NAME', 'GSS_CODE', 'HECTARES', 'NONLD_AREA', 'ONS_INNER', 'geometry']]
+
+#add # of households
+gdf = pd.merge(gdf, households[["GSS_CODE", "no_households"]], left_on="GSS_CODE", right_on="GSS_CODE", how="left")
+
+#add funding
+gdf = pd.merge(gdf, funding[["GSS_CODE", "transport_bid", "transport_funding"]], left_on="GSS_CODE", right_on="GSS_CODE", how="left")
+gdf["funding_perk_household"] = gdf["transport_funding"] / gdf["no_households"]*1000
+
+#add osm stats
+gdf = pd.merge(gdf, osm_stats_df.rename(columns=lambda x: f"osm_{x}" if x != 'NAME' else x), 
+               left_on="NAME", right_on="NAME", how="left",)
+gdf["osm_cycle_road_ratio"] = gdf["osm_total_cycleways"] / gdf["osm_total_roads"] *100
+
+#add tfl stats
+gdf = pd.merge(gdf, tfl_cycle_routes_stats.rename(columns=lambda x: f"tfl_{x.lower()}" if x != 'NAME' else x), 
+               left_on="NAME", right_on="NAME", how="left",)
+gdf["tfl_cycle_road_ratio"] =  (gdf["tfl_open"]*1000) / (gdf["osm_total_roads"]) *100
+
+#add hangar stats
+gdf = pd.merge(gdf, hangar_stats.rename(columns=lambda x: f"hangar_{x.lower()}" if x != 'NAME' else x), 
+               left_on="NAME", right_on="NAME", how="left",)
+gdf["hangar_perk_household"] = gdf["hangar_total"] / gdf["no_households"]*1000
+
+#add rates
+gdf = pd.merge(gdf, rates, left_on="GSS_CODE", right_on="ONS Code", how="right")
+
+#pass df to observable
+df_python = pd.DataFrame(gdf.drop(columns='geometry')).fillna("Missing")
+df_python = df_python.transpose()
+df_python = df_python.to_dict(orient="dict", index=True)
+pydata = []
+for key, value in df_python.items():
+  value['name'] = key
+  pydata.append(value)
+ojs_define(pydata = pydata)
+```
+
+
+<!-- Pass data to Observable --->
+```{ojs}
+data = pydata
+
+columns = ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+
+data.forEach(function(d) {
+    columns.forEach(function(column){
+        if (d[column] === "Missing") {
+        d[column] = null;
+        }
+    });
+});
+
+// Filter the data based on purpose and frequency
+filteredData = data.filter(function(d) {
+    return d.Purpose === purpose && 
+            d.Frequency === frequency ; // Filter for "Camden"
+});
+filteredData;
+```
+
+
+
+<!-- Input fields --->
+```{ojs}
+viewof year = Inputs.range(
+  [2016, 2023], 
+  {value: 2023, step: 1, 
+  label: "Year"})
+
+viewof purpose = Inputs.radio(
+  ["Any", "Leisure", "Travel"], 
+  { value: "Any", 
+    label: "Purpose"
+  })
+
+viewof frequency = Inputs.select(
+    ["At least once per month", 
+    "At least once per week",
+    "At least 3 times per week",
+    "At least 5 times per week"], 
+    {multiple: false, 
+    value: "At least once per week",
+    label: "Frequency"})
+```
+
+
+
+```{ojs}
+
+Plot.plot({
+  inset: 8,
+  grid: true,
+  color: {
+    legend: true,
+  },
+  marks: [
+    Plot.dot(filteredData, {x: "tfl_cycle_road_ratio", y: year.toString()})
+  ]
+})
+
+```
