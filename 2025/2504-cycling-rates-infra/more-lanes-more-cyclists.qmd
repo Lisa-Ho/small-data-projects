@@ -65,8 +65,8 @@ rates = pd.read_excel("cw0302-proportion-of-adults-that-cycle-by-frequency-purpo
 rates = rates[rates["ONS Code"].isin(london["GSS_CODE"])].reset_index(drop=True)
 rates = rates.drop(columns=["Area name", "Class", "Mode"])
 years = ['2016', '2017', '2018','2019', '2020', '2021', '2022', '2023']
-with pd.option_context('future.no_silent_downcasting', True):
-    rates[years] = rates[years].replace("[u]", np.nan)
+#with pd.option_context('future.no_silent_downcasting', True):
+rates[years] = rates[years].replace("[u]", np.nan)
 
 #load household estimates
 households = pd.read_excel("roundedhouseholdestimates2023.xlsx",
@@ -115,37 +115,13 @@ gdf = pd.merge(gdf, rates, left_on="GSS_CODE", right_on="ONS Code", how="right")
 #pass df to observable
 df_python = pd.DataFrame(gdf.drop(columns='geometry')).fillna("Missing")
 df_python = df_python.transpose()
-df_python = df_python.to_dict(orient="dict", index=True)
+df_python = df_python.to_dict(orient="dict")
 pydata = []
 for key, value in df_python.items():
   value['name'] = key
   pydata.append(value)
 ojs_define(pydata = pydata)
 ```
-
-
-<!-- Pass data to Observable --->
-```{ojs}
-data = pydata
-
-columns = ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
-
-data.forEach(function(d) {
-    columns.forEach(function(column){
-        if (d[column] === "Missing") {
-        d[column] = null;
-        }
-    });
-});
-
-// Filter the data based on purpose and frequency
-filteredData = data.filter(function(d) {
-    return d.Purpose === purpose && 
-            d.Frequency === frequency ; // Filter for "Camden"
-});
-filteredData;
-```
-
 
 
 <!-- Input fields --->
@@ -171,6 +147,28 @@ viewof frequency = Inputs.select(
     label: "Frequency"})
 ```
 
+
+<!-- Pass data to Observable --->
+```{ojs}
+data = pydata
+
+columns = ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+
+dataCopy = data.forEach(function(d) {
+    columns.forEach(function(column){
+        if (d[column] === "Missing") {
+          d[column] = null;
+        }
+    });
+});
+
+// Filter the data based on purpose and frequency
+filteredData = data.filter(function(d) {
+    return d.Purpose === purpose && 
+            d.Frequency === frequency ; // Filter for "Camden"
+});
+// filteredData;
+```
 
 
 ```{ojs}

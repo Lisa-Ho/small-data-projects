@@ -1,0 +1,132 @@
+
+
+form {
+    padding-bottom : 4px;
+}
+
+svg {
+    padding-top: 50px;
+}
+
+input[type="number"] {
+    border: 1px solid#ccc; /* Changes the border color */
+    border-radius: 4px; /* Adds rounded corners */
+    outline: none; /* Removes the default outline */
+    padding: 5px; /* Adds space inside the input */
+    max-width: 80px; /* Sets the width of the input */
+    font-size: 16px; /* Sets the font size */
+    background-color: #ffffff; /* Changes the background color */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Adds a subtle shadow */
+    transition: border-color 0.3s ease; /* Animates border color change */
+    cursor: pointer;
+}
+
+input[type="number"]:hover {
+    /* border-color: #00688a; Highlights the border when focused */
+    border: 1px solid #0986e0;
+    background-color: #f6f6f6; /* Changes background color on focus */
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default browser styling */
+    width: 300px; /* Set width of the slider */
+    height: 6px; /* Height of the slider track */
+    background: #ddd; /* Track color */
+    border-radius: 5px; /* Rounded track */
+    outline: none; /* Remove default outline */
+    transition: background-color 0.3s ease; /* Smooth background change on interaction */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling for the thumb */
+    width: 15px; /* Thumb width */
+    height: 15px; /* Thumb height */
+    background: #0986e0; /* Thumb color */
+    border-radius: 50%; /* Make the thumb circular */
+    border: 0px solid #0267af; /* Add a border around the thumb */
+    cursor: pointer; /* Change the cursor to indicate interaction */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #0267af; /* Change thumb color on hover */
+}
+
+
+/* Basic styling for the radio buttons */
+input[type="radio"] {
+    appearance: none; /* Remove default browser styling */
+    -webkit-appearance: none; /* For WebKit browsers */
+    -moz-appearance: none; /* For Mozilla browsers */
+    width: 15px; /* Size of the radio button */
+    height: 15px;
+    border: 1px solid #ccc; /* Unselected border color */
+    border-radius: 50%; /* Makes the radio button circular */
+    outline: none; /* Removes browser focus outlines */
+    cursor: pointer; /* Adds interactivity */
+    position: relative; /* Position for custom indicators */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Styling for the selected radio button */
+input[type="radio"]:checked {
+    border: 2px solid #0986e0; /* Border color for the selected button */
+}
+
+input[type="radio"]:checked::before {
+    content: ''; /* Create the inner circle for the selected state */
+    width: 7px; /* Size of the inner circle */
+    height: 7px;
+    background-color: #0986e0; /* Inner circle color */
+    border-radius: 50%; /* Makes the inner circle circular */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the circle */
+}
+
+select {
+    appearance: none; /* Remove default browser styling */
+    -webkit-appearance: none; /* WebKit-specific reset */
+    -moz-appearance: none; /* Mozilla-specific reset */
+    width: 200px; /* Set width of dropdown */
+    padding: 5px 40px 5px 5px; /* Add padding for the arrow */
+    background-color: #ffffff; /* Changes the background color */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Removes the default outline */
+    font-size: 16px; /* Font styling */
+    color: #333; /* Text color */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23008CBA" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+/* Optional: Add hover effect */
+select:hover {
+    border-color: #0986e0; /* Highlight border color on hover */
+    background-color: #f6f6f6; /* Slight change in background */
+}
+
+
+/* Add this for the dropdown menu itself */
+select:focus {
+    border-radius: 0px 0px 0px 0px; /* Keep the top corners rounded */
+}
+
+select:focus-within {
+    border-bottom-left-radius: 2px; /* Customize the bottom-left corner of the open dropdown */
+    border-bottom-right-radius: 2px; /* Customize the bottom-right corner */
+}
+
+/* Optional: Style dropdown options */
+option {
+    background-color: #fff;
+    color: #333;
+}
+
+
+
