@@ -167,7 +167,7 @@ filteredData = data.filter(function(d) {
     return d.Purpose === purpose && 
             d.Frequency === frequency ; // Filter for "Camden"
 });
-// filteredData;
+filteredData;
 ```
 
 
@@ -179,9 +179,44 @@ Plot.plot({
   color: {
     legend: true,
   },
+  y: {zero: true},
+  x: {zero: true},
   marks: [
-    Plot.dot(filteredData, {x: "tfl_cycle_road_ratio", y: year.toString()})
-  ]
+    Plot.dot(filteredData, 
+              {x: "hangar_perk_household", 
+              y: year.toString(),
+              stroke: "ONS_INNER",
+              channels: {name: "NAME"},
+              tip: true
+              }),
+   
+  ],
+  
+})
+
+```
+
+```{ojs}
+
+Plot.plot({
+  inset: 8,
+  grid: true,
+  color: {
+    legend: true,
+  },
+  y: {zero: true},
+  x: {zero: true},
+  marks: [
+    Plot.dot(filteredData, 
+              {x: "tfl_cycle_road_ratio", 
+              y: year.toString(),
+              stroke: "ONS_INNER",
+              channels: {name: "NAME"},
+              tip: true
+              }),
+   
+  ],
+  
 })
 
 ```
