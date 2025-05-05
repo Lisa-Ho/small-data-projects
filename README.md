@@ -2,7 +2,7 @@
 
 Repository for small-ish analysis and data viz projects. 
 
-### 05/2025 London cycle lanes
+### 04/2025 London cycle lanes
 
 Do more cycle lanes mean more cyclists? I've looked at a few different data sets to answer this question, and it's probably a 'yes' and 'no' :D 
 
