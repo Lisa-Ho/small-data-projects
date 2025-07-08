@@ -1,0 +1,31 @@
+---
+title: "XKCD Color Survey"
+execute:
+  echo: false
+from: markdown+emoji
+format:
+  html:
+    theme: 
+        - cosmo
+    code-copy: true
+    css: custom-styles.css
+jupyter: python3
+toc: false
+number-sections: false
+
+---
+
+Intro text
+<br/><br/>
+
+```{python} 
+#setup -------------------------------
+
+#load libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+```
+
