@@ -2,6 +2,22 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 04/2025 London cycle lanes
+
+Do more cycle lanes mean more cyclists? I've looked at a few different data sets to answer this question, and it's probably a 'yes' and 'no' :D 
+
+Initial chart made for the #30DayChartChallenge prompt Day 15 - Complicated. Then created a few more graphs to explore the issue. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2504-cycling-rates-infra/cycling-rates-vs-infra.ipynb)
+
+<img src="https://github.com/user-attachments/assets/3aeff124-9709-458f-84f9-e588d15e73fc" width="550">
+<br>
+<img src="https://github.com/user-attachments/assets/59235560-28cf-4715-b8db-c3cd537d1fbc" width="250">
+<img src="https://github.com/user-attachments/assets/a4b1f234-086d-4eb5-a1ec-3c35ccdd6aec" width="250">
+
+
+
+
 ### 04/2025 Bob's Burgers dialogue
 
 I'm a big lover of the TV show, so this had to happen at some point. Viz exploring mentions of fart(s/ing/ed) and butt(s) by episode. 
