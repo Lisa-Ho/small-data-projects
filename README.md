@@ -2,6 +2,17 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+
+### 07/2025 Color names
+
+Fun mapping colours in 3D. Data from the [xkcd Color Survey](https://blog.xkcd.com/2010/05/03/color-survey-results/) via [#TidyTuesday](https://github.com/rfordatascience/tidytuesday). [Website](https://inside-numbers.quarto.pub/top-100-color-names/) made in Quarto using python and plotly for interactive chart. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2507-xkcd-colors/xkcd-colors.qmd)
+
+<img src="https://github.com/user-attachments/assets/288cab24-22eb-48b1-9d90-285cf2c3d6b9" width="650">
+
+
+
 ### 04/2025 London cycle lanes
 
 Do more cycle lanes mean more cyclists? I've looked at a few different data sets to answer this question, and it's probably a 'yes' and 'no' :D 
