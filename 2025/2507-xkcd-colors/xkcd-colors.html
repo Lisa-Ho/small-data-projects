@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>XKCD Color Survey</title>
+<title>The top 100 color names</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="xkcd-colors_files/libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="xkcd-colors_files/libs/clipboard/clipboard.min.js"></script>
 <script src="xkcd-colors_files/libs/quarto-html/quarto.js"></script>
 <script src="xkcd-colors_files/libs/quarto-html/popper.min.js"></script>
 <script src="xkcd-colors_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -33,6 +33,25 @@ ul.task-list li input[type="checkbox"] {
 <script src="xkcd-colors_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="xkcd-colors_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="xkcd-colors_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+if (typeof require !== 'undefined') {
+require.undef("plotly");
+requirejs.config({
+    paths: {
+        'plotly': ['https://cdn.plot.ly/plotly-2.12.1.min']
+    }
+});
+require(['plotly'], function(Plotly) {
+    window._Plotly = Plotly;
+});
+}
+</script>
+
 
 
 <link rel="stylesheet" href="custom-styles.css">
@@ -46,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">XKCD Color Survey</h1>
+<h1 class="title">The top 100 color names</h1>
 </div>
 
 
@@ -63,7 +82,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Intro text <br><br></p>
+<p><span class="subtitle">The top 100 ranked color names from the xkcd color survey by hue, lightness and saturation</span> <br> (sized by rank)</p>
+<div id="722a6e95" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>                            <div id="40476eb4-5d77-4c86-a840-0fba953ffffd" class="plotly-graph-div" style="height:450px; width:750px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("40476eb4-5d77-4c86-a840-0fba953ffffd")) {                    Plotly.newPlot(                        "40476eb4-5d77-4c86-a840-0fba953ffffd",                        [{"customdata":[["purple",1],["green",2],["blue",3],["pink",4],["brown",5],["red",6],["light blue",7],["teal",8],["orange",9],["light green",10],["magenta",11],["yellow",12],["sky blue",13],["grey",14],["lime green",15],["light purple",16],["violet",17],["dark green",18],["turquoise",19],["lavender",20],["dark blue",21],["tan",22],["cyan",23],["aqua",24],["forest green",25],["mauve",26],["dark purple",27],["bright green",28],["maroon",29],["olive",30],["salmon",31],["beige",32],["royal blue",33],["navy blue",34],["lilac",35],["black",36],["hot pink",37],["light brown",38],["pale green",39],["peach",40],["olive green",41],["dark pink",42],["periwinkle",43],["sea green",44],["lime",45],["indigo",46],["mustard",47],["light pink",48],["rose",49],["bright blue",50],["neon green",51],["burnt orange",52],["aquamarine",53],["navy",54],["grass green",55],["pale blue",56],["dark red",57],["bright purple",58],["yellow green",59],["baby blue",60],["gold",61],["mint green",62],["plum",63],["royal purple",64],["brick red",65],["dark teal",66],["burgundy",67],["khaki",68],["blue green",69],["seafoam green",70],["kelly green",71],["puke green",72],["pea green",73],["taupe",74],["dark brown",75],["deep purple",76],["chartreuse",77],["bright pink",78],["light orange",79],["mint",80],["pastel green",81],["sand",82],["dark orange",83],["spring green",84],["puce",85],["seafoam",86],["grey blue",87],["army green",88],["dark grey",89],["dark yellow",90],["goldenrod",91],["slate",92],["light teal",93],["rust",94],["deep blue",95],["pale pink",96],["cerulean",97],["light red",98],["mustard yellow",99],["ochre",100]],"hovertemplate":"<b>%{customdata[0]}</b><br>Rank: %{customdata[1]}<br><br>","legendgroup":"","marker":{"color":["#7e1e9c","#15b01a","#0343df","#ff81c0","#653700","#e50000","#95d0fc","#029386","#f97306","#96f97b","#c20078","#ffff14","#75bbfd","#929591","#89fe05","#bf77f6","#9a0eea","#033500","#06c2ac","#c79fef","#00035b","#d1b26f","#00ffff","#13eac9","#06470c","#ae7181","#35063e","#01ff07","#650021","#6e750e","#ff796c","#e6daa6","#0504aa","#001146","#cea2fd","#000000","#ff028d","#ad8150","#c7fdb5","#ffb07c","#677a04","#cb416b","#8e82fe","#53fca1","#aaff32","#380282","#ceb301","#ffd1df","#cf6275","#0165fc","#0cff0c","#c04e01","#04d8b2","#01153e","#3f9b0b","#d0fefe","#840000","#be03fd","#c0fb2d","#a2cffe","#dbb40c","#8fff9f","#580f41","#4b006e","#8f1402","#014d4e","#610023","#aaa662","#137e6d","#7af9ab","#02ab2e","#9aae07","#8eab12","#b9a281","#341c02","#36013f","#c1f80a","#fe01b1","#fdaa48","#9ffeb0","#b0ff9d","#e2ca76","#c65102","#a9f971","#a57e52","#80f9ad","#6b8ba4","#4b5d16","#363737","#d5b60a","#fac205","#516572","#90e4c1","#a83c09","#040273","#ffcfdc","#0485d1","#ff474c","#d2bd0a","#bf9005"],"symbol":"circle","size":[41.10960958218894,40.80090049279655,40.49141083491193,40.18113063924951,39.8700497049674,39.558157591817626,39.24544361194451,38.93189682131173,38.617506010737195,38.302259696512955,37.98614611058658,37.66915319027803,37.35126856750492,37.03247955748641,36.71277314689461,36.392135981419436,36.070554352710765,35.74801418465886,35.424501018971085,35.1,34.774495858773946,34.447972896177866,34.12041496522774,33.791805452377616,33.462127257792936,33.1313627745189,32.79949386646615,32.46650184512991,32.132367444951036,31.79707079722017,31.460591402416636,31.122908100864816,30.783999041579428,30.443841649159808,30.102412588579927,29.75968772770635,29.415642097360383,29.070249848722337,28.723484207856075,28.375317427109373,28.02572073312058,27.674664271133967,27.322117045294654,26.968046854557922,26.612420223808492,26.255202329739188,25.89635692098752,25.53584623197077,25.173630889793202,24.80966981352449,24.443920105061554,24.076336930687777,23.706873392329683,23.33548038738125,22.962106455814506,22.586697613121245,22.209197167427174,21.82954551888395,21.447679939168015,21.063534328590784,20.67703894794332,20.288120121747074,19.896699909046916,19.502695737244824,19.106019993708784,18.706579568973652,18.304275344241603,17.89900161454336,17.490645437277262,17.079085893825365,16.66419324945313,16.245827993600763,15.823839738797695,15.39806595154416,14.968330482297183,14.534441853748637,14.096191256313574,13.653350186352261,13.205667645001338,12.752866791979866,12.294640917041283,11.830648548456296,11.360507457951368,10.883787237170495,10.4,9.90858858901499,9.408911402020506,8.90022255462996,8.381645468223626,7.852136960898407,7.310437227474537,6.754998149518621,6.183876998014152,5.594572191856507,4.983756213120925,4.346811982346743,3.676955262170048,2.9633591740412104,2.1863306796596578,1.3]},"mode":"markers","name":"","scene":"scene","showlegend":false,"x":[285,121,222,330,32,0,205,174,26,107,322,60,209,105,88,273,278,116,172,270,238,41,180,170,125,344,290,121,340,64,5,48,240,225,268,0,327,31,105,23,69,341,245,147,84,265,52,341,349,216,119,24,169,220,98,180,0,284,77,210,48,128,318,280,7,180,338,56,170,143,135,67,71,35,31,291,73,318,32,130,108,46,24,95,31,142,206,75,180,50,46,203,155,19,241,343,202,358,53,44],"y":[67,78,97,100,100,100,94,97,95,91,100,100,97,1,99,87,88,100,94,71,100,51,100,84,84,27,82,100,100,78,100,56,95,100,95,0,100,36,94,100,93,57,98,96,100,96,99,100,53,99,100,98,96,96,86,95,100,98,96,97,89,100,70,100,97,97,100,29,73,91,97,92,80,28,92,96,94,99,97,97,100,65,98,91,33,90,23,61,0,91,96,16,60,89,96,100,96,100,90,94],"z":[36,38,44,75,19,44,78,29,50,72,38,53,72,57,50,71,48,10,39,78,17,62,50,49,15,56,13,50,19,25,71,77,34,13,81,0,50,49,85,74,24,52,75,65,59,25,40,90,59,49,52,37,43,12,32,90,25,50,58,81,45,78,20,21,28,15,19,52,28,72,33,35,37,61,10,12,50,50,63,80,80,67,39,70,48,73,53,22,21,43,50,38,72,34,22,90,41,63,43,38],"type":"scatter3d"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"scene":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"xaxis":{"title":{"text":"Hue"}},"yaxis":{"title":{"text":"Saturation"}},"zaxis":{"title":{"text":"Lightness"}},"camera":{"eye":{"x":2,"y":2.0,"z":0.75}}},"legend":{"tracegroupgap":0},"margin":{"l":0,"r":0,"t":0,"b":0},"autosize":false,"width":750,"height":450},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('40476eb4-5d77-4c86-a840-0fba953ffffd');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<p><br> <span class="footer">Data source: <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd Color Survey</a> via #TidyTuesday</span></p>
 
 </main>
 <!-- /main column -->

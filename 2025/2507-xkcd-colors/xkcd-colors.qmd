@@ -1,12 +1,11 @@
 ---
-title: "XKCD Color Survey"
+title: "The top 100 color names"
 execute:
   echo: false
 from: markdown+emoji
 format:
   html:
-    theme: 
-        - cosmo
+    theme: cosmo
     code-copy: true
     css: custom-styles.css
 jupyter: python3
@@ -14,9 +13,7 @@ toc: false
 number-sections: false
 
 ---
-
-Intro text
-<br/><br/>
+[The top 100 ranked color names from the xkcd color survey by hue, lightness and saturation]{.subtitle} <br> (sized by rank)
 
 ```{python} 
 #setup -------------------------------
@@ -27,5 +24,52 @@ import matplotlib.pyplot as plt
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+import colorsys
+import math
+
+#load data
+df = pd.read_csv("color_ranks.csv")
+
+#convert hex into rgb and hls color space
+df["rgb"] = [tuple(int(hex.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) for hex in df["hex"]]
+df["rgb_n"] =[[round(rgb[0]/255,4), round(rgb[1]/255,4), round(rgb[2]/255,4)] for rgb in df["rgb"]]
+df["hls_n"] = [colorsys.rgb_to_hls(rgb[0], rgb[1], rgb[2]) for rgb in df["rgb_n"]]
+df["hls_n"] = [ [round(i[0] ,4), round(i[1],4), round(i[2],4)] for i in df["hls_n"]]
+df["hls"] = [ [int(i[0]*360), int(i[1]*100), int(i[2]*100)] for i in df["hls_n"]]
 ```
 
+```{python}
+df_to_plot = df.head(100)
+
+#explore colors in 3D space
+hue = list(df_to_plot["hls"].str[0])
+light = list(df_to_plot["hls"].str[1])
+sat = list(df_to_plot["hls"].str[2])
+size = [(len(df_to_plot)-i *0.1) for i in df_to_plot["rank"]]
+size = [math.sqrt(math.sqrt(len(df_to_plot)-i))**3 *1.3 for i in df_to_plot.index]
+
+fig = go.Figure()
+fig = px.scatter_3d(df_to_plot, x=hue, y=sat, z=light, custom_data=['color', 'rank']).update_traces(
+                        marker=dict(color=df_to_plot["hex"]),
+                        marker_size=size,
+                        hovertemplate =
+                        "<b>%{customdata[0]}</b><br>" +
+                        "Rank: %{customdata[1]}<br><br>")
+                    
+fig = fig.update_layout(scene = dict(
+                      xaxis=dict(title=dict(text='Hue') ),
+                      yaxis=dict(title=dict( text='Saturation')),
+                      zaxis=dict(title=dict(text='Lightness')),
+                    ), 
+                      autosize=False,
+                      width=750,
+                      height=450,
+                      template="plotly_white",
+                      margin=dict(l=0,r=0,t=0,b=0), scene_camera=dict(eye=dict(x=2, y=2.0, z=0.75))
+        )
+
+fig.show()
+```
+
+<br>
+[Data source: [xkcd Color Survey](https://blog.xkcd.com/2010/05/03/color-survey-results/) via #TidyTuesday]{.footer}

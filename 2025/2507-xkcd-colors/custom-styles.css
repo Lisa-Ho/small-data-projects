@@ -1,0 +1,21 @@
+#quarto-content {
+    padding-top:35px;
+  }
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.0em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 600;
+  }
+
+.subtitle {
+  font-size: 1.2rem;
+}
+
+.footer {
+  font-size: 0.9rem;
+}
