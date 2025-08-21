@@ -2,6 +2,16 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 08/2025 Scottish Munros
+
+A Munro is defined as a mountain in Scotland with a height over 3,000 feet, and which is on the Scottish Mountaineering Club official list of Munros. 
+What if all those munros were located on a single mountain around the highest munro (Ben Nevis)? 
+
+Fun experiment for [#TidyTuesday](https://github.com/rfordatascience/tidytuesday) using python, matplotlib and pyfonts. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2025/2508-scottish-munros/scottish-munros.ipynb)
+
+<img src="https://github.com/user-attachments/assets/8018c9ec-51ae-48f7-b391-b13bff74ff3f" width="450">
 
 ### 07/2025 Color names
 
