@@ -2,6 +2,16 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 02/2026 Olympics schedule
+
+Quick contribution to TidyTuesday on the Winter Olympics 2026. Long weeks ahead for Curling and Ice Hockey fans. 
+
+Made with python, matplotlib, pyfonts + custom background image in branded colours.
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2026/2602-olympic-schedule/olympic-schedule.ipynb)
+
+<img src="https://github.com/user-attachments/assets/3a0c03ea-1b44-4026-8577-a555479ef6b7" width="550">
+
 ### 08/2025 Scottish Munros
 
 A Munro is defined as a mountain in Scotland with a height over 3,000 feet, and which is on the Scottish Mountaineering Club official list of Munros. 
