@@ -10,7 +10,7 @@ Made with python, matplotlib, pyfonts + custom background image in branded colou
 
 [Full code](https://github.com/Lisa-Ho/small-data-projects/blob/main/2026/2602-olympic-schedule/olympic-schedule.ipynb)
 
-<img src="https://github.com/user-attachments/assets/3a0c03ea-1b44-4026-8577-a555479ef6b7" width="550">
+<img src="https://github.com/user-attachments/assets/e8e5d7c1-a39a-4c1d-8782-8c1bb1f75d1d" width="550">
 
 ### 08/2025 Scottish Munros
 
