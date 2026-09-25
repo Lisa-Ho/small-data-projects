@@ -2,6 +2,20 @@
 
 Repository for small-ish analysis and data viz projects. 
 
+### 09/2026 Country songs
+
+Another contribution to TidyTuesday exploring mentions of the word 'girl' in country songs on the Billboard Top 30 between 2013 and 2019. 
+
+It's the most common noun used in songs, appearing more than 750 times. If all songs were played word by word at the same time, most of the times you'd hear someone sing about 'girl'. 
+
+Decided to go for a album cover vibe. Added some annotations but left out a legend for simplicity. 
+
+[Full code](https://github.com/Lisa-Ho/small-data-projects/tree/main/2026/2609-country-songs)
+
+<img width="450"  alt="girl-mentions" src="https://github.com/user-attachments/assets/dc59a8bc-9008-4539-966e-9f5fd9b556a7" />
+
+
+
 ### 02/2026 Olympics schedule
 
 Quick contribution to TidyTuesday on the Winter Olympics 2026. Long weeks ahead for Curling and Ice Hockey fans. 
